@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Drops Water Engineering Ltd - Professional Water Solutions in Kenya</title>
+    <meta name="description" content="Leading water engineering company in Kapenguria, Kenya. Borehole drilling, water pumps, solar systems, and comprehensive water solutions.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(rgba(3, 105, 161, 0.8), rgba(2, 132, 199, 0.9));
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #0ea5e9;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+        }
+        
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0ea5e9;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #0ea5e9;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 20px;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+            transform: translateX(-50%);
+        }
+        
+        .process-step:last-child::before {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+            
+            .stats-counter {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="company-logo.png" alt="Fancy Drops Water Engineering Ltd" class="h-12 w-auto">
+                    <div class="ml-4">
+                        <h1 class="text-xl font-bold text-gray-900">Fancy Drops Water Engineering Ltd</h1>
+                        <p class="text-sm text-gray-600">Professional Water Solutions</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#services" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#projects" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#contact" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="tel:+254713332124" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-phone mr-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-900 hover:text-blue-600">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Services</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Contact</a>
+                <a href="tel:+254713332124" class="block px-3 py-2 bg-blue-600 text-white rounded-lg mx-3 text-center">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-full pt-20">
+        <div class="absolute inset-0">
+            <img src="hero-image.jpg" alt="Professional Water Engineering" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center text-white">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+                    Professional Water <span class="text-yellow-400">Engineering</span> Solutions
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Leading water engineering company in Kenya. We provide comprehensive borehole services, water treatment, and sustainable water solutions for communities and businesses.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="openQuoteModal()" class="cta-button bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-lg text-lg font-semibold">
+                        <i class="fas fa-calculator mr-2"></i>Get Free Quote
+                    </button>
+                    <a href="tel:+254713332124" class="cta-button bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold">
+                        <i class="fas fa-phone mr-2"></i>Call: 0713 332 124
+                    </a>
+                    <a href="#services" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                        <i class="fas fa-arrow-down mr-2"></i>View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="relative bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stats-counter" data-target="500">30</div>
+                        <p class="text-gray-600 font-medium">Boreholes Drilled</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stats-counter" data-target="15">15</div>
+                        <p class="text-gray-600 font-medium">Years Experience</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stats-counter" data-target="1000">55</div>
+                        <p class="text-gray-600 font-medium">Happy Clients</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stats-counter" data-target="24">17</div>
+                        <p class="text-gray-600 font-medium">Counties Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Our Professional Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Comprehensive water engineering solutions designed to meet your specific needs with international quality standards.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Borehole Services -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="borehole-services.jpg" alt="Borehole Services" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Borehole Services</h3>
+                    <p class="text-gray-600 mb-6">Complete borehole maintenance, repair, and rehabilitation services to ensure optimal water flow and system longevity.</p>
+                    <button onclick="openServiceModal('borehole')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Hydrogeological Survey -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="hydrogeological-survey.jpg" alt="Hydrogeological Survey" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hydrogeological Survey</h3>
+                    <p class="text-gray-600 mb-6">Professional groundwater assessment and geological surveys using advanced equipment to locate optimal drilling sites.</p>
+                    <button onclick="openServiceModal('survey')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Borehole Drilling -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="borehole-drilling.jpg" alt="Borehole Drilling" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Borehole Drilling</h3>
+                    <p class="text-gray-600 mb-6">State-of-the-art drilling equipment and techniques for efficient, precise borehole construction with minimal environmental impact.</p>
+                    <button onclick="openServiceModal('drilling')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Water Pumps -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="water-pumps.jpg" alt="Water Pumps" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Water Pumps</h3>
+                    <p class="text-gray-600 mb-6">Installation, maintenance, and repair of various water pump systems including submersible, centrifugal, and booster pumps.</p>
+                    <button onclick="openServiceModal('pumps')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Solar Pumps -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="solar-pumps.jpg" alt="Solar Pumps" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Solar Pumps</h3>
+                    <p class="text-gray-600 mb-6">Eco-friendly solar-powered water pumping systems for sustainable, cost-effective water supply solutions.</p>
+                    <button onclick="openServiceModal('solar')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Water Treatment -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="water-treatment.jpg" alt="Water Treatment" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Water Treatment</h3>
+                    <p class="text-gray-600 mb-6">Advanced water purification and treatment systems to ensure safe, clean drinking water for all applications.</p>
+                    <button onclick="openServiceModal('treatment')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Generators -->
+                <div class="service-card bg-white rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src="generators.jpg" alt="Generators" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Generators</h3>
+                    <p class="text-gray-600 mb-6">Reliable backup power solutions and generator systems to ensure continuous operation of water systems.</p>
+                    <button onclick="openServiceModal('generators')" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Our Professional Process
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    A systematic approach ensuring quality results and customer satisfaction at every step.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Consultation</h3>
+                    <p class="text-gray-600">Initial assessment of your water needs and site evaluation</p>
+                </div>
+                
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Survey & Planning</h3>
+                    <p class="text-gray-600">Detailed hydrogeological survey and project planning</p>
+                </div>
+                
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Implementation</h3>
+                    <p class="text-gray-600">Professional installation using modern equipment</p>
+                </div>
+                
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Maintenance</h3>
+                    <p class="text-gray-600">Ongoing support and maintenance services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        About Fancy Drops Water Engineering Ltd
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        With over 15 years of experience in the water engineering industry, Fancy Drops Water Engineering Ltd has established itself as a leading provider of comprehensive water solutions in Kenya and East Africa.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Based in Kapenguria, we serve clients across multiple counties, delivering professional water engineering services that meet international standards. Our team of certified engineers and technicians is committed to providing sustainable water solutions for communities, businesses, and institutions.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                            <p class="text-gray-600">Projects Completed</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                            <p class="text-gray-600">Emergency Support</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openQuoteModal()" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                        <i class="fas fa-handshake mr-2"></i>Work With Us
+                    </button>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <img src="about-team.jpg" alt="Fancy Drops Team" class="rounded-xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Certifications & Quality Assurance
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Our commitment to excellence is backed by professional certifications and quality standards.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ISO Certified</h3>
+                    <p class="text-gray-600">International quality management standards compliance</p>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Licensed Engineers</h3>
+                    <p class="text-gray-600">Certified professional engineers and technicians</p>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Industry Awards</h3>
+                    <p class="text-gray-600">Recognized excellence in water engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Recent Projects
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Showcasing our latest water engineering projects across Kenya.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="project-1.jpg" alt="Community Borehole Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Community Water Project - Kitale</h3>
+                        <p class="text-gray-600 mb-4">Complete borehole drilling and solar pump installation serving 500+ families</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Completed 2024</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="project-2.jpg" alt="School Water System" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">School Water System - Eldoret</h3>
+                        <p class="text-gray-600 mb-4">Water treatment and distribution system for 1,200 students</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Completed 2024</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="project-3.jpg" alt="Industrial Water Supply" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Industrial Water Supply - Nakuru</h3>
+                        <p class="text-gray-600 mb-4">High-capacity borehole system for manufacturing facility</p>
+                        <span class="inline-block bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full">In Progress</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="openProjectsModal()" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                    <i class="fas fa-eye mr-2"></i>View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white relative">
+        <div class="absolute inset-0">
+            <img src="testimonial-bg.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    What Our Clients Say
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Trusted by communities, businesses, and institutions across Kenya.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-yellow-500 text-2xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Exceptional service! The team completed our borehole project on time and within budget. The water quality is excellent and the system has been running flawlessly for over a year."</p>
+                    <div class="font-bold text-gray-900">Sarah Wanjiku</div>
+                    <div class="text-gray-600">School Principal, Kitale</div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-yellow-500 text-2xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Professional team with modern equipment. They provided a complete water solution for our community including solar pumps and treatment systems. Highly recommended!"</p>
+                    <div class="font-bold text-gray-900">John Kiprotich</div>
+                    <div class="text-gray-600">Community Leader, Eldoret</div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-yellow-500 text-2xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Outstanding customer service and technical expertise. The hydrogeological survey was thorough and the drilling was precise. Our factory now has reliable water supply."</p>
+                    <div class="font-bold text-gray-900">Mary Achieng</div>
+                    <div class="text-gray-600">Factory Manager, Nakuru</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="200">
+                    Common questions about our water engineering services.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-lg font-semibold text-gray-900 hover:text-blue-600">
+                        How long does borehole drilling take?
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        Typically, borehole drilling takes 2-5 days depending on depth, ground conditions, and water table level. We provide detailed timelines during the initial consultation.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-lg font-semibold text-gray-900 hover:text-blue-600">
+                        What is included in the hydrogeological survey?
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        Our survey includes geological mapping, groundwater assessment, site evaluation, water quality testing, and detailed recommendations for optimal drilling locations.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-lg font-semibold text-gray-900 hover:text-blue-600">
+                        Do you provide maintenance services?
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        Yes, we offer comprehensive maintenance packages including regular inspections, pump servicing, water quality testing, and emergency repair services.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-lg font-semibold text-gray-900 hover:text-blue-600">
+                        What areas do you serve?
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        We serve all counties in Kenya with our main office in Kapenguria. We also provide services in neighboring East African countries for large-scale projects.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="absolute inset-0">
+            <img src="contact-bg.jpg" alt="Contact Background" class="w-full h-full object-cover opacity-5">
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
+                    Get In Touch
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Ready to start your water engineering project? Contact us for a free consultation and quote.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Phone</p>
+                                <a href="tel:+254713332124" class="text-blue-600 hover:text-blue-700">0713 332 124</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email</p>
+                                <a href="mailto:fancydropswatersystemsltd@gmail.com" class="text-blue-600 hover:text-blue-700">fancydropswatersystemsltd@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Location</p>
+                                <p class="text-gray-600">Kapenguria, Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Business Hours</p>
+                                <p class="text-gray-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                <p class="text-gray-600">Sat: 8:00 AM - 4:00 PM</p>
+                                <p class="text-gray-600">Emergency: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Emergency Contact</h4>
+                        <p class="text-gray-600 mb-4">For urgent water system issues, call our 24/7 emergency line:</p>
+                        <a href="tel:+254713332124" class="cta-button bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold inline-block">
+                            <i class="fas fa-phone mr-2"></i>Emergency: 0713 332 124
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form id="contactForm" class="bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
+                            <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="borehole-drilling">Borehole Drilling</option>
+                                <option value="borehole-services">Borehole Services</option>
+                                <option value="hydrogeological-survey">Hydrogeological Survey</option>
+                                <option value="water-pumps">Water Pumps</option>
+                                <option value="solar-pumps">Solar Pumps</option>
+                                <option value="water-treatment">Water Treatment</option>
+                                <option value="generators">Generators</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg text-lg font-semibold">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="company-logo.png" alt="Fancy Drops Logo" class="h-10 w-auto mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">Fancy Drops</h3>
+                            <p class="text-blue-200 text-sm">Water Engineering Ltd</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 mb-4">Professional water engineering solutions for sustainable development across Kenya and East Africa.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li><a href="#" class="hover:text-white transition-colors">Borehole Drilling</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hydrogeological Survey</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Water Pumps</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Solar Pumps</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Water Treatment</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Generators</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-3 text-blue-100">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Kapenguria, Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <a href="tel:+254713332124" class="hover:text-white transition-colors">0713 332 124</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:fancydropswatersystemsltd@gmail.com" class="hover:text-white transition-colors">fancydropswatersystemsltd@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-400 mt-12 pt-8 text-center text-blue-100">
+                <p>&copy; 2024 Fancy Drops Water Engineering Ltd. All rights reserved. | Professional Water Solutions Since 2009</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fab fa-whatsapp" style="margin-top: 16px;"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-40 right-10 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <div class="gradient-bg text-white p-6 rounded-t-xl">
+                <span class="close text-white">&times;</span>
+                <h2 class="text-2xl font-bold">Get Your Free Quote</h2>
+                <p class="text-blue-100">Tell us about your project and we'll provide a detailed quote within 24 hours.</p>
+            </div>
+            
+            <form id="quoteForm" class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="quoteName" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="quoteName" name="quoteName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="quotePhone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="quotePhone" name="quotePhone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="quoteEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" id="quoteEmail" name="quoteEmail" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="quoteLocation" class="block text-sm font-medium text-gray-700 mb-2">Project Location</label>
+                    <input type="text" id="quoteLocation" name="quoteLocation" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="County, Town, or specific location">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="quoteService" class="block text-sm font-medium text-gray-700 mb-2">Service Required</label>
+                    <select id="quoteService" name="quoteService" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Select a service</option>
+                        <option value="borehole-drilling">Borehole Drilling</option>
+                        <option value="borehole-services">Borehole Services & Maintenance</option>
+                        <option value="hydrogeological-survey">Hydrogeological Survey</option>
+                        <option value="water-pumps">Water Pumps Installation</option>
+                        <option value="solar-pumps">Solar Pumps System</option>
+                        <option value="water-treatment">Water Treatment System</option>
+                        <option value="generators">Generator Installation</option>
+                        <option value="complete-system">Complete Water System</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="quoteDetails" class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                    <textarea id="quoteDetails" name="quoteDetails" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Please describe your project requirements, expected water usage, timeline, etc."></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="quoteBudget" class="block text-sm font-medium text-gray-700 mb-2">Estimated Budget Range (Optional)</label>
+                    <select id="quoteBudget" name="quoteBudget" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Select budget range</option>
+                        <option value="under-500k">Under KSh 500,000</option>
+                        <option value="500k-1m">KSh 500,000 - 1,000,000</option>
+                        <option value="1m-2m">KSh 1,000,000 - 2,000,000</option>
+                        <option value="2m-5m">KSh 2,000,000 - 5,000,000</option>
+                        <option value="over-5m">Over KSh 5,000,000</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg text-lg font-semibold transition-colors">
+                    <i class="fas fa-paper-plane mr-2"></i>Request Quote
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Details Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="gradient-bg text-white p-6 rounded-t-xl">
+                <span class="close text-white">&times;</span>
+                <h2 id="serviceModalTitle" class="text-2xl font-bold">Service Details</h2>
+            </div>
+            
+            <div id="serviceModalContent" class="p-6">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Modal -->
+    <div id="projectsModal" class="modal">
+        <div class="modal-content">
+            <div class="gradient-bg text-white p-6 rounded-t-xl">
+                <span class="close text-white">&times;</span>
+                <h2 class="text-2xl font-bold">Our Projects Portfolio</h2>
+                <p class="text-blue-100">Showcasing our water engineering excellence across Kenya</p>
+            </div>
+            
+            <div class="p-6 max-h-96 overflow-y-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="project-1.jpg" alt="Project 1" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h3 class="font-bold text-gray-900 mb-2">Community Borehole - Kitale</h3>
+                        <p class="text-sm text-gray-600 mb-2">Complete water system serving 500+ families</p>
+                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Completed 2024</span>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="project-2.jpg" alt="Project 2" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h3 class="font-bold text-gray-900 mb-2">School Water System - Eldoret</h3>
+                        <p class="text-sm text-gray-600 mb-2">Water treatment for 1,200 students</p>
+                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Completed 2024</span>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="project-3.jpg" alt="Project 3" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h3 class="font-bold text-gray-900 mb-2">Industrial Supply - Nakuru</h3>
+                        <p class="text-sm text-gray-600 mb-2">High-capacity system for manufacturing</p>
+                        <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">In Progress</span>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="project-4.jpg" alt="Project 4" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h3 class="font-bold text-gray-900 mb-2">Hospital Water System - Mombasa</h3>
+                        <p class="text-sm text-gray-600 mb-2">Critical healthcare facility water supply</p>
+                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Completed 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 20);
+        }
+
+        // Intersection Observer for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stats-counter');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Observe stats section
+        const statsSection = document.querySelector('.stats-counter').closest('div').parentElement;
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close');
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking close button
+        closeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const modal = e.target.closest('.modal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close modal when clicking outside
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Quote modal functions
+        function openQuoteModal() {
+            openModal('quoteModal');
+        }
+
+        function openProjectsModal() {
+            openModal('projectsModal');
+        }
+
+        // Service modal function
+        function openServiceModal(serviceType) {
+            const serviceContent = {
+                'borehole': {
+                    title: 'Borehole Services',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Comprehensive Borehole Services</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Borehole maintenance and repair</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Pump installation and replacement</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Water quality testing and treatment</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>System optimization and upgrades</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Emergency repair services</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Our experienced technicians ensure your borehole operates at peak efficiency with minimal downtime.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'survey': {
+                    title: 'Hydrogeological Survey',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Professional Hydrogeological Survey</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Geological mapping and analysis</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Groundwater assessment</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Site evaluation and recommendations</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Water table depth analysis</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Detailed technical reports</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Using advanced equipment and techniques to locate optimal drilling sites and assess groundwater potential.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'drilling': {
+                    title: 'Borehole Drilling',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Professional Borehole Drilling</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>State-of-the-art drilling equipment</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Various drilling techniques available</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Depths up to 300+ meters</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Proper casing and completion</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Water quality testing included</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Efficient, precise drilling with minimal environmental impact and maximum water yield.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'pumps': {
+                    title: 'Water Pumps',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Water Pump Systems</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Submersible pump installation</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Centrifugal pump systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Booster pump installations</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Pump maintenance and repair</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Energy-efficient solutions</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">High-quality pump systems designed for reliability and optimal water delivery.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'solar': {
+                    title: 'Solar Pumps',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Solar-Powered Water Systems</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Eco-friendly solar technology</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Reduced operating costs</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Battery backup systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Remote monitoring capabilities</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Low maintenance requirements</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Sustainable water pumping solutions powered by clean solar energy.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'treatment': {
+                    title: 'Water Treatment',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Water Treatment Systems</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Advanced filtration systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Chemical treatment solutions</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>UV sterilization systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Reverse osmosis systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Water quality monitoring</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Ensuring safe, clean drinking water through advanced treatment technologies.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                },
+                'generators': {
+                    title: 'Generator Systems',
+                    content: `
+                        <h3 class="text-xl font-bold mb-4">Backup Power Solutions</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Diesel generator systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Automatic transfer switches</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Load management systems</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Regular maintenance services</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 monitoring options</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Reliable backup power to ensure continuous water system operation.</p>
+                        <button onclick="openQuoteModal(); closeModal('serviceModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Get Quote</button>
+                    `
+                }
+            };
+
+            const service = serviceContent[serviceType];
+            if (service) {
+                document.getElementById('serviceModalTitle').textContent = service.title;
+                document.getElementById('serviceModalContent').innerHTML = service.content;
+                openModal('serviceModal');
+            }
+        }
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Form submissions
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const formData = new FormData(this);
+            const name = formData.get('firstName') + ' ' + formData.get('lastName');
+            
+            // Create success message
+            const successDiv = document.createElement('div');
+            successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4';
+            successDiv.innerHTML = `
+                <strong>Thank you, ${name}!</strong> Your message has been received. 
+                We'll contact you within 24 hours to discuss your project.
+            `;
+            
+            // Insert success message at the top of the form
+            this.insertBefore(successDiv, this.firstChild);
+            
+            // Reset form
+            this.reset();
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successDiv.remove();
+            }, 5000);
+        });
+
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('quoteName');
+            
+            // Create success message
+            const successDiv = document.createElement('div');
+            successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4';
+            successDiv.innerHTML = `
+                <strong>Quote Request Received!</strong> Thank you, ${name}. 
+                Our team will prepare your detailed quote and contact you within 24 hours.
+            `;
+            
+            // Insert success message at the top of the form
+            this.insertBefore(successDiv, this.firstChild);
+            
+            // Reset form
+            this.reset();
+            
+            // Close modal after 3 seconds
+            setTimeout(() => {
+                closeModal('quoteModal');
+                successDiv.remove();
+            }, 3000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-xl');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.classList.remove('shadow-xl');
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Preload critical images
+        const criticalImages = [
+            'hero-image.jpg',
+            'company-logo.png',
+            'about-team.jpg'
+        ];
+
+        criticalImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Service card hover effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992ad6152367bb80',t:'MTc2MTE1NTQxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
