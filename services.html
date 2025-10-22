@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Fancy Drops Water Engineering Ltd | Professional Water Solutions Kenya</title>
+    <meta name="description" content="Comprehensive water engineering services: Borehole drilling, water pumps, solar systems, water treatment, and generators. Professional solutions across Kenya.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
+        }
+        
+        .premium-blue-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .dark-blue-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .section-bg-blue {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, 
+                        linear-gradient(135deg, #e0f2fe, #bfdbfe) border-box;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+            border: 2px solid #3b82f6;
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #3b82f6;
+            transform: scale(1.05);
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            transform: translateY(-50%);
+        }
+        
+        .process-step:last-child::after {
+            display: none;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-content.active {
+            max-height: 200px;
+        }
+        
+        @media (max-width: 768px) {
+            .process-step::after {
+                display: none;
+            }
+            
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 28px;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-tint text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-800">Fancy Drops Water Engineering Ltd</h1>
+                        <p class="text-sm text-blue-600 font-medium">Professional Water Solutions</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Home</a>
+                        <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">About</a>
+                        <a href="services.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-semibold">Services</a>
+                        <a href="projects.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Projects</a>
+                        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Contact</a>
+                        <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl hover:shadow-lg font-semibold">
+                            <i class="fas fa-phone mr-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-800 hover:text-blue-600 p-2 rounded-lg border border-slate-300 bg-white shadow-sm">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 text-blue-600 font-medium">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Contact</a>
+                <a href="tel:+254713332124" class="block px-3 py-2 premium-blue-gradient text-white rounded-lg mx-3 text-center font-semibold">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-20 hero-gradient overflow-hidden">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="text-center text-white">
+                <div class="floating-animation mb-8" data-aos="zoom-in">
+                    <div class="w-32 h-32 mx-auto premium-blue-gradient rounded-full flex items-center justify-center pulse-glow">
+                        <i class="fas fa-cogs text-5xl text-white"></i>
+                    </div>
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight" data-aos="fade-up">
+                    Professional <span class="text-yellow-400">Water</span><br>
+                    <span class="text-cyan-300">Engineering</span> Services
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-blue-100 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    🔧 Comprehensive water solutions from borehole drilling to solar systems. 
+                    Professional services with 15+ years of expertise and 1000+ successful projects.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#services" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                        <i class="fas fa-eye mr-3"></i>View Services
+                    </a>
+                    <a href="contact.html" class="cta-button bg-cyan-500 hover:bg-cyan-400 text-white px-10 py-5 rounded-2xl text-xl font-bold">
+                        <i class="fas fa-calculator mr-3"></i>Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-24 section-bg-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Our <span class="text-blue-600">Premium</span> Services
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Complete water engineering solutions designed with international quality standards 
+                    and cutting-edge technology for optimal results.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Borehole Drilling -->
+                <div id="drilling" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-drill text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Borehole Drilling</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Professional borehole drilling with state-of-the-art equipment. Depths up to 300m with guaranteed water yield assessment.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Site survey & assessment</li>
+                            <li>• Professional drilling equipment</li>
+                            <li>• Water yield testing</li>
+                            <li>• Borehole completion</li>
+                            <li>• 2-year warranty</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 80,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hydrogeological Survey -->
+                <div id="survey" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-search text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Hydrogeological Survey</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Comprehensive groundwater assessment using advanced geophysical methods to locate optimal drilling sites.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Geophysical survey</li>
+                            <li>• Groundwater mapping</li>
+                            <li>• Site recommendation</li>
+                            <li>• Detailed report</li>
+                            <li>• GPS coordinates</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 25,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Water Pumps -->
+                <div id="pumps" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-cog text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Water Pumps</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Installation, maintenance, and repair of submersible, centrifugal, and booster pumps for all water systems.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Pump selection & sizing</li>
+                            <li>• Professional installation</li>
+                            <li>• Control panel setup</li>
+                            <li>• Testing & commissioning</li>
+                            <li>• 1-year warranty</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 35,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Solar Systems -->
+                <div id="solar" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-solar-panel text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Solar Water Systems</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Eco-friendly solar-powered water pumping systems for sustainable, cost-effective water supply solutions.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Solar panel installation</li>
+                            <li>• Solar pump controller</li>
+                            <li>• Battery backup system</li>
+                            <li>• Monitoring system</li>
+                            <li>• 5-year warranty</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 150,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Water Treatment -->
+                <div id="treatment" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-filter text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Water Treatment</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Advanced water purification and filtration systems to ensure clean, safe drinking water for all applications.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Water quality testing</li>
+                            <li>• Treatment system design</li>
+                            <li>• Equipment installation</li>
+                            <li>• Regular maintenance</li>
+                            <li>• Quality monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 45,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Generators -->
+                <div id="generators" class="service-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-24 h-24 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-bolt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Generator Systems</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Reliable backup power solutions for water systems ensuring continuous operation during power outages.</p>
+                    <div class="text-left mb-6">
+                        <h4 class="font-semibold text-slate-800 mb-2">Includes:</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Generator selection</li>
+                            <li>• Auto-start system</li>
+                            <li>• Fuel management</li>
+                            <li>• Regular servicing</li>
+                            <li>• 2-year warranty</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-blue-600 mb-4">From KSh 120,000</p>
+                        <a href="contact.html" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold inline-block">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Our <span class="text-blue-600">Process</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    A systematic approach ensuring quality results and customer satisfaction at every step.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Consultation</h3>
+                    <p class="text-slate-600 leading-relaxed">Initial site visit and requirement assessment to understand your specific water needs.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Survey & Design</h3>
+                    <p class="text-slate-600 leading-relaxed">Comprehensive site survey and custom solution design based on technical requirements.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Implementation</h3>
+                    <p class="text-slate-600 leading-relaxed">Professional installation using quality materials and advanced equipment by certified technicians.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Support</h3>
+                    <p class="text-slate-600 leading-relaxed">Ongoing maintenance, support, and warranty coverage to ensure optimal system performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages -->
+    <section class="py-24 section-bg-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Service <span class="text-blue-600">Packages</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Flexible packages designed to meet different needs and budgets with transparent pricing.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="pricing-card bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Basic Package</h3>
+                        <p class="text-slate-600 mb-6">Essential water solutions for small properties</p>
+                        <div class="text-4xl font-black text-blue-600 mb-2">KSh 150K</div>
+                        <p class="text-slate-500">Complete basic setup</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Borehole drilling (up to 100m)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Basic submersible pump</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">500L storage tank</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Basic piping system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">1-year warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html" class="cta-button w-full bg-slate-800 text-white py-4 rounded-xl font-semibold text-center block">
+                        Choose Basic
+                    </a>
+                </div>
+                
+                <!-- Standard Package (Featured) -->
+                <div class="pricing-card featured bg-white rounded-3xl p-8 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Standard Package</h3>
+                        <p class="text-slate-600 mb-6">Comprehensive solution for medium properties</p>
+                        <div class="text-4xl font-black text-blue-600 mb-2">KSh 300K</div>
+                        <p class="text-slate-500">Complete standard setup</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Borehole drilling (up to 200m)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">High-capacity submersible pump</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">2000L storage tank</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Complete piping & distribution</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Basic water treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">2-year warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html" class="cta-button w-full premium-blue-gradient text-white py-4 rounded-xl font-semibold text-center block">
+                        Choose Standard
+                    </a>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="pricing-card bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Premium Package</h3>
+                        <p class="text-slate-600 mb-6">Complete solution for large properties</p>
+                        <div class="text-4xl font-black text-blue-600 mb-2">KSh 500K</div>
+                        <p class="text-slate-500">Complete premium setup</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Borehole drilling (up to 300m)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Solar-powered pump system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">5000L storage tank</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Advanced distribution system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Complete water treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">Backup generator</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-slate-600">5-year warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html" class="cta-button w-full bg-slate-800 text-white py-4 rounded-xl font-semibold text-center block">
+                        Choose Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Frequently Asked <span class="text-blue-600">Questions</span>
+                </h2>
+                <p class="text-xl text-slate-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Common questions about our water engineering services and solutions.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-slate-50 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">How long does borehole drilling take?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            Typically, borehole drilling takes 2-5 days depending on depth and ground conditions. 
+                            This includes site preparation, drilling, casing installation, and initial testing. 
+                            We provide daily progress updates throughout the process.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-slate-50 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">What warranty do you provide?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            We provide comprehensive warranties: 2 years for boreholes, 1-2 years for pumps, 
+                            and 5 years for solar systems. This covers equipment defects and workmanship. 
+                            Emergency support is available 24/7 during warranty period.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-slate-50 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">Do you provide maintenance services?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            Yes, we offer comprehensive maintenance packages including regular inspections, 
+                            pump servicing, system cleaning, and emergency repairs. Our maintenance contracts 
+                            ensure optimal performance and extend equipment lifespan.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-slate-50 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">What areas do you serve?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            We serve all 47 counties in Kenya and have expanded to Uganda and Tanzania. 
+                            Our main office is in Kapenguria, but we have mobile teams that can reach 
+                            any location within East Africa for project implementation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Service Banner -->
+    <section class="py-16 premium-blue-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20" data-aos="zoom-in">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    <i class="fas fa-exclamation-triangle text-yellow-400 mr-3"></i>
+                    24/7 Emergency Service
+                </h2>
+                <p class="text-xl text-blue-100 mb-6 leading-relaxed">
+                    Water system breakdown? Pump failure? We're here to help around the clock. 
+                    Our emergency response team is ready to restore your water supply quickly.
+                </p>
+                <a href="tel:+254713332124" class="cta-button bg-red-500 hover:bg-red-400 text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                    <i class="fas fa-phone mr-3"></i>Emergency: 0713 332 124
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 section-bg-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-8" data-aos="fade-up">
+                Ready to Start Your <span class="text-blue-600">Water Project</span>?
+            </h2>
+            <p class="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Get a free consultation and detailed quote for your water engineering needs. 
+                Our experts are ready to help you achieve reliable water solutions.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="contact.html" class="cta-button premium-blue-gradient text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                    <i class="fas fa-rocket mr-3"></i>Get Free Quote
+                </a>
+                <a href="projects.html" class="cta-button bg-slate-800 text-white px-12 py-5 rounded-2xl text-xl font-bold">
+                    <i class="fas fa-eye mr-3"></i>View Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-blue-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tint text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Fancy Drops</h3>
+                            <p class="text-blue-300 text-sm">Water Engineering Ltd</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 mb-6 leading-relaxed">Professional water engineering solutions for sustainable development across Kenya and East Africa.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-slate-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="careers.html" class="text-slate-300 hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#drilling" class="text-slate-300 hover:text-white transition-colors">Borehole Drilling</a></li>
+                        <li><a href="#survey" class="text-slate-300 hover:text-white transition-colors">Hydrogeological Survey</a></li>
+                        <li><a href="#pumps" class="text-slate-300 hover:text-white transition-colors">Water Pumps</a></li>
+                        <li><a href="#solar" class="text-slate-300 hover:text-white transition-colors">Solar Systems</a></li>
+                        <li><a href="#treatment" class="text-slate-300 hover:text-white transition-colors">Water Treatment</a></li>
+                        <li><a href="#generators" class="text-slate-300 hover:text-white transition-colors">Generators</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                            <span class="text-slate-300">Kapenguria, Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <a href="tel:+254713332124" class="text-slate-300 hover:text-white transition-colors">0713 332 124</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <a href="mailto:fancydropswatersystemsltd@gmail.com" class="text-slate-300 hover:text-white transition-colors">fancydropswatersystemsltd@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-blue-400"></i>
+                            <span class="text-slate-300">24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-600 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-slate-400 mb-4 md:mb-0">&copy; 2024 Fancy Drops Water Engineering Ltd. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fab fa-whatsapp" style="margin-top: 19px;"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-32 right-8 bg-slate-800 text-white p-4 rounded-full shadow-2xl hover:bg-slate-700 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const faqContent = faqItem.querySelector('.faq-content');
+                const icon = button.querySelector('i');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.querySelector('.faq-content').classList.remove('active');
+                        item.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current FAQ
+                faqContent.classList.toggle('active');
+                if (faqContent.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-2xl');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.classList.remove('shadow-2xl');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Page loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.8s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Service card hover effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-12px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Pricing card hover effects
+        document.querySelectorAll('.pricing-card:not(.featured)').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992b9128b34e6ae4',t:'MTc2MTE2MzA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
