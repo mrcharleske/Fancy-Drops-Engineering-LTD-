@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Fancy Drops Water Engineering Ltd | Our Success Stories & Portfolio</title>
-    <meta name="description" content="Explore our portfolio of 1000+ successful water engineering projects across Kenya. Case studies, client testimonials, and project galleries showcasing our expertise.">
+    <title>Contact Us - Fancy Drops Water Engineering Ltd | Get in Touch for Water Solutions</title>
+    <meta name="description" content="Contact Fancy Drops Water Engineering Ltd for professional water solutions. Call 0713 332 124, email us, or visit our Kapenguria office. 24/7 emergency service available.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,58 +59,28 @@
             50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
         }
         
-        .project-card {
+        .contact-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
             background: linear-gradient(white, white) padding-box, 
                         linear-gradient(135deg, #e0f2fe, #bfdbfe) border-box;
-            overflow: hidden;
         }
         
-        .project-card:hover {
+        .contact-card:hover {
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
             border: 2px solid #3b82f6;
         }
         
-        .project-image {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .project-card:hover .project-image::before {
-            opacity: 1;
-        }
-        
-        .testimonial-card {
+        .form-input {
             transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
         }
         
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
-        }
-        
-        .stats-counter {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .form-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            outline: none;
         }
         
         .cta-button {
@@ -188,42 +158,63 @@
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
         }
         
-        .filter-button {
-            transition: all 0.3s ease;
+        .office-marker {
+            position: relative;
+            display: inline-block;
         }
         
-        .filter-button.active {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            color: white;
+        .office-marker::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: ping 2s infinite;
         }
         
-        .star-rating {
-            color: #fbbf24;
+        @keyframes ping {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            75%, 100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
         }
         
-        .before-after {
+        .kenya-map {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid #3b82f6;
+            border-radius: 20px;
             position: relative;
             overflow: hidden;
-            border-radius: 1rem;
         }
         
-        .before-after::before {
-            content: 'BEFORE';
+        .kenya-map::before {
+            content: '';
             position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: rgba(239, 68, 68, 0.9);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            font-size: 0.875rem;
-            z-index: 10;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20,20 Q50,10 80,20 Q90,50 80,80 Q50,90 20,80 Q10,50 20,20 Z' fill='none' stroke='%233b82f6' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E") center/contain no-repeat;
         }
         
-        .before-after.after::before {
-            content: 'AFTER';
-            background: rgba(34, 197, 94, 0.9);
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .error-message {
+            display: none;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
         }
         
         @media (max-width: 768px) {
@@ -233,10 +224,6 @@
                 bottom: 20px;
                 right: 20px;
                 font-size: 28px;
-            }
-            
-            .stats-counter {
-                font-size: 2.5rem;
             }
         }
     </style>
@@ -261,8 +248,8 @@
                         <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Home</a>
                         <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">About</a>
                         <a href="services.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Services</a>
-                        <a href="projects.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-semibold">Projects</a>
-                        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Contact</a>
+                        <a href="projects.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Projects</a>
+                        <a href="contact.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-semibold">Contact</a>
                         <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl hover:shadow-lg font-semibold">
                             <i class="fas fa-phone mr-2"></i>Call Now
                         </a>
@@ -283,8 +270,8 @@
                 <a href="index.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Home</a>
                 <a href="about.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">About</a>
                 <a href="services.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Services</a>
-                <a href="projects.html" class="block px-3 py-2 text-blue-600 font-medium">Projects</a>
-                <a href="contact.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Contact</a>
+                <a href="projects.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
                 <a href="tel:+254713332124" class="block px-3 py-2 premium-blue-gradient text-white rounded-lg mx-3 text-center font-semibold">
                     <i class="fas fa-phone mr-2"></i>Call Now
                 </a>
@@ -298,509 +285,373 @@
             <div class="text-center text-white">
                 <div class="floating-animation mb-8" data-aos="zoom-in">
                     <div class="w-32 h-32 mx-auto premium-blue-gradient rounded-full flex items-center justify-center pulse-glow">
-                        <i class="fas fa-trophy text-5xl text-white"></i>
+                        <i class="fas fa-phone text-5xl text-white"></i>
                     </div>
                 </div>
                 
                 <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight" data-aos="fade-up">
-                    Our <span class="text-yellow-400">Success</span><br>
-                    <span class="text-cyan-300">Stories</span> & Projects
+                    Get in <span class="text-yellow-400">Touch</span><br>
+                    <span class="text-cyan-300">Today</span>
                 </h1>
                 
                 <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-blue-100 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    🏆 Explore our portfolio of 1000+ successful water engineering projects across Kenya. 
-                    Real results, satisfied clients, and transformative water solutions.
+                    📞 Ready to transform your water challenges into solutions? Contact our expert team for 
+                    professional consultation, emergency service, or project quotes. We're here 24/7!
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#projects" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl">
-                        <i class="fas fa-eye mr-3"></i>View Portfolio
+                    <a href="tel:+254713332124" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                        <i class="fas fa-phone mr-3"></i>Call: 0713 332 124
                     </a>
-                    <a href="contact.html" class="cta-button bg-cyan-500 hover:bg-cyan-400 text-white px-10 py-5 rounded-2xl text-xl font-bold">
-                        <i class="fas fa-handshake mr-3"></i>Start Your Project
+                    <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 hover:bg-green-400 text-white px-10 py-5 rounded-2xl text-xl font-bold">
+                        <i class="fab fa-whatsapp mr-3"></i>WhatsApp Us
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Statistics -->
+    <!-- Quick Contact Options -->
     <section class="py-24 section-bg-blue">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-20">
                 <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    Our <span class="text-blue-600">Impact</span> in Numbers
+                    Multiple Ways to <span class="text-blue-600">Reach Us</span>
                 </h2>
                 <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Measurable results that demonstrate our commitment to excellence and community impact.
+                    Choose your preferred method to connect with our water engineering experts.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Projects Completed -->
-                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                <!-- Phone Contact -->
+                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-check-circle text-3xl text-white"></i>
+                        <i class="fas fa-phone text-3xl text-white"></i>
                     </div>
-                    <div class="stats-counter" data-target="1000">0</div>
-                    <p class="text-slate-600 font-semibold text-lg">Projects Completed</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Call Us Direct</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Speak directly with our experts for immediate assistance and consultation.</p>
+                    <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
+                        <i class="fas fa-phone mr-2"></i>0713 332 124
+                    </a>
                 </div>
                 
-                <!-- Counties Served -->
-                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-map-marked-alt text-3xl text-white"></i>
+                <!-- WhatsApp Contact -->
+                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fab fa-whatsapp text-3xl text-white"></i>
                     </div>
-                    <div class="stats-counter" data-target="47">0</div>
-                    <p class="text-slate-600 font-semibold text-lg">Counties Served</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">WhatsApp Chat</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Quick messaging for quotes, photos, and instant communication.</p>
+                    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat Now
+                    </a>
                 </div>
                 
-                <!-- People Served -->
-                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-users text-3xl text-white"></i>
+                <!-- Email Contact -->
+                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-envelope text-3xl text-white"></i>
                     </div>
-                    <div class="stats-counter" data-target="500000">0</div>
-                    <p class="text-slate-600 font-semibold text-lg">People Served</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Email Us</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Send detailed project requirements and receive comprehensive proposals.</p>
+                    <a href="mailto:fancydropswatersystemsltd@gmail.com" class="cta-button bg-purple-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
+                        <i class="fas fa-envelope mr-2"></i>Send Email
+                    </a>
                 </div>
                 
-                <!-- Client Satisfaction -->
-                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-star text-3xl text-white"></i>
+                <!-- Emergency Contact -->
+                <div class="contact-card bg-white rounded-3xl p-8 text-center border-2 border-red-500" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-exclamation-triangle text-3xl text-white"></i>
                     </div>
-                    <div class="stats-counter" data-target="98">0</div>
-                    <p class="text-slate-600 font-semibold text-lg">% Client Satisfaction</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">24/7 Emergency</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Urgent water system failures? Our emergency team responds immediately.</p>
+                    <a href="tel:+254713332124" class="cta-button bg-red-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
+                        <i class="fas fa-ambulance mr-2"></i>Emergency Call
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    Featured <span class="text-blue-600">Projects</span>
-                </h2>
-                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Showcase of our most impactful water engineering projects across different sectors and regions.
-                </p>
-            </div>
-            
-            <!-- Project Filter -->
-            <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up" data-aos-delay="300">
-                <button class="filter-button active px-6 py-3 rounded-xl font-semibold border-2 border-blue-600 text-blue-600" data-filter="all">
-                    All Projects
-                </button>
-                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="borehole">
-                    Boreholes
-                </button>
-                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="solar">
-                    Solar Systems
-                </button>
-                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="treatment">
-                    Water Treatment
-                </button>
-                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="commercial">
-                    Commercial
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Project 1: Kapenguria Hospital -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole commercial" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-hospital text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Kapenguria County Hospital</h4>
-                            <p class="text-blue-100">200m Deep Borehole</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Healthcare</span>
-                            <span class="text-slate-500 text-sm">Completed 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Kapenguria County Hospital Water Supply</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            Complete water system installation including 200m borehole, solar pumping system, 
-                            and 10,000L storage capacity serving 500+ patients daily.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>West Pokot County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 2.5M</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2: Kitale Solar Farm -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="solar commercial" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-solar-panel text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Kitale Agricultural Farm</h4>
-                            <p class="text-blue-100">50kW Solar System</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Agriculture</span>
-                            <span class="text-slate-500 text-sm">Completed 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Large-Scale Solar Irrigation System</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            50kW solar-powered irrigation system covering 200 acres of farmland with 
-                            automated drip irrigation and remote monitoring capabilities.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>Trans-Nzoia County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 4.2M</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3: Eldoret Water Treatment -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="treatment commercial" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-filter text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Eldoret Industrial Complex</h4>
-                            <p class="text-blue-100">Advanced Treatment Plant</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Industrial</span>
-                            <span class="text-slate-500 text-sm">Completed 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Industrial Water Treatment Plant</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            Advanced water treatment facility processing 50,000L/day with reverse osmosis, 
-                            UV sterilization, and automated quality monitoring systems.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>Uasin Gishu County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 3.8M</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4: Lodwar Community -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-home text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Lodwar Community Project</h4>
-                            <p class="text-blue-100">Community Water Point</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Community</span>
-                            <span class="text-slate-500 text-sm">Completed 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Lodwar Community Water Access</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            Community borehole project serving 2,000+ residents with multiple water points, 
-                            solar pumping, and community management training program.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>Turkana County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 1.8M</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5: Nakuru School -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole solar" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-school text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Nakuru Girls High School</h4>
-                            <p class="text-blue-100">Solar Water System</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">Education</span>
-                            <span class="text-slate-500 text-sm">Completed 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">School Solar Water System</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            Complete water solution for 800 students including borehole, solar pumping, 
-                            elevated storage tanks, and distribution to dormitories and classrooms.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>Nakuru County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 2.1M</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6: Mombasa Resort -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="treatment commercial" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-image h-64 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-umbrella-beach text-6xl mb-4"></i>
-                            <h4 class="text-xl font-bold">Coastal Resort Complex</h4>
-                            <p class="text-blue-100">Desalination Plant</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-semibold">Hospitality</span>
-                            <span class="text-slate-500 text-sm">Completed 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Seawater Desalination System</h3>
-                        <p class="text-slate-600 mb-4 leading-relaxed">
-                            Advanced seawater desalination plant producing 20,000L/day of fresh water 
-                            for luxury resort with 200 rooms and recreational facilities.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm text-slate-500">
-                                <i class="fas fa-map-marker-alt mr-1"></i>Mombasa County
-                            </div>
-                            <div class="text-blue-600 font-semibold">KSh 5.5M</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Before & After Showcase -->
-    <section class="py-24 section-bg-blue">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    <span class="text-blue-600">Transformation</span> Stories
-                </h2>
-                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    See the dramatic impact of our water engineering solutions on communities and businesses.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <!-- Before/After 1 -->
-                <div data-aos="fade-right" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Rural Community Water Access</h3>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="before-after h-48 premium-blue-gradient flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-exclamation-triangle text-4xl mb-2"></i>
-                                <p class="font-semibold">No Water Access</p>
-                                <p class="text-sm text-blue-100">10km walk to nearest source</p>
-                            </div>
-                        </div>
-                        <div class="before-after after h-48 bg-green-500 flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-tint text-4xl mb-2"></i>
-                                <p class="font-semibold">Clean Water 24/7</p>
-                                <p class="text-sm text-green-100">Community borehole installed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Transformed a remote village in Turkana County from water scarcity to reliable access, 
-                        serving 1,500 residents with clean water and reducing water collection time from 6 hours to 10 minutes.
-                    </p>
-                </div>
-                
-                <!-- Before/After 2 -->
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Agricultural Productivity Boost</h3>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="before-after h-48 bg-yellow-600 flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-seedling text-4xl mb-2"></i>
-                                <p class="font-semibold">Rain-Dependent</p>
-                                <p class="text-sm text-yellow-100">1 harvest per year</p>
-                            </div>
-                        </div>
-                        <div class="before-after after h-48 bg-green-500 flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-leaf text-4xl mb-2"></i>
-                                <p class="font-semibold">Year-Round Farming</p>
-                                <p class="text-sm text-green-100">3 harvests per year</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Solar-powered irrigation system increased farm productivity by 300%, enabling year-round cultivation 
-                        and transforming 50 acres of farmland into a thriving agricultural enterprise.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Testimonials -->
+    <!-- Contact Forms -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
                 <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    What Our <span class="text-blue-600">Clients</span> Say
+                    Send Us a <span class="text-blue-600">Message</span>
                 </h2>
                 <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Real feedback from satisfied clients across Kenya who have experienced our exceptional service.
+                    Fill out the form below and we'll get back to you within 24 hours with a detailed response.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">Dr. Sarah Kimani</h4>
-                            <p class="text-slate-600">Hospital Administrator</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-slate-50 rounded-3xl p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6">Project Inquiry Form</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-semibold text-slate-700 mb-2">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-semibold text-slate-700 mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
+                                    <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="location" class="block text-sm font-semibold text-slate-700 mb-2">Project Location *</label>
+                                <input type="text" id="location" name="location" required placeholder="County, Town/Area" class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-semibold text-slate-700 mb-2">Service Required *</label>
+                                <select id="service" name="service" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                    <option value="">Select a service...</option>
+                                    <option value="borehole">Borehole Drilling</option>
+                                    <option value="survey">Hydrogeological Survey</option>
+                                    <option value="pumps">Water Pumps Installation</option>
+                                    <option value="solar">Solar Water Systems</option>
+                                    <option value="treatment">Water Treatment</option>
+                                    <option value="generators">Generator Systems</option>
+                                    <option value="maintenance">Maintenance & Repair</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="budget" class="block text-sm font-semibold text-slate-700 mb-2">Estimated Budget</label>
+                                <select id="budget" name="budget" class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                    <option value="">Select budget range...</option>
+                                    <option value="under-100k">Under KSh 100,000</option>
+                                    <option value="100k-300k">KSh 100,000 - 300,000</option>
+                                    <option value="300k-500k">KSh 300,000 - 500,000</option>
+                                    <option value="500k-1m">KSh 500,000 - 1,000,000</option>
+                                    <option value="over-1m">Over KSh 1,000,000</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="timeline" class="block text-sm font-semibold text-slate-700 mb-2">Project Timeline</label>
+                                <select id="timeline" name="timeline" class="form-input w-full px-4 py-3 rounded-xl bg-white">
+                                    <option value="">When do you need this completed?</option>
+                                    <option value="urgent">Urgent (Within 1 week)</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="3-months">Within 3 months</option>
+                                    <option value="6-months">Within 6 months</option>
+                                    <option value="flexible">Timeline is flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please describe your water engineering needs, current challenges, and any specific requirements..." class="form-input w-full px-4 py-3 rounded-xl bg-white resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold w-full">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Project Inquiry
+                            </button>
+                            
+                            <div id="successMessage" class="success-message">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Thank you! Your message has been sent successfully. We'll contact you within 24 hours.
+                            </div>
+                            
+                            <div id="errorMessage" class="error-message">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Sorry, there was an error sending your message. Please try calling us directly.
+                            </div>
+                        </form>
                     </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "Fancy Drops transformed our hospital's water supply completely. The solar system they installed 
-                        has been running flawlessly for 8 months, saving us thousands in electricity costs. 
-                        Professional service from start to finish!"
-                    </p>
                 </div>
                 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
+                <!-- Office Information -->
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <div class="space-y-8">
+                        <!-- Main Office -->
+                        <div class="bg-slate-50 rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Main Office</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Address</h4>
+                                        <p class="text-slate-600">Kapenguria Town<br>West Pokot County<br>Kenya</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-clock text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Business Hours</h4>
+                                        <p class="text-slate-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Emergency Only</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-ambulance text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Emergency Service</h4>
+                                        <p class="text-slate-600">24/7 Emergency Response<br>Water System Failures<br>Pump Breakdowns</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">John Mwangi</h4>
-                            <p class="text-slate-600">Farm Owner</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <!-- Service Coverage -->
+                        <div class="bg-slate-50 rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Service Coverage</h3>
+                            <div class="kenya-map h-64 flex items-center justify-center mb-6">
+                                <div class="text-center">
+                                    <div class="office-marker w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-map text-2xl text-white"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-800">All 47 Counties</h4>
+                                    <p class="text-slate-600">Kenya, Uganda & Tanzania</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 mb-2">Primary Coverage:</h5>
+                                    <ul class="text-slate-600 space-y-1">
+                                        <li>• West Pokot County</li>
+                                        <li>• Trans-Nzoia County</li>
+                                        <li>• Uasin Gishu County</li>
+                                        <li>• Turkana County</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 mb-2">Extended Coverage:</h5>
+                                    <ul class="text-slate-600 space-y-1">
+                                        <li>• All Kenya Counties</li>
+                                        <li>• Uganda (Selected)</li>
+                                        <li>• Tanzania (Selected)</li>
+                                        <li>• Mobile Teams Available</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="bg-slate-50 rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-500 transition-colors">
+                                    <i class="fab fa-facebook-f text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center hover:bg-blue-300 transition-colors">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <i class="fab fa-linkedin-in text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center hover:bg-pink-400 transition-colors">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </a>
+                                <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center hover:bg-green-400 transition-colors">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "The irrigation system has revolutionized my farming. From struggling with one harvest per year 
-                        to three successful harvests! My income has tripled. Fancy Drops delivered exactly what they promised."
-                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 section-bg-blue">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Contact <span class="text-blue-600">FAQs</span>
+                </h2>
+                <p class="text-xl text-slate-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Common questions about getting in touch and our response process.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">How quickly do you respond to inquiries?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            We respond to all inquiries within 24 hours during business days. For emergency situations, 
+                            we provide immediate response 24/7. WhatsApp messages are typically answered within 2-4 hours.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">Mary Chepkemoi</h4>
-                            <p class="text-slate-600">School Principal</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">Do you provide free consultations?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            Yes! We provide free initial consultations for all potential projects. This includes 
+                            site assessment, basic recommendations, and preliminary cost estimates. Detailed surveys 
+                            may have associated costs which we'll discuss upfront.
+                        </p>
                     </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "Our school now has reliable water for 800 students. The team was professional, completed on time, 
-                        and provided excellent training. The solar system works perfectly even during dry seasons."
-                    </p>
                 </div>
                 
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">Peter Lokwang</h4>
-                            <p class="text-slate-600">Community Leader</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">What information should I include in my inquiry?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            Please include: your location (county/town), type of service needed, current water challenges, 
+                            estimated budget, and timeline. Photos of your site or current water system are also helpful. 
+                            The more details you provide, the better we can assist you.
+                        </p>
                     </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "Before Fancy Drops, our women walked 10km for water. Now we have clean water in our village. 
-                        Children can go to school instead of fetching water. This project changed our entire community."
-                    </p>
                 </div>
                 
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">James Ochieng</h4>
-                            <p class="text-slate-600">Factory Manager</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-800">Do you travel to remote locations?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-slate-600 leading-relaxed">
+                            Absolutely! We serve all 47 counties in Kenya and have mobile teams equipped to reach 
+                            even the most remote locations. We also extend our services to selected areas in Uganda 
+                            and Tanzania. Travel costs are included in our project quotes.
+                        </p>
                     </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "The water treatment plant exceeded our expectations. Water quality is consistently excellent, 
-                        and the automated monitoring gives us peace of mind. Excellent technical support and maintenance."
-                    </p>
-                </div>
-                
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="600">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-2xl text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-800">Grace Wanjiku</h4>
-                            <p class="text-slate-600">Resort Owner</p>
-                            <div class="star-rating flex">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed italic">
-                        "The desalination system has been a game-changer for our coastal resort. Guests never experience 
-                        water shortages, and the system runs efficiently. Fancy Drops provided world-class engineering."
-                    </p>
                 </div>
             </div>
         </div>
@@ -811,19 +662,19 @@
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-5xl md:text-6xl font-black text-white mb-8" data-aos="fade-up">
-                Ready to Create Your <span class="text-yellow-400">Success Story</span>?
+                Don't Wait - <span class="text-yellow-400">Contact Us</span> Now!
             </h2>
             <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Join over 1,000 satisfied clients who have transformed their water challenges into success stories. 
-                Let's discuss your project and create lasting impact together.
+                Every day without reliable water is a day of missed opportunities. Let our experts solve your 
+                water challenges quickly and professionally. Get started today!
             </p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
-                <a href="contact.html" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
-                    <i class="fas fa-rocket mr-3"></i>Start Your Project
+                <a href="tel:+254713332124" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                    <i class="fas fa-phone mr-3"></i>Call: 0713 332 124
                 </a>
-                <a href="services.html" class="cta-button bg-white/20 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-blue-900 px-12 py-5 rounded-2xl text-xl font-bold">
-                    <i class="fas fa-cogs mr-3"></i>View Services
+                <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I%20need%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-2xl text-xl font-bold">
+                    <i class="fab fa-whatsapp mr-3"></i>WhatsApp Now
                 </a>
             </div>
         </div>
@@ -946,88 +797,61 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Project Filter
-        const filterButtons = document.querySelectorAll('.filter-button');
-        const projectItems = document.querySelectorAll('.project-item');
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.classList.add('border-slate-300', 'text-slate-600');
-                    btn.classList.remove('border-blue-600', 'text-white');
-                });
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                button.classList.remove('border-slate-300', 'text-slate-600');
-                
-                const filter = button.getAttribute('data-filter');
-                
-                // Filter projects
-                projectItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
-                        item.style.display = 'block';
-                        item.style.opacity = '0';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                        }, 100);
-                    } else {
-                        item.style.opacity = '0';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Stats counter animation
-        function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-target'));
-            const increment = target / 100;
-            let current = 0;
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    if (target >= 1000) {
-                        element.textContent = (target / 1000).toFixed(0) + 'K+';
-                    } else {
-                        element.textContent = target + (target === 98 ? '%' : '+');
-                    }
-                    clearInterval(timer);
-                } else {
-                    if (target >= 1000) {
-                        element.textContent = Math.floor(current / 1000) + 'K+';
-                    } else {
-                        element.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
-                    }
-                }
-            }, 20);
-        }
+            // Hide any previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission (replace with actual form handling)
+            setTimeout(() => {
+                // For demo purposes, we'll show success message
+                // In real implementation, you'd send data to your server
+                successMessage.style.display = 'block';
+                contactForm.reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1000);
+        });
 
-        // Intersection Observer for stats
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = entry.target.querySelectorAll('.stats-counter');
-                    counters.forEach(counter => {
-                        if (!counter.classList.contains('animated')) {
-                            counter.classList.add('animated');
-                            animateCounter(counter);
-                        }
-                    });
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const faqContent = faqItem.querySelector('.faq-content');
+                const icon = button.querySelector('i');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        const content = item.querySelector('.faq-content');
+                        const itemIcon = item.querySelector('i');
+                        content.style.maxHeight = '0';
+                        itemIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current FAQ
+                if (faqContent.style.maxHeight === '200px') {
+                    faqContent.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    faqContent.style.maxHeight = '200px';
+                    icon.style.transform = 'rotate(180deg)';
                 }
             });
         });
-
-        // Observe stats section
-        const statsSection = document.querySelector('.stats-counter');
-        if (statsSection) {
-            statsObserver.observe(statsSection.closest('section'));
-        }
 
         // Back to top button
         const backToTopButton = document.getElementById('backToTop');
@@ -1085,8 +909,8 @@
             }, 100);
         });
 
-        // Project card hover effects
-        document.querySelectorAll('.project-card').forEach(card => {
+        // Contact card hover effects
+        document.querySelectorAll('.contact-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-12px) scale(1.02)';
             });
@@ -1096,16 +920,16 @@
             });
         });
 
-        // Testimonial card hover effects
-        document.querySelectorAll('.testimonial-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-8px)';
+        // Form input focus effects
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.style.transform = 'scale(1.02)';
             });
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
+            input.addEventListener('blur', () => {
+                input.style.transform = 'scale(1)';
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992b9e3210576ae4',t:'MTc2MTE2MzYxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992ba63983836ae4',t:'MTc2MTE2Mzk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
