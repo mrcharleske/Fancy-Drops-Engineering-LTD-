@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Fancy Drops Water Engineering Ltd | Our Success Stories & Portfolio</title>
+    <meta name="description" content="Explore our portfolio of 1000+ successful water engineering projects across Kenya. Case studies, client testimonials, and project galleries showcasing our expertise.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
+        }
+        
+        .premium-blue-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .dark-blue-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .section-bg-blue {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, 
+                        linear-gradient(135deg, #e0f2fe, #bfdbfe) border-box;
+            overflow: hidden;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+            border: 2px solid #3b82f6;
+        }
+        
+        .project-image {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-image::before {
+            opacity: 1;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+        }
+        
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+        
+        .filter-button {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button.active {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        
+        .before-after::before {
+            content: 'BEFORE';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            font-size: 0.875rem;
+            z-index: 10;
+        }
+        
+        .before-after.after::before {
+            content: 'AFTER';
+            background: rgba(34, 197, 94, 0.9);
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 28px;
+            }
+            
+            .stats-counter {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-tint text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-800">Fancy Drops Water Engineering Ltd</h1>
+                        <p class="text-sm text-blue-600 font-medium">Professional Water Solutions</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Home</a>
+                        <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">About</a>
+                        <a href="services.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Services</a>
+                        <a href="projects.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-semibold">Projects</a>
+                        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Contact</a>
+                        <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl hover:shadow-lg font-semibold">
+                            <i class="fas fa-phone mr-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-800 hover:text-blue-600 p-2 rounded-lg border border-slate-300 bg-white shadow-sm">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-blue-600 font-medium">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Contact</a>
+                <a href="tel:+254713332124" class="block px-3 py-2 premium-blue-gradient text-white rounded-lg mx-3 text-center font-semibold">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-20 hero-gradient overflow-hidden">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="text-center text-white">
+                <div class="floating-animation mb-8" data-aos="zoom-in">
+                    <div class="w-32 h-32 mx-auto premium-blue-gradient rounded-full flex items-center justify-center pulse-glow">
+                        <i class="fas fa-trophy text-5xl text-white"></i>
+                    </div>
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight" data-aos="fade-up">
+                    Our <span class="text-yellow-400">Success</span><br>
+                    <span class="text-cyan-300">Stories</span> & Projects
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-blue-100 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    🏆 Explore our portfolio of 1000+ successful water engineering projects across Kenya. 
+                    Real results, satisfied clients, and transformative water solutions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                        <i class="fas fa-eye mr-3"></i>View Portfolio
+                    </a>
+                    <a href="contact.html" class="cta-button bg-cyan-500 hover:bg-cyan-400 text-white px-10 py-5 rounded-2xl text-xl font-bold">
+                        <i class="fas fa-handshake mr-3"></i>Start Your Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="py-24 section-bg-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Our <span class="text-blue-600">Impact</span> in Numbers
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Measurable results that demonstrate our commitment to excellence and community impact.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Projects Completed -->
+                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-check-circle text-3xl text-white"></i>
+                    </div>
+                    <div class="stats-counter" data-target="1000">0</div>
+                    <p class="text-slate-600 font-semibold text-lg">Projects Completed</p>
+                </div>
+                
+                <!-- Counties Served -->
+                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-map-marked-alt text-3xl text-white"></i>
+                    </div>
+                    <div class="stats-counter" data-target="47">0</div>
+                    <p class="text-slate-600 font-semibold text-lg">Counties Served</p>
+                </div>
+                
+                <!-- People Served -->
+                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <div class="stats-counter" data-target="500000">0</div>
+                    <p class="text-slate-600 font-semibold text-lg">People Served</p>
+                </div>
+                
+                <!-- Client Satisfaction -->
+                <div class="text-center bg-white rounded-3xl p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-star text-3xl text-white"></i>
+                    </div>
+                    <div class="stats-counter" data-target="98">0</div>
+                    <p class="text-slate-600 font-semibold text-lg">% Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    Featured <span class="text-blue-600">Projects</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Showcase of our most impactful water engineering projects across different sectors and regions.
+                </p>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up" data-aos-delay="300">
+                <button class="filter-button active px-6 py-3 rounded-xl font-semibold border-2 border-blue-600 text-blue-600" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="borehole">
+                    Boreholes
+                </button>
+                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="solar">
+                    Solar Systems
+                </button>
+                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="treatment">
+                    Water Treatment
+                </button>
+                <button class="filter-button px-6 py-3 rounded-xl font-semibold border-2 border-slate-300 text-slate-600" data-filter="commercial">
+                    Commercial
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project 1: Kapenguria Hospital -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole commercial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-hospital text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Kapenguria County Hospital</h4>
+                            <p class="text-blue-100">200m Deep Borehole</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Healthcare</span>
+                            <span class="text-slate-500 text-sm">Completed 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Kapenguria County Hospital Water Supply</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Complete water system installation including 200m borehole, solar pumping system, 
+                            and 10,000L storage capacity serving 500+ patients daily.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>West Pokot County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 2.5M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Kitale Solar Farm -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="solar commercial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-solar-panel text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Kitale Agricultural Farm</h4>
+                            <p class="text-blue-100">50kW Solar System</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Agriculture</span>
+                            <span class="text-slate-500 text-sm">Completed 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Large-Scale Solar Irrigation System</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            50kW solar-powered irrigation system covering 200 acres of farmland with 
+                            automated drip irrigation and remote monitoring capabilities.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Trans-Nzoia County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 4.2M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Eldoret Water Treatment -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="treatment commercial" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-filter text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Eldoret Industrial Complex</h4>
+                            <p class="text-blue-100">Advanced Treatment Plant</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Industrial</span>
+                            <span class="text-slate-500 text-sm">Completed 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Industrial Water Treatment Plant</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Advanced water treatment facility processing 50,000L/day with reverse osmosis, 
+                            UV sterilization, and automated quality monitoring systems.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Uasin Gishu County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 3.8M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Lodwar Community -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-home text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Lodwar Community Project</h4>
+                            <p class="text-blue-100">Community Water Point</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Community</span>
+                            <span class="text-slate-500 text-sm">Completed 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Lodwar Community Water Access</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Community borehole project serving 2,000+ residents with multiple water points, 
+                            solar pumping, and community management training program.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Turkana County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 1.8M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Nakuru School -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="borehole solar" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-school text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Nakuru Girls High School</h4>
+                            <p class="text-blue-100">Solar Water System</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">Education</span>
+                            <span class="text-slate-500 text-sm">Completed 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">School Solar Water System</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Complete water solution for 800 students including borehole, solar pumping, 
+                            elevated storage tanks, and distribution to dormitories and classrooms.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Nakuru County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 2.1M</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Mombasa Resort -->
+                <div class="project-card bg-white rounded-3xl overflow-hidden project-item" data-category="treatment commercial" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-umbrella-beach text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold">Coastal Resort Complex</h4>
+                            <p class="text-blue-100">Desalination Plant</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-semibold">Hospitality</span>
+                            <span class="text-slate-500 text-sm">Completed 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Seawater Desalination System</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Advanced seawater desalination plant producing 20,000L/day of fresh water 
+                            for luxury resort with 200 rooms and recreational facilities.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-slate-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Mombasa County
+                            </div>
+                            <div class="text-blue-600 font-semibold">KSh 5.5M</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Showcase -->
+    <section class="py-24 section-bg-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    <span class="text-blue-600">Transformation</span> Stories
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    See the dramatic impact of our water engineering solutions on communities and businesses.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Before/After 1 -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Rural Community Water Access</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="before-after h-48 premium-blue-gradient flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-exclamation-triangle text-4xl mb-2"></i>
+                                <p class="font-semibold">No Water Access</p>
+                                <p class="text-sm text-blue-100">10km walk to nearest source</p>
+                            </div>
+                        </div>
+                        <div class="before-after after h-48 bg-green-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-tint text-4xl mb-2"></i>
+                                <p class="font-semibold">Clean Water 24/7</p>
+                                <p class="text-sm text-green-100">Community borehole installed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Transformed a remote village in Turkana County from water scarcity to reliable access, 
+                        serving 1,500 residents with clean water and reducing water collection time from 6 hours to 10 minutes.
+                    </p>
+                </div>
+                
+                <!-- Before/After 2 -->
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Agricultural Productivity Boost</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="before-after h-48 bg-yellow-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-seedling text-4xl mb-2"></i>
+                                <p class="font-semibold">Rain-Dependent</p>
+                                <p class="text-sm text-yellow-100">1 harvest per year</p>
+                            </div>
+                        </div>
+                        <div class="before-after after h-48 bg-green-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-leaf text-4xl mb-2"></i>
+                                <p class="font-semibold">Year-Round Farming</p>
+                                <p class="text-sm text-green-100">3 harvests per year</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Solar-powered irrigation system increased farm productivity by 300%, enabling year-round cultivation 
+                        and transforming 50 acres of farmland into a thriving agricultural enterprise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
+                    What Our <span class="text-blue-600">Clients</span> Say
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Real feedback from satisfied clients across Kenya who have experienced our exceptional service.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">Dr. Sarah Kimani</h4>
+                            <p class="text-slate-600">Hospital Administrator</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "Fancy Drops transformed our hospital's water supply completely. The solar system they installed 
+                        has been running flawlessly for 8 months, saving us thousands in electricity costs. 
+                        Professional service from start to finish!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">John Mwangi</h4>
+                            <p class="text-slate-600">Farm Owner</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "The irrigation system has revolutionized my farming. From struggling with one harvest per year 
+                        to three successful harvests! My income has tripled. Fancy Drops delivered exactly what they promised."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">Mary Chepkemoi</h4>
+                            <p class="text-slate-600">School Principal</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "Our school now has reliable water for 800 students. The team was professional, completed on time, 
+                        and provided excellent training. The solar system works perfectly even during dry seasons."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">Peter Lokwang</h4>
+                            <p class="text-slate-600">Community Leader</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "Before Fancy Drops, our women walked 10km for water. Now we have clean water in our village. 
+                        Children can go to school instead of fetching water. This project changed our entire community."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">James Ochieng</h4>
+                            <p class="text-slate-600">Factory Manager</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "The water treatment plant exceeded our expectations. Water quality is consistently excellent, 
+                        and the automated monitoring gives us peace of mind. Excellent technical support and maintenance."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">Grace Wanjiku</h4>
+                            <p class="text-slate-600">Resort Owner</p>
+                            <div class="star-rating flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "The desalination system has been a game-changer for our coastal resort. Guests never experience 
+                        water shortages, and the system runs efficiently. Fancy Drops provided world-class engineering."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 premium-blue-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-8" data-aos="fade-up">
+                Ready to Create Your <span class="text-yellow-400">Success Story</span>?
+            </h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Join over 1,000 satisfied clients who have transformed their water challenges into success stories. 
+                Let's discuss your project and create lasting impact together.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="contact.html" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
+                    <i class="fas fa-rocket mr-3"></i>Start Your Project
+                </a>
+                <a href="services.html" class="cta-button bg-white/20 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-blue-900 px-12 py-5 rounded-2xl text-xl font-bold">
+                    <i class="fas fa-cogs mr-3"></i>View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-blue-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tint text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Fancy Drops</h3>
+                            <p class="text-blue-300 text-sm">Water Engineering Ltd</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 mb-6 leading-relaxed">Professional water engineering solutions for sustainable development across Kenya and East Africa.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-slate-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="careers.html" class="text-slate-300 hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#drilling" class="text-slate-300 hover:text-white transition-colors">Borehole Drilling</a></li>
+                        <li><a href="services.html#survey" class="text-slate-300 hover:text-white transition-colors">Hydrogeological Survey</a></li>
+                        <li><a href="services.html#pumps" class="text-slate-300 hover:text-white transition-colors">Water Pumps</a></li>
+                        <li><a href="services.html#solar" class="text-slate-300 hover:text-white transition-colors">Solar Systems</a></li>
+                        <li><a href="services.html#treatment" class="text-slate-300 hover:text-white transition-colors">Water Treatment</a></li>
+                        <li><a href="services.html#generators" class="text-slate-300 hover:text-white transition-colors">Generators</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-blue-300">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                            <span class="text-slate-300">Kapenguria, Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <a href="tel:+254713332124" class="text-slate-300 hover:text-white transition-colors">0713 332 124</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <a href="mailto:fancydropswatersystemsltd@gmail.com" class="text-slate-300 hover:text-white transition-colors">fancydropswatersystemsltd@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-blue-400"></i>
+                            <span class="text-slate-300">24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-600 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-slate-400 mb-4 md:mb-0">&copy; 2024 Fancy Drops Water Engineering Ltd. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fab fa-whatsapp" style="margin-top: 19px;"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-32 right-8 bg-slate-800 text-white p-4 rounded-full shadow-2xl hover:bg-slate-700 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Project Filter
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.add('border-slate-300', 'text-slate-600');
+                    btn.classList.remove('border-blue-600', 'text-white');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                button.classList.remove('border-slate-300', 'text-slate-600');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Filter projects
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                        item.style.display = 'block';
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    if (target >= 1000) {
+                        element.textContent = (target / 1000).toFixed(0) + 'K+';
+                    } else {
+                        element.textContent = target + (target === 98 ? '%' : '+');
+                    }
+                    clearInterval(timer);
+                } else {
+                    if (target >= 1000) {
+                        element.textContent = Math.floor(current / 1000) + 'K+';
+                    } else {
+                        element.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                    }
+                }
+            }, 20);
+        }
+
+        // Intersection Observer for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stats-counter');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Observe stats section
+        const statsSection = document.querySelector('.stats-counter');
+        if (statsSection) {
+            statsObserver.observe(statsSection.closest('section'));
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-2xl');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.classList.remove('shadow-2xl');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Page loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.8s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Project card hover effects
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-12px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Testimonial card hover effects
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992b9e3210576ae4',t:'MTc2MTE2MzYxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
