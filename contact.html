@@ -1,935 +1,1163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Fancy Drops Water Engineering Ltd | Get in Touch for Water Solutions</title>
-    <meta name="description" content="Contact Fancy Drops Water Engineering Ltd for professional water solutions. Call 0713 332 124, email us, or visit our Kapenguria office. 24/7 emergency service available.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Fancy Drops Water Engineering Limited</title>
+  <link rel="icon" type="image/png" href="faviconlogo.png">
+  <meta name="description" content="Get in touch with Fancy Drops Water Engineering Limited. Contact us for water engineering solutions, borehole drilling, solar systems, and water treatment services in Kenya.">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
         }
-        
-        .premium-blue-gradient {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
         }
-        
-        .dark-blue-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+
+        /* Color Palette */
+        :root {
+            --deep-blue: #1e40af;
+            --sky-blue: #3b82f6;
+            --white: #ffffff;
+            --light-blue: #f0f9ff;
+            --accent-orange: #f97316;
+            --charcoal: #1f2937;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --error-red: #ef4444;
         }
-        
-        .section-bg-blue {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
+
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+            background: rgba(255, 255, 255, 0.98);
         }
-        
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--deep-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-5px); }
         }
-        
-        .pulse-glow {
-            animation: pulseGlow 2s infinite;
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
         }
-        
-        .contact-card {
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--accent-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-            background: linear-gradient(white, white) padding-box, 
-                        linear-gradient(135deg, #e0f2fe, #bfdbfe) border-box;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
-            border: 2px solid #3b82f6;
-        }
-        
-        .form-input {
-            transition: all 0.3s ease;
-            border: 2px solid #e2e8f0;
-        }
-        
-        .form-input:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-            outline: none;
-        }
-        
-        .cta-button {
-            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
             position: relative;
             overflow: hidden;
         }
         
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
+        .btn:active {
+            transform: scale(0.95);
         }
-        
-        .cta-button:hover::before {
-            left: 100%;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
-        }
-        
-        .nav-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -8px;
-            left: 0;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            transition: width 0.3s ease;
-            border-radius: 2px;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            width: 70px;
-            height: 70px;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: #FFF;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-            z-index: 100;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.15);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
-        }
-        
-        .office-marker {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .office-marker::before {
+
+        .btn::before {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background: #3b82f6;
+            width: 0;
+            height: 0;
             border-radius: 50%;
-            animation: ping 2s infinite;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
         }
-        
-        @keyframes ping {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            75%, 100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
         }
-        
-        .kenya-map {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border: 2px solid #3b82f6;
-            border-radius: 20px;
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 64, 175, 0.85) 50%, rgba(59, 130, 246, 0.8) 100%),
+                        url('contact-hero.jpg') center/cover;
+            color: var(--white);
+            padding: 10rem 3rem 6rem;
+            text-align: center;
             position: relative;
             overflow: hidden;
+            margin-top: 80px;
+            min-height: 50%;
         }
-        
-        .kenya-map::before {
+
+        .page-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20,20 Q50,10 80,20 Q90,50 80,80 Q50,90 20,80 Q10,50 20,20 Z' fill='none' stroke='%233b82f6' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E") center/contain no-repeat;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.2) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
         }
-        
-        .success-message {
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeUpHero 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeUpHero {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        /* Contact Info Cards */
+        .contact-info-section {
+            background: var(--white);
+            padding: 4rem 3rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .info-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.3);
+        }
+
+        .info-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .info-card a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .info-card a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Main Contact Section */
+        .main-contact-section {
+            padding: 6rem 3rem;
+            background: var(--light-blue);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-form-container.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-form-container h2 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .contact-form-container p {
+            color: var(--charcoal);
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+            font-size: 1.05rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--sky-blue);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
             display: none;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 1rem;
-            border-radius: 0.75rem;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 2px solid var(--success-green);
+        }
+
+        .message.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 2px solid var(--error-red);
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        /* Map & Info Container */
+        .map-info-container {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .map-info-container.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .map-container {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            height: 400px;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .map-placeholder-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-placeholder a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 700;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* Additional Info Cards */
+        .additional-info {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .additional-info h3 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .info-item {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item h4 {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .info-item p {
+            color: var(--charcoal);
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 3rem;
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .faq-header h2 {
+            color: var(--deep-blue);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .faq-header p {
+            color: var(--charcoal);
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .faq-item {
+            background: var(--light-blue);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .faq-item:hover {
+            border-color: var(--sky-blue);
+        }
+
+        .faq-question {
+            padding: 1.8rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 2rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.8rem;
+        }
+
+        .faq-answer p {
+            color: var(--charcoal);
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
             margin-top: 1rem;
         }
-        
-        .error-message {
-            display: none;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            color: white;
-            padding: 1rem;
-            border-radius: 0.75rem;
-            margin-top: 1rem;
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
         }
-        
+
+        .social-link:hover {
+            background: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
         @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 60px;
-                height: 60px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 28px;
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .cta-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .page-hero {
+                padding: 6rem 1.5rem 4rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container,
+            .map-info-container {
+                transform: none;
+            }
+
+            .faq-header h2 {
+                font-size: 2rem;
             }
         }
     </style>
-</head>
-<body class="bg-slate-50">
-    <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-blue-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4">
-                        <i class="fas fa-tint text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-slate-800">Fancy Drops Water Engineering Ltd</h1>
-                        <p class="text-sm text-blue-600 font-medium">Professional Water Solutions</p>
-                    </div>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Home</a>
-                        <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">About</a>
-                        <a href="services.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Services</a>
-                        <a href="projects.html" class="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold">Projects</a>
-                        <a href="contact.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-semibold">Contact</a>
-                        <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl hover:shadow-lg font-semibold">
-                            <i class="fas fa-phone mr-2"></i>Call Now
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-slate-800 hover:text-blue-600 p-2 rounded-lg border border-slate-300 bg-white shadow-sm">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div><!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container"><a href="index.html" class="logo"> <img src="logo.png" alt="Fancy Drops Logo" class="logo-icon" onerror="this.style.display='none';"> <span>Fancy Drops</span> </a> <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="btn btn-secondary">📞 Call</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-primary">💬 WhatsApp</a>
+    </div>
+   </div>
+  </nav><!-- Page Hero -->
+  <section class="page-hero">
+   <div class="page-hero-content">
+    <h1>Get In Touch</h1>
+    <p>Ready to start your water engineering project? We're here to help! Contact us today for a free consultation and quote.</p>
+   </div>
+  </section><!-- Contact Info Cards -->
+  <section class="contact-info-section">
+   <div class="contact-info-container">
+    <div class="info-card" data-animate style="transition-delay: 0.1s"><span class="info-icon">📞</span>
+     <h3>Call Us</h3>
+     <p><a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>Mon - Sat: 8:00 AM - 6:00 PM<br>
+      Sunday: Emergency Only</p>
+    </div>
+    <div class="info-card" data-animate style="transition-delay: 0.2s"><span class="info-icon">✉️</span>
+     <h3>Email Us</h3>
+     <p><a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>We respond within 24 hours</p>
+    </div>
+    <div class="info-card" data-animate style="transition-delay: 0.3s"><span class="info-icon">📍</span>
+     <h3>Visit Us</h3>
+     <p>Kapenguria Town<br>
+      West Pokot County<br>
+      Kenya</p>
+    </div>
+    <div class="info-card" data-animate style="transition-delay: 0.4s"><span class="info-icon">💬</span>
+     <h3>WhatsApp</h3>
+     <p><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">Chat with us instantly</a></p>
+     <p>Fast response guaranteed</p>
+    </div>
+   </div>
+  </section><!-- Main Contact Section -->
+  <section class="main-contact-section">
+   <div class="container">
+    <div class="contact-grid"><!-- Contact Form -->
+     <div class="contact-form-container" data-animate>
+      <h2>Send Us a Message</h2>
+      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+      <div id="formMessage" class="message"></div>
+      <form id="contactForm">
+       <div class="form-row">
+        <div class="form-group"><label for="firstName">First Name *</label> <input type="text" id="firstName" name="firstName" required>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-blue-100">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">About</a>
-                <a href="services.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Services</a>
-                <a href="projects.html" class="block px-3 py-2 text-slate-800 hover:text-blue-600 font-medium">Projects</a>
-                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
-                <a href="tel:+254713332124" class="block px-3 py-2 premium-blue-gradient text-white rounded-lg mx-3 text-center font-semibold">
-                    <i class="fas fa-phone mr-2"></i>Call Now
-                </a>
-            </div>
+        <div class="form-group"><label for="lastName">Last Name *</label> <input type="text" id="lastName" name="lastName" required>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen pt-20 hero-gradient overflow-hidden">
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <div class="text-center text-white">
-                <div class="floating-animation mb-8" data-aos="zoom-in">
-                    <div class="w-32 h-32 mx-auto premium-blue-gradient rounded-full flex items-center justify-center pulse-glow">
-                        <i class="fas fa-phone text-5xl text-white"></i>
-                    </div>
-                </div>
-                
-                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight" data-aos="fade-up">
-                    Get in <span class="text-yellow-400">Touch</span><br>
-                    <span class="text-cyan-300">Today</span>
-                </h1>
-                
-                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-blue-100 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    📞 Ready to transform your water challenges into solutions? Contact our expert team for 
-                    professional consultation, emergency service, or project quotes. We're here 24/7!
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
-                    <a href="tel:+254713332124" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl">
-                        <i class="fas fa-phone mr-3"></i>Call: 0713 332 124
-                    </a>
-                    <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 hover:bg-green-400 text-white px-10 py-5 rounded-2xl text-xl font-bold">
-                        <i class="fab fa-whatsapp mr-3"></i>WhatsApp Us
-                    </a>
-                </div>
-            </div>
+       </div>
+       <div class="form-row">
+        <div class="form-group"><label for="email">Email Address *</label> <input type="email" id="email" name="email" required>
         </div>
-    </section>
-
-    <!-- Quick Contact Options -->
-    <section class="py-24 section-bg-blue">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    Multiple Ways to <span class="text-blue-600">Reach Us</span>
-                </h2>
-                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Choose your preferred method to connect with our water engineering experts.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Phone Contact -->
-                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-20 h-20 premium-blue-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-phone text-3xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">Call Us Direct</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Speak directly with our experts for immediate assistance and consultation.</p>
-                    <a href="tel:+254713332124" class="cta-button premium-blue-gradient text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
-                        <i class="fas fa-phone mr-2"></i>0713 332 124
-                    </a>
-                </div>
-                
-                <!-- WhatsApp Contact -->
-                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fab fa-whatsapp text-3xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">WhatsApp Chat</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Quick messaging for quotes, photos, and instant communication.</p>
-                    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
-                        <i class="fab fa-whatsapp mr-2"></i>Chat Now
-                    </a>
-                </div>
-                
-                <!-- Email Contact -->
-                <div class="contact-card bg-white rounded-3xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-envelope text-3xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">Email Us</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Send detailed project requirements and receive comprehensive proposals.</p>
-                    <a href="mailto:fancydropswatersystemsltd@gmail.com" class="cta-button bg-purple-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
-                        <i class="fas fa-envelope mr-2"></i>Send Email
-                    </a>
-                </div>
-                
-                <!-- Emergency Contact -->
-                <div class="contact-card bg-white rounded-3xl p-8 text-center border-2 border-red-500" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <i class="fas fa-exclamation-triangle text-3xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">24/7 Emergency</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Urgent water system failures? Our emergency team responds immediately.</p>
-                    <a href="tel:+254713332124" class="cta-button bg-red-500 text-white px-6 py-3 rounded-xl font-semibold inline-block w-full">
-                        <i class="fas fa-ambulance mr-2"></i>Emergency Call
-                    </a>
-                </div>
-            </div>
+        <div class="form-group"><label for="phone">Phone Number *</label> <input type="tel" id="phone" name="phone" required>
         </div>
-    </section>
-
-    <!-- Contact Forms -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    Send Us a <span class="text-blue-600">Message</span>
-                </h2>
-                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Fill out the form below and we'll get back to you within 24 hours with a detailed response.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
-                <div data-aos="fade-right" data-aos-delay="100">
-                    <div class="bg-slate-50 rounded-3xl p-8">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6">Project Inquiry Form</h3>
-                        <form id="contactForm" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="firstName" class="block text-sm font-semibold text-slate-700 mb-2">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                </div>
-                                <div>
-                                    <label for="lastName" class="block text-sm font-semibold text-slate-700 mb-2">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-                                    <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="location" class="block text-sm font-semibold text-slate-700 mb-2">Project Location *</label>
-                                <input type="text" id="location" name="location" required placeholder="County, Town/Area" class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                            </div>
-                            
-                            <div>
-                                <label for="service" class="block text-sm font-semibold text-slate-700 mb-2">Service Required *</label>
-                                <select id="service" name="service" required class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                    <option value="">Select a service...</option>
-                                    <option value="borehole">Borehole Drilling</option>
-                                    <option value="survey">Hydrogeological Survey</option>
-                                    <option value="pumps">Water Pumps Installation</option>
-                                    <option value="solar">Solar Water Systems</option>
-                                    <option value="treatment">Water Treatment</option>
-                                    <option value="generators">Generator Systems</option>
-                                    <option value="maintenance">Maintenance & Repair</option>
-                                    <option value="consultation">General Consultation</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="budget" class="block text-sm font-semibold text-slate-700 mb-2">Estimated Budget</label>
-                                <select id="budget" name="budget" class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                    <option value="">Select budget range...</option>
-                                    <option value="under-100k">Under KSh 100,000</option>
-                                    <option value="100k-300k">KSh 100,000 - 300,000</option>
-                                    <option value="300k-500k">KSh 300,000 - 500,000</option>
-                                    <option value="500k-1m">KSh 500,000 - 1,000,000</option>
-                                    <option value="over-1m">Over KSh 1,000,000</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="timeline" class="block text-sm font-semibold text-slate-700 mb-2">Project Timeline</label>
-                                <select id="timeline" name="timeline" class="form-input w-full px-4 py-3 rounded-xl bg-white">
-                                    <option value="">When do you need this completed?</option>
-                                    <option value="urgent">Urgent (Within 1 week)</option>
-                                    <option value="1-month">Within 1 month</option>
-                                    <option value="3-months">Within 3 months</option>
-                                    <option value="6-months">Within 6 months</option>
-                                    <option value="flexible">Timeline is flexible</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">Project Details *</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Please describe your water engineering needs, current challenges, and any specific requirements..." class="form-input w-full px-4 py-3 rounded-xl bg-white resize-none"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="cta-button premium-blue-gradient text-white px-8 py-4 rounded-xl font-semibold w-full">
-                                <i class="fas fa-paper-plane mr-2"></i>Send Project Inquiry
-                            </button>
-                            
-                            <div id="successMessage" class="success-message">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                Thank you! Your message has been sent successfully. We'll contact you within 24 hours.
-                            </div>
-                            
-                            <div id="errorMessage" class="error-message">
-                                <i class="fas fa-exclamation-triangle mr-2"></i>
-                                Sorry, there was an error sending your message. Please try calling us directly.
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-                <!-- Office Information -->
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <div class="space-y-8">
-                        <!-- Main Office -->
-                        <div class="bg-slate-50 rounded-3xl p-8">
-                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Main Office</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-slate-800">Address</h4>
-                                        <p class="text-slate-600">Kapenguria Town<br>West Pokot County<br>Kenya</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 premium-blue-gradient rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-clock text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-slate-800">Business Hours</h4>
-                                        <p class="text-slate-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Emergency Only</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-ambulance text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-slate-800">Emergency Service</h4>
-                                        <p class="text-slate-600">24/7 Emergency Response<br>Water System Failures<br>Pump Breakdowns</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Service Coverage -->
-                        <div class="bg-slate-50 rounded-3xl p-8">
-                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Service Coverage</h3>
-                            <div class="kenya-map h-64 flex items-center justify-center mb-6">
-                                <div class="text-center">
-                                    <div class="office-marker w-16 h-16 premium-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <i class="fas fa-map text-2xl text-white"></i>
-                                    </div>
-                                    <h4 class="text-lg font-bold text-slate-800">All 47 Counties</h4>
-                                    <p class="text-slate-600">Kenya, Uganda & Tanzania</p>
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <h5 class="font-semibold text-slate-800 mb-2">Primary Coverage:</h5>
-                                    <ul class="text-slate-600 space-y-1">
-                                        <li>• West Pokot County</li>
-                                        <li>• Trans-Nzoia County</li>
-                                        <li>• Uasin Gishu County</li>
-                                        <li>• Turkana County</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h5 class="font-semibold text-slate-800 mb-2">Extended Coverage:</h5>
-                                    <ul class="text-slate-600 space-y-1">
-                                        <li>• All Kenya Counties</li>
-                                        <li>• Uganda (Selected)</li>
-                                        <li>• Tanzania (Selected)</li>
-                                        <li>• Mobile Teams Available</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Social Media -->
-                        <div class="bg-slate-50 rounded-3xl p-8">
-                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Follow Us</h3>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-500 transition-colors">
-                                    <i class="fab fa-facebook-f text-white"></i>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center hover:bg-blue-300 transition-colors">
-                                    <i class="fab fa-twitter text-white"></i>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
-                                    <i class="fab fa-linkedin-in text-white"></i>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center hover:bg-pink-400 transition-colors">
-                                    <i class="fab fa-instagram text-white"></i>
-                                </a>
-                                <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center hover:bg-green-400 transition-colors">
-                                    <i class="fab fa-whatsapp text-white"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-24 section-bg-blue">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-slate-800 mb-6" data-aos="fade-up">
-                    Contact <span class="text-blue-600">FAQs</span>
-                </h2>
-                <p class="text-xl text-slate-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    Common questions about getting in touch and our response process.
-                </p>
-            </div>
-            
-            <div class="space-y-6">
-                <!-- FAQ 1 -->
-                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-800">How quickly do you respond to inquiries?</h3>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
-                    </button>
-                    <div class="faq-content mt-4">
-                        <p class="text-slate-600 leading-relaxed">
-                            We respond to all inquiries within 24 hours during business days. For emergency situations, 
-                            we provide immediate response 24/7. WhatsApp messages are typically answered within 2-4 hours.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 2 -->
-                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-800">Do you provide free consultations?</h3>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
-                    </button>
-                    <div class="faq-content mt-4">
-                        <p class="text-slate-600 leading-relaxed">
-                            Yes! We provide free initial consultations for all potential projects. This includes 
-                            site assessment, basic recommendations, and preliminary cost estimates. Detailed surveys 
-                            may have associated costs which we'll discuss upfront.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 3 -->
-                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-800">What information should I include in my inquiry?</h3>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
-                    </button>
-                    <div class="faq-content mt-4">
-                        <p class="text-slate-600 leading-relaxed">
-                            Please include: your location (county/town), type of service needed, current water challenges, 
-                            estimated budget, and timeline. Photos of your site or current water system are also helpful. 
-                            The more details you provide, the better we can assist you.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 4 -->
-                <div class="faq-item bg-white rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-800">Do you travel to remote locations?</h3>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
-                    </button>
-                    <div class="faq-content mt-4">
-                        <p class="text-slate-600 leading-relaxed">
-                            Absolutely! We serve all 47 counties in Kenya and have mobile teams equipped to reach 
-                            even the most remote locations. We also extend our services to selected areas in Uganda 
-                            and Tanzania. Travel costs are included in our project quotes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-24 premium-blue-gradient relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl md:text-6xl font-black text-white mb-8" data-aos="fade-up">
-                Don't Wait - <span class="text-yellow-400">Contact Us</span> Now!
-            </h2>
-            <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Every day without reliable water is a day of missed opportunities. Let our experts solve your 
-                water challenges quickly and professionally. Get started today!
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
-                <a href="tel:+254713332124" class="cta-button bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">
-                    <i class="fas fa-phone mr-3"></i>Call: 0713 332 124
-                </a>
-                <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I%20need%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="cta-button bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-2xl text-xl font-bold">
-                    <i class="fab fa-whatsapp mr-3"></i>WhatsApp Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="dark-blue-gradient text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-tint text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Fancy Drops</h3>
-                            <p class="text-blue-300 text-sm">Water Engineering Ltd</p>
-                        </div>
-                    </div>
-                    <p class="text-slate-300 mb-6 leading-relaxed">Professional water engineering solutions for sustainable development across Kenya and East Africa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="projects.html" class="text-slate-300 hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="careers.html" class="text-slate-300 hover:text-white transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="services.html#drilling" class="text-slate-300 hover:text-white transition-colors">Borehole Drilling</a></li>
-                        <li><a href="services.html#survey" class="text-slate-300 hover:text-white transition-colors">Hydrogeological Survey</a></li>
-                        <li><a href="services.html#pumps" class="text-slate-300 hover:text-white transition-colors">Water Pumps</a></li>
-                        <li><a href="services.html#solar" class="text-slate-300 hover:text-white transition-colors">Solar Systems</a></li>
-                        <li><a href="services.html#treatment" class="text-slate-300 hover:text-white transition-colors">Water Treatment</a></li>
-                        <li><a href="services.html#generators" class="text-slate-300 hover:text-white transition-colors">Generators</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Contact Info</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
-                            <span class="text-slate-300">Kapenguria, Kenya</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-blue-400"></i>
-                            <a href="tel:+254713332124" class="text-slate-300 hover:text-white transition-colors">0713 332 124</a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
-                            <a href="mailto:fancydropswatersystemsltd@gmail.com" class="text-slate-300 hover:text-white transition-colors">fancydropswatersystemsltd@gmail.com</a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock mr-3 text-blue-400"></i>
-                            <span class="text-slate-300">24/7 Emergency Service</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-600 mt-16 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-slate-400 mb-4 md:mb-0">&copy; 2024 Fancy Drops Water Engineering Ltd. All rights reserved.</p>
-                    <div class="flex space-x-6">
-                        <a href="privacy.html" class="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="terms.html" class="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/254713332124?text=Hello%20Fancy%20Drops!%20I'm%20interested%20in%20your%20water%20engineering%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
-        <i class="fab fa-whatsapp" style="margin-top: 19px;"></i>
-    </a>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-32 right-8 bg-slate-800 text-white p-4 rounded-full shadow-2xl hover:bg-slate-700 transition-all duration-300 opacity-0 invisible">
-        <i class="fas fa-arrow-up text-xl"></i>
-    </button>
-
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1200,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-cubic'
-        });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Contact Form Handling
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-
-        contactForm.addEventListener('submit', function(e) {
+       </div>
+       <div class="form-group"><label for="service">Service Interested In *</label> <select id="service" name="service" required> <option value="">Select a service...</option> <option value="borehole">Borehole Drilling</option> <option value="survey">Hydrogeological Survey</option> <option value="treatment">Water Treatment</option> <option value="solar">Solar Water Systems</option> <option value="generator">Generator Systems</option> <option value="maintenance">Maintenance &amp; Repair</option> <option value="consultation">Free Consultation</option> <option value="other">Other</option> </select>
+       </div>
+       <div class="form-group"><label for="location">Project Location</label> <input type="text" id="location" name="location" placeholder="e.g., Kapenguria, West Pokot">
+       </div>
+       <div class="form-group"><label for="message">Your Message *</label> <textarea id="message" name="message" required placeholder="Tell us about your project requirements..."></textarea>
+       </div><button type="submit" class="submit-btn" id="submitBtn"> Send Message </button>
+      </form>
+     </div><!-- Map & Additional Info -->
+     <div class="map-info-container" data-animate>
+      <div class="map-container">
+       <div class="map-placeholder"><span class="map-placeholder-icon">📍</span>
+        <p><strong>Fancy Drops Water Engineering Limited</strong><br>
+          Kapenguria Town, West Pokot County, Kenya</p><a href="https://maps.google.com/?q=Kapenguria,West+Pokot,Kenya" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+       </div>
+      </div>
+      <div class="additional-info">
+       <h3>Why Choose Us?</h3>
+       <div class="info-item">
+        <h4>🎯 Free Consultation</h4>
+        <p>Get expert advice and project assessment at no cost</p>
+       </div>
+       <div class="info-item">
+        <h4>⚡ Fast Response</h4>
+        <p>We respond to all inquiries within 24 hours</p>
+       </div>
+       <div class="info-item">
+        <h4>💰 Transparent Pricing</h4>
+        <p>Clear, detailed quotes with no hidden charges</p>
+       </div>
+       <div class="info-item">
+        <h4>🛠️ Expert Team</h4>
+        <p>Certified professionals with 10+ years experience</p>
+       </div>
+       <div class="info-item">
+        <h4>✅ Quality Guarantee</h4>
+        <p>All work backed by comprehensive warranties</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- FAQ Section -->
+  <section class="faq-section">
+   <div class="faq-container">
+    <div class="faq-header">
+     <h2>Frequently Asked Questions</h2>
+     <p>Quick answers to common questions about our services</p>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>How long does borehole drilling take?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>Typical borehole drilling projects take 2-4 weeks from start to finish, including survey, drilling, testing, and installation. The exact timeline depends on depth, ground conditions, and system complexity.</p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>Do you offer free site assessments?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>Yes! We provide free initial consultations and site assessments within West Pokot County and surrounding areas. This includes preliminary evaluation and project recommendations.</p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>What areas do you serve?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>We primarily serve West Pokot County and surrounding regions including Turkana, Trans-Nzoia, Elgeyo-Marakwet, and Baringo counties. We also undertake projects in other parts of Kenya upon request.</p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>What payment methods do you accept?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>We accept bank transfers, M-Pesa, cash payments, and checks. Projects are typically structured with a deposit, progress payments, and final payment upon completion.</p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>Do you provide maintenance services?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>Absolutely! We offer comprehensive maintenance packages for all water systems including regular inspections, repairs, and emergency services. Maintenance contracts ensure optimal system performance.</p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <div class="faq-question" onclick="toggleFAQ(this)"><span>Are your services guaranteed?</span> <span class="faq-icon">▼</span>
+     </div>
+     <div class="faq-answer">
+      <p>Yes! All our installations come with comprehensive warranties. Boreholes include drilling guarantees, equipment carries manufacturer warranties, and our workmanship is guaranteed for 12 months.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Fancy Drops Water Engineering</h3>
+     <p>Your trusted partner for sustainable water solutions in Kapenguria, Kenya and beyond.</p>
+     <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
+     </div>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Generator Systems</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Info</h3>
+     <p>📍 Kapenguria, West Pokot County, Kenya</p>
+     <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>💬 <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Fancy Drops Water Engineering Limited. All rights reserved. | Designed with 💧 for excellence</p>
+   </div>
+  </footer>
+  <script>
+        // Form Submission Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Hide any previous messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
             
             // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                location: document.getElementById('location').value,
+                message: document.getElementById('message').value
+            };
             
-            // Simulate form submission (replace with actual form handling)
+            // Simulate form submission (replace with actual API call)
             setTimeout(() => {
-                // For demo purposes, we'll show success message
-                // In real implementation, you'd send data to your server
-                successMessage.style.display = 'block';
-                contactForm.reset();
+                // Show success message
+                formMessage.textContent = '✅ Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
+                formMessage.className = 'message success show';
                 
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 1000);
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.remove('show');
+                }, 5000);
+                
+                // Log form data (in production, send to server)
+                console.log('Form submitted:', formData);
+            }, 1500);
         });
 
         // FAQ Toggle
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.closest('.faq-item');
-                const faqContent = faqItem.querySelector('.faq-content');
-                const icon = button.querySelector('i');
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Ripple Effect on Buttons
+        document.querySelectorAll('.btn, .submit-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.pointerEvents = 'none';
                 
-                // Close all other FAQs
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    if (item !== faqItem) {
-                        const content = item.querySelector('.faq-content');
-                        const itemIcon = item.querySelector('i');
-                        content.style.maxHeight = '0';
-                        itemIcon.style.transform = 'rotate(0deg)';
-                    }
-                });
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
                 
-                // Toggle current FAQ
-                if (faqContent.style.maxHeight === '200px') {
-                    faqContent.style.maxHeight = '0';
-                    icon.style.transform = 'rotate(0deg)';
-                } else {
-                    faqContent.style.maxHeight = '200px';
-                    icon.style.transform = 'rotate(180deg)';
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.animation = 'rippleEffect 0.6s ease-out';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Form Input Animation
+        document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Info Card Click to Action
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const link = this.querySelector('a');
+                if (link) {
+                    link.click();
                 }
             });
         });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-
+        // Parallax Effect
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.add('opacity-0', 'invisible');
-                backToTopButton.classList.remove('opacity-100', 'visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                navbar.classList.add('shadow-2xl');
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            } else {
-                navbar.classList.remove('shadow-2xl');
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Page loading animation
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.8s ease';
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-
-        // Contact card hover effects
-        document.querySelectorAll('.contact-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-12px) scale(1.02)';
-            });
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.page-hero-content');
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Form input focus effects
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('focus', () => {
-                input.style.transform = 'scale(1.02)';
-            });
-            
-            input.addEventListener('blur', () => {
-                input.style.transform = 'scale(1)';
+            parallaxElements.forEach(el => {
+                el.style.transform = `translateY(${scrolled * 0.3}px)`;
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992ba63983836ae4',t:'MTc2MTE2Mzk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99c6e2aa91046247',t:'MTc2Mjc5MTcxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
