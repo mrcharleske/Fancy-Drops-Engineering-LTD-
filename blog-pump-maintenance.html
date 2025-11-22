@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7 Signs Your Borehole Pump Needs Maintenance | Fancy Drops Engineering</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Learn to identify early warning signs of borehole pump problems before they become expensive failures. Expert maintenance guide from licensed water engineers.">
+  <meta name="keywords" content="borehole pump maintenance, pump repair Kenya, water pump problems, pump troubleshooting, West Pokot pump service">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        :root {
+            --deep-blue: #1e40af;
+            --sky-blue: #3b82f6;
+            --white: #ffffff;
+            --light-blue: #f0f9ff;
+            --accent-orange: #f97316;
+            --charcoal: #1f2937;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --ocean-blue: #0c4a6e;
+            --warning-red: #ef4444;
+        }
+
+        /* Navigation - Same as previous articles */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--accent-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .nav-cta-call {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Article Hero */
+        .article-hero {
+            margin-top: 85px;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .article-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .article-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 3rem;
+        }
+
+        .article-intro {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #fef2f2;
+            border-radius: 15px;
+            border-left: 5px solid var(--warning-red);
+        }
+
+        .article-content h2 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .article-content h3 {
+            color: var(--sky-blue);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--warning-red);
+        }
+
+        .warning-box h4 {
+            color: var(--warning-red);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sign-card {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--warning-red);
+        }
+
+        .sign-card h3 {
+            color: var(--warning-red);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .solution-box {
+            background: #f0fdf4;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--success-green);
+        }
+
+        .solution-box h5 {
+            color: var(--success-green);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* CTA Section */
+        .article-cta {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .article-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .article-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: var(--white);
+        }
+
+        .cta-buttons-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .cta-btn-primary {
+            background: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
+        }
+
+        .cta-btn-secondary {
+            background: var(--white);
+            color: var(--deep-blue);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Share Section */
+        .share-section {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .share-section h4 {
+            color: var(--deep-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .share-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .share-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .share-email {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .share-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--light-blue);
+            border-radius: 20px;
+        }
+
+        .related-articles h3 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .related-card h4 {
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .related-card p {
+            color: var(--charcoal);
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--gray-100);
+            color: var(--deep-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-blog:hover {
+            background: var(--sky-blue);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* Sticky WhatsApp */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ocean-blue);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                order: 4;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .article-hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .article-hero h1 {
+                font-size: 2rem;
+            }
+
+            .article-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .featured-image {
+                height: 250px;
+                font-size: 4rem;
+            }
+
+            .cta-buttons-group {
+                flex-direction: column;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="blog.html" class="active">Blog</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
+   </div>
+  </nav><!-- Sticky WhatsApp --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬
+   </div></a> <!-- Article Hero -->
+  <section class="article-hero">
+   <div class="article-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>→</span> <a href="blog.html">Blog</a> <span>→</span> <span>Pump Maintenance</span>
+    </div><span class="article-category">Maintenance</span>
+    <h1>7 Signs Your Borehole Pump Needs Maintenance</h1>
+    <div class="article-meta"><span class="meta-item">📅 January 8, 2024</span> <span class="meta-item">⏱️ 5 min read</span> <span class="meta-item">✍️ Fancy Drops Engineering</span>
+    </div>
+   </div>
+  </section><!-- Article Content -->
+  <div class="article-container"><a href="blog.html" class="back-to-blog">← Back to Blog</a>
+   <article class="article-content">
+    <div class="featured-image">
+     🔧
+    </div>
+    <p class="article-intro"><strong>Don't wait for complete pump failure!</strong> Early detection of pump problems can save you KSH 50,000-200,000 in repair or replacement costs. Learn to recognize these 7 critical warning signs and take action before minor issues become major emergencies.</p>
+    <div class="sign-card">
+     <h3>🚨 Sign #1: Reduced Water Pressure or Flow</h3>
+     <p><strong>What You'll Notice:</strong> Water flow from taps is noticeably weaker than normal, takes longer to fill containers, or irrigation system coverage is reduced.</p>
+     <p><strong>What It Means:</strong> This is often the first sign of pump wear or blockage. Possible causes include:</p>
+     <ul>
+      <li>Worn impellers reducing pumping efficiency</li>
+      <li>Sediment buildup blocking water passages</li>
+      <li>Damaged pump bearings causing misalignment</li>
+      <li>Partially clogged intake screen</li>
+      <li>Declining water table (seasonal or long-term)</li>
+     </ul>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Schedule immediate pump inspection. Early intervention can often restore performance without full replacement. Cost: KSH 5,000-15,000 for servicing vs. KSH 80,000-200,000 for replacement.</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>⚡ Sign #2: Frequent Circuit Breaker Trips</h3>
+     <p><strong>What You'll Notice:</strong> Your electrical circuit breaker trips repeatedly when the pump runs, requiring constant resetting.</p>
+     <p><strong>What It Means:</strong> The pump is drawing excessive current, indicating serious electrical or mechanical issues:</p>
+     <ul>
+      <li>Motor winding damage or short circuits</li>
+      <li>Seized bearings creating mechanical resistance</li>
+      <li>Damaged capacitor (for single-phase pumps)</li>
+      <li>Water intrusion into motor housing</li>
+      <li>Voltage fluctuations damaging motor components</li>
+     </ul>
+     <div class="warning-box">
+      <h4>⚠️ Critical Warning:</h4>
+      <p>Continuing to operate a pump that trips breakers can cause electrical fires or permanent motor damage. <strong>Stop using the pump immediately</strong> and call a professional.</p>
+     </div>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Immediate electrical inspection required. May need motor rewinding (KSH 25,000-45,000) or full pump replacement depending on damage extent.</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>🔊 Sign #3: Unusual Noises (Grinding, Rattling, or Screeching)</h3>
+     <p><strong>What You'll Notice:</strong> Your pump makes grinding, rattling, screaming, or knocking sounds that weren't there before.</p>
+     <p><strong>What It Means:</strong> Mechanical components are failing or damaged:</p>
+     <ul>
+      <li><strong>Grinding:</strong> Worn bearings or damaged impeller</li>
+      <li><strong>Rattling:</strong> Loose components or debris in pump</li>
+      <li><strong>Screeching:</strong> Dry or seized bearings</li>
+      <li><strong>Knocking:</strong> Cavitation (air bubbles) or loose motor mounts</li>
+     </ul>
+     <p><strong>Why It Matters:</strong> These sounds indicate components rubbing metal-on-metal, which accelerates wear exponentially. What might cost KSH 8,000 to fix today could cost KSH 150,000 next month.</p>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Schedule immediate diagnostic assessment. Early bearing replacement costs KSH 8,000-20,000. Waiting until complete failure can require full pump replacement.</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>🌊 Sign #4: Water Contains Sediment, Sand, or Discoloration</h3>
+     <p><strong>What You'll Notice:</strong> Water appears cloudy, sandy, brown, or contains visible particles. May notice grit in taps or sediment in toilet tanks.</p>
+     <p><strong>What It Means:</strong> Your pump or borehole integrity is compromised:</p>
+     <ul>
+      <li>Damaged borehole casing allowing soil infiltration</li>
+      <li>Worn pump seals permitting sediment entry</li>
+      <li>Pump positioned too low in borehole (drawing sediment)</li>
+      <li>Deteriorating gravel pack around borehole screen</li>
+      <li>Excessive drawdown causing aquifer disturbance</li>
+     </ul>
+     <p><strong>Damage This Causes:</strong> Sediment acts like sandpaper inside your pump, rapidly wearing impellers, bearings, and seals. It also damages plumbing fixtures, water heaters, and appliances throughout your property.</p>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Requires camera inspection of borehole (KSH 15,000-25,000) to identify source. May need casing repair, pump repositioning, or sediment filtration system installation.</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>💡 Sign #5: Pump Runs Continuously or Cycles Frequently</h3>
+     <p><strong>What You'll Notice:</strong> Pump runs constantly without shutting off, or cycles on/off rapidly every few minutes even when no water is being used.</p>
+     <p><strong>What It Means:</strong> Pressure control or water retention issues:</p>
+     <ul>
+      <li><strong>Continuous Running:</strong> Pump cannot achieve shutoff pressure (worn pump or pressure switch failure)</li>
+      <li><strong>Rapid Cycling:</strong> Waterlogged pressure tank or failed pressure switch</li>
+      <li>Hidden leaks in plumbing system</li>
+      <li>Failed check valve allowing water backflow</li>
+      <li>Undersized or failing pressure tank</li>
+     </ul>
+     <p><strong>Why This Matters:</strong> Excessive cycling dramatically shortens pump lifespan and wastes electricity. A pump designed to last 15 years may fail in 3-5 years with continuous cycling.</p>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Check pressure switch settings and pressure tank condition. Pressure tank replacement: KSH 15,000-35,000. Pressure switch: KSH 3,000-8,000. Much cheaper than new pump at KSH 80,000+!</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>📊 Sign #6: Dramatically Increased Electricity Bills</h3>
+     <p><strong>What You'll Notice:</strong> Your electricity bills have increased significantly (20%+ higher) without changes to usage patterns.</p>
+     <p><strong>What It Means:</strong> Your pump is working much harder to deliver the same amount of water:</p>
+     <ul>
+      <li>Reduced pump efficiency due to wear</li>
+      <li>Motor damage requiring more power</li>
+      <li>Continuous cycling wasting energy</li>
+      <li>Partial blockages forcing harder work</li>
+      <li>Cavitation creating resistance</li>
+     </ul>
+     <p><strong>Real Example:</strong> A client in Kapenguria saw monthly bills jump from KSH 3,500 to KSH 5,800. After pump servicing (cost: KSH 12,000), bills dropped back to KSH 3,600. The service paid for itself in 3 months!</p>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Professional energy audit and pump efficiency testing. Early servicing can restore efficiency and dramatically reduce operational costs.</p>
+     </div>
+    </div>
+    <div class="sign-card">
+     <h3>💧 Sign #7: Intermittent Water Supply or Complete Pump Failure</h3>
+     <p><strong>What You'll Notice:</strong> Water flow starts and stops unpredictably, or pump stops working entirely for periods before restarting.</p>
+     <p><strong>What It Means:</strong> Critical component failure is imminent or occurring:</p>
+     <ul>
+      <li>Thermal overload protection activating (motor overheating)</li>
+      <li>Intermittent electrical connections</li>
+      <li>Severe bearing wear causing motor stalls</li>
+      <li>Capacitor failure (single-phase motors)</li>
+      <li>Water level dropping below pump intake</li>
+     </ul>
+     <div class="warning-box">
+      <h4>⚠️ Emergency Alert:</h4>
+      <p>This indicates imminent complete pump failure. <strong>Do not continue operating the pump.</strong> Continued use can cause catastrophic damage requiring full replacement instead of repair.</p>
+     </div>
+     <div class="solution-box">
+      <h5>✅ Solution:</h5>
+      <p>Emergency service call required. May still be repairable if addressed immediately (KSH 20,000-60,000). Waiting guarantees full replacement necessity (KSH 80,000-250,000).</p>
+     </div>
+    </div>
+    <h2>Preventative Maintenance: Your Best Protection 🛡️</h2>
+    <p>Most pump failures are preventable with proper maintenance. Here's what you should do:</p>
+    <h3>Annual Professional Inspection (Essential)</h3>
+    <ul>
+     <li>Complete electrical system testing</li>
+     <li>Pump performance evaluation</li>
+     <li>Pressure tank and control system check</li>
+     <li>Water quality testing</li>
+     <li>Bearing and seal inspection</li>
+    </ul>
+    <p><strong>Cost:</strong> KSH 5,000-10,000 annually</p>
+    <p><strong>Savings:</strong> Prevents 80% of major failures (saves KSH 100,000+ in emergency repairs)</p>
+    <h3>Monthly Owner Checks (Quick &amp; Easy)</h3>
+    <ul>
+     <li>Listen for unusual pump noises</li>
+     <li>Check water pressure at multiple taps</li>
+     <li>Observe water clarity and quality</li>
+     <li>Note any changes in electricity bills</li>
+     <li>Verify pressure gauge readings</li>
+    </ul>
+    <p><strong>Time Required:</strong> 10 minutes per month</p>
+    <p><strong>Benefit:</strong> Early problem detection before catastrophic failure</p>
+    <h3>Every 3-5 Years (Major Service)</h3>
+    <ul>
+     <li>Full pump removal and inspection</li>
+     <li>Bearing and seal replacement</li>
+     <li>Impeller cleaning or replacement</li>
+     <li>Motor winding testing</li>
+     <li>Camera inspection of borehole</li>
+    </ul>
+    <p><strong>Cost:</strong> KSH 25,000-60,000</p>
+    <p><strong>Value:</strong> Extends pump life by 10-15 years (avoids KSH 150,000+ replacement)</p>
+    <div class="article-cta">
+     <h3>🔧 Schedule Your Pump Inspection Today</h3>
+     <p>Don't wait for complete failure! Fancy Drops Engineering offers comprehensive pump diagnostics and maintenance services across West Pokot and Kenya. Protect your investment with professional care.</p>
+     <div class="cta-buttons-group"><a href="tel:+254713332124" class="cta-btn cta-btn-primary">📞 Book Inspection Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary">💬 WhatsApp Us</a>
+     </div>
+    </div>
+    <div class="share-section">
+     <h4>Share this maintenance guide! 🔄</h4>
+     <div class="share-buttons"><a href="https://wa.me/?text=Important%20pump%20maintenance%20signs%20every%20borehole%20owner%20should%20know!%20https://yourwebsite.com/blog-pump-maintenance.html" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp">💬 Share on WhatsApp</a> <a href="mailto:?subject=7%20Signs%20Your%20Pump%20Needs%20Maintenance&amp;body=Check%20out%20this%20helpful%20guide%20on%20pump%20maintenance:%20https://yourwebsite.com/blog-pump-maintenance.html" class="share-btn share-email">✉️ Share via Email</a>
+     </div>
+    </div>
+   </article><!-- Related Articles -->
+   <div class="related-articles">
+    <h3>📚 Related Articles</h3>
+    <div class="related-grid"><a href="blog-maintenance-checklist.html" class="related-card"> <h4>✅ Annual Borehole Maintenance Checklist</h4><p>Complete maintenance schedule to keep your system running smoothly.</p></a> <a href="blog-solar-benefits.html" class="related-card"> <h4>☀️ 5 Benefits of Solar Water Pumps</h4><p>Reduce energy costs and improve reliability with solar pumping.</p></a> <a href="blog-borehole-guide.html" class="related-card"> <h4>💧 Complete Borehole Drilling Guide</h4><p>Everything you need to know about borehole projects in Kenya.</p></a>
+    </div>
+   </div>
+  </div><!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
+     <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
+     </div>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="blog.html">Blog</a> <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Info</h3>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
+     <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
+   </div>
+  </footer>
+  <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a2bac06e62d8a65',t:'MTc2Mzg0ODUzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
