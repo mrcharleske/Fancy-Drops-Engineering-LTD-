@@ -1,639 +1,1190 @@
 <!doctype html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fancy Drops Water Engineering Limited - Premium Water Solutions</title>
+  <title>Fancy Drops Engineering Limited - Expert Water Solutions in Kenya</title>
   <link rel="icon" type="image/png" href="images/faviconlogo.png">
-  <meta name="description" content="Leading water engineering company in Kenya. Expert borehole drilling, hydrogeological surveys, water treatment, solar & generator systems. Serving Kapenguria and beyond.">
-
+  <meta name="description" content="Leading water engineering company in Kenya. Borehole drilling, solar systems, water treatment. 500+ successful projects. Free consultation. Call +254 713 332 124">
+  <meta name="keywords" content="borehole drilling Kenya, water engineering Kapenguria, solar water systems, water treatment West Pokot">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #1f2937;
-      overflow-x: hidden;
-    }
-    html { scroll-behavior: smooth; height: 100%; }
-
-    :root {
-      --deep-blue: #1e40af;
-      --sky-blue: #3b82f6;
-      --white: #ffffff;
-      --light-blue: #f0f9ff;
-      --accent-orange: #f97316;
-      --charcoal: #1f2937;
-      --gray-100: #f3f4f6;
-      --gray-200: #e5e7eb;
-    }
-
-    /* Navigation */
-    nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    nav.scrolled {
-      box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-      background: rgba(255, 255, 255, 0.98);
-    }
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 3rem;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--deep-blue);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      transition: transform 0.3s ease;
-      text-decoration: none;
-    }
-    .logo:hover { transform: scale(1.05); }
-    .logo-icon {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      animation: float 3s ease-in-out infinite;
-    }
-    .logo-text {
-      font-size: 1.35rem;
-      letter-spacing: -0.5px;
-      white-space: nowrap;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
-    .nav-links { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
-    .nav-links a {
-      color: var(--charcoal);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      position: relative;
-      padding: 0.5rem 0;
-    }
-    .nav-links a::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 50%;
-      width: 0; height: 3px;
-      background: var(--accent-orange);
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-    .nav-links a:hover::before,
-    .nav-links a.active::before { width: 100%; }
-    .nav-links a:hover { color: var(--sky-blue); }
-
-    .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn {
-      padding: 0.85rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn:active { transform: scale(0.95); }
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 0; height: 0;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-    .btn:hover::before { width: 300px; height: 300px; }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-      color: var(--white);
-      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-    }
-    .btn-secondary {
-      background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
-      color: var(--white);
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-    }
-    .btn-secondary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-    .btn-outline:hover {
-      background: var(--white);
-      color: var(--deep-blue);
-      transform: translateY(-3px);
-    }
-
-    /* HERO – Tesla/Apple Style */
-    .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 650px;
-      color: var(--white);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero-video-container {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      overflow: hidden;
-    }
-    .hero-video {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1.8s ease-in-out;
-    }
-    .hero-video.active { opacity: 1; }
-    .hero-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(30,64,175,0.72) 100%);
-    }
-    .hero-fallback {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: url('images/hero-fallback.jpg') center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
-      padding: 0 2rem;
-    }
-    .video-caption {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      opacity: 0;
-      transition: opacity 1s ease;
-      z-index: 3;
-    }
-    .video-caption.active { opacity: 0.9; }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      padding: 0.6rem 1.5rem;
-      border-radius: 50px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-    .hero h1 {
-      font-size: 4.5rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-    .hero h1 .highlight {
-      background: linear-gradient(135deg, var(--accent-orange), #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero p {
-      font-size: 1.45rem;
-      opacity: 0.95;
-      max-width: 850px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
-    }
-    .hero-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-
-    .water-drop {
-      position: absolute;
-      font-size: 2.5rem;
-      opacity: 0.12;
-      animation: floatDrop 18s infinite ease-in-out;
-      pointer-events: none;
-      z-index: 1;
-    }
-    @keyframes floatDrop {
-      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-      25% { transform: translateY(-40px) rotate(8deg) scale(1.15); }
-      50% { transform: translateY(-80px) rotate(-6deg) scale(0.9); }
-      75% { transform: translateY(-40px) rotate(4deg) scale(1.1); }
-    }
-
-    /* Stats */
-    .stats-section { background: var(--white); padding: 4rem 3rem; margin-top: -3rem; position: relative; z-index: 10; }
-    .stats-container {
-      max-width: 1400px; margin: 0 auto;
-      background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 100%);
-      border-radius: 20px; padding: 3rem; box-shadow: 0 20px 60px rgba(30,64,175,0.3);
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;
-      text-align: center; color: white;
-    }
-    .stat-item { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-    .stat-item.visible { opacity: 1; transform: translateY(0); }
-    .stat-number {
-      font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--white), var(--accent-orange));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-
-    /* About Preview */
-    .about-preview { padding: 7rem 3rem; background: var(--light-blue); position: relative; overflow: hidden; }
-    .about-preview::before { content: 'Water Drop'; position: absolute; font-size: 30rem; opacity: 0.03; top: 50%; right: -5rem; transform: translateY(-50%); }
-    .container { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
-    .section-header { text-align: center; margin-bottom: 4rem; opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
-    .section-header.visible { opacity: 1; transform: translateY(0); }
-    .section-badge { display: inline-block; background: var(--accent-orange); color: white; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
-    .section-header h2 { font-size: 3rem; color: var(--deep-blue); margin-bottom: 1rem; font-weight: 800; }
-    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-text, .about-visual { opacity: 0; transition: all 1s ease; }
-    .about-text.visible { opacity: 1; transform: translateX(0); }
-    .about-visual.visible { opacity: 1; transform: translateX(0); }
-    .about-image-container {
-      position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); height: 500px;
-    }
-    .about-image-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .about-image-container:hover img { transform: scale(1.05); }
-    .about-image-overlay {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(30,64,175,0.9), transparent);
-      padding: 2rem; color: white;
-    }
-    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
-    .feature-check { display: flex; align-items: center; gap: 0.8rem; font-weight: 600; }
-    .feature-check::before { content: 'Checkmark'; background: var(--accent-orange); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
-
-    /* Services */
-    .services { padding: 7rem 3rem; background: var(--white); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
-    .service-card {
-      background: white; padding: 2.5rem; border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: all 0.5s ease;
-      border: 1px solid var(--gray-200); position: relative; overflow: hidden; opacity: 0; transform: translateY(30px);
-    }
-    .service-card.visible { opacity: 1; transform: translateY(0); }
-    .service-card:hover { transform: translateY(-15px); box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
-    .service-icon { font-size: 3.5rem; margin-bottom: 1.5rem; }
-
-    /* Why Choose */
-    .why-choose { padding: 7rem 3rem; background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%); }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
-    .feature-item {
-      background: white; padding: 2.5rem; border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;
-      transition: all 0.6s ease; opacity: 0; transform: scale(0.9);
-    }
-    .feature-item.visible { opacity: 1; transform: scale(1); }
-    .feature-item:hover { transform: scale(1.05); }
-
-    /* Testimonials */
-    .testimonials { padding: 7rem 3rem; background: var(--white); }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
-    .testimonial-card { background: var(--light-blue); padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-    .testimonial-card.visible { opacity: 1; transform: translateY(0); }
-
-    /* CTA Banner */
-    .cta-banner {
-      background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,64,175,0.9)), url('images/cta-bg.jpg') center/cover;
-      color: white; padding: 7rem 3rem; text-align: center; position: relative; overflow: hidden;
-    }
-
-    /* Footer */
-    footer { background: var(--charcoal); color: white; padding: 4rem 3rem 2rem; }
-    .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
-    .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
-    .social-link { width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
-    .social-link:hover { background: var(--accent-orange); transform: translateY(-5px); }
-
-    .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue)); z-index: 9999; transition: width 0.1s ease; }
-
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: 3.5rem; }
-      .about-content { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-container { padding: 1rem 1.5rem; }
-      .logo-text { font-size: 1.15rem; }
-      .menu-toggle { display: block; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--deep-blue); }
-      .nav-links { display: none; flex-direction: column; width: 100%; padding: 1rem 0; }
-      .nav-links.active { display: flex; }
-      .hero h1 { font-size: 2.8rem; }
-      .hero p { font-size: 1.2rem; }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <img src="images/logo.png" alt="Fancy Drops Logo" class="logo-icon" onerror="this.style.display='none'">
-        <span class="logo-text">Fancy Drops Water Engineering Limited</span>
-      </a>
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">Menu</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="cta-buttons">
-        <a href="tel:+254713332124" class="btn btn-secondary">Call</a>
-        <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="water-drop" style="top:10%;left:8%;animation-delay:0s;">Water Drop</div>
-    <div class="water-drop" style="top:25%;right:12%;animation-delay:3s;">Water Drop</div>
-    <div class="water-drop" style="bottom:20%;left:15%;animation-delay:6s;">Water Drop</div>
-    <div class="water-drop" style="top:60%;right:10%;animation-delay:9s;">Water Drop</div>
-
-    <div class="hero-video-container">
-      <div class="hero-video active" data-caption="Precision Borehole Drilling">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="images/hero-video-1.webm" type="video/webm">
-          <source src="images/hero-video-1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-video" data-caption="Solar-Powered Water Systems">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="images/hero-video-2.webm" type="video/webm">
-          <source src="images/hero-video-2.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-video" data-caption="Pure Water Treatment Solutions">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="images/hero-video-3.webm" type="video/webm">
-          <source src="images/hero-video-3.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-fallback" id="heroFallback"></div>
-    </div>
-
-    <div class="hero-overlay"></div>
-    <div class="video-caption active" id="videoCaption">Precision Borehole Drilling</div>
-
-    <div class="hero-content">
-      <div class="hero-badge">Kenya's Trusted Water Engineering Partner</div>
-      <h1>Sustainable <span class="highlight">Water Solutions</span> for Every Need</h1>
-      <p>Expert borehole drilling, hydrogeological surveys, water treatment, solar & generator systems. Delivering excellence across Kapenguria and beyond.</p>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
-        <a href="tel:+254713332124" class="btn btn-outline">Call Us Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="stats-section">
-    <div class="stats-container">
-      <div class="stat-item" data-animate><div class="stat-number" data-count="500">0</div><div class="stat-label">Boreholes Drilled</div></div>
-      <div class="stat-item" data-animate><div class="stat-number" data-count="10">0</div><div class="stat-label">Years Experience</div></div>
-      <div class="stat-item" data-animate><div class="stat-number" data-count="1000">0</div><div class="stat-label">Happy Clients</div></div>
-      <div class="stat-item" data-animate><div class="stat-number" data-count="100">0</div><div class="stat-label">Success Rate %</div></div>
-    </div>
-  </section>
-
-  <!-- About Preview -->
-  <section class="about-preview">
-    <div class="container">
-      <div class="section-header" data-animate><span class="section-badge">Who We Are</span>
-        <h2>Leading Water Engineering Excellence</h2>
-        <p>Transforming water access across Kenya with innovative solutions and expert engineering</p>
-      </div>
-      <div class="about-content">
-        <div class="about-text" data-animate>
-          <h3>Your Trusted Water Solutions Partner</h3>
-          <p>Fancy Drops Water Engineering Limited is a premier water solutions provider, specializing in comprehensive borehole drilling, advanced hydrogeological surveys, cutting-edge water treatment systems, sustainable solar water solutions, and reliable generator installations.</p>
-          <p>Based in Kapenguria, Kenya, we leverage state-of-the-art equipment and a team of highly experienced engineers to deliver sustainable, cost-effective water solutions for residential, agricultural674, and commercial clients throughout the region.</p>
-          <div class="about-features">
-            <div class="feature-check">Licensed & Certified</div>
-            <div class="feature-check">Modern Equipment</div>
-            <div class="feature-check">Expert Engineers</div>
-            <div class="feature-check">24/7 Support</div>
-          </div>
-          <a href="about.html" class="btn btn-primary">Discover Our Story</a>
-        </div>
-        <div class="about-visual" data-animate>
-          <div class="about-image-container">
-            <img src="images/about-image.jpg" alt="Water drilling equipment in action">
-            <div class="about-image-overlay">
-              <h4>Award-Winning Service</h4>
-              <p>Excellence in water engineering</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services">
-    <div class="container">
-      <div class="section-header" data-animate><span class="section-badge">What We Do</span>
-        <h2>Comprehensive Water Solutions</h2>
-        <p>From drilling to installation, we provide end-to-end water engineering services</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card" data-animate><div class="service-icon">Drilling</div><h3>Borehole Drilling</h3><p>Professional borehole drilling services using advanced equipment and techniques.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-        <div class="service-card" data-animate><div class="service-icon">Survey</div><h3>Hydrogeological Survey</h3><p>Expert site assessment and geological analysis to identify optimal drilling locations.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-        <div class="service-card" data-animate><div class="service-icon">Water Drop</div><h3>Water Treatment</h3><p>Comprehensive water purification and treatment solutions.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-        <div class="service-card" data-animate><div class="service-icon">Pump</div><h3>Water Pumps Installation</h3><p>Professional installation and maintenance of efficient water pumping systems.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-        <div class="service-card" data-animate><div class="service-icon">Sun</div><h3>Solar Water Systems</h3><p>Eco-friendly solar-powered water solutions for sustainable operations.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-        <div class="service-card" data-animate><div class="service-icon">Generator</div><h3>Generator Systems</h3><p>Reliable backup power solutions for uninterrupted water supply.</p><a href="services.html" class="btn btn-outline">Learn More →</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose -->
-  <section class="why-choose">
-    <div class="container">
-      <div class="section-header" data-animate><span class="section-badge">Our Advantage</span>
-        <h2>Why Choose Fancy Drops?</h2>
-        <p>Experience the difference of working with Kenya's leading water engineering experts</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-item" data-animate><div class="feature-icon">Engineer</div><h3>Experienced Engineers</h3><p>Our team brings over 10 years of combined expertise in water engineering.</p></div>
-        <div class="feature-item" data-animate><div class="feature-icon">Machinery</div><h3>Modern Equipment</h3><p>We invest in state-of-the-art drilling and installation equipment.</p></div>
-        <div class="feature-item" data-animate><div class="feature-icon">Clock</div><h3>Timely Delivery</h3><p>We respect your time and complete all projects on schedule.</p></div>
-        <div class="feature-item" data-animate><div class="feature-icon">Money</div><h3>Affordable Solutions</h3><p>Competitive pricing with flexible payment options.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header" data-animate><span class="section-badge">Client Stories</span>
-        <h2>What Our Clients Say</h2>
-        <p>Real experiences from satisfied customers across Kenya</p>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card" data-animate>
-          <p class="testimonial-text">Fancy Drops drilled our farm borehole in record time. The water quality is excellent and the solar pump system they installed has saved us thousands in electricity costs. Highly professional team!</p>
-          <div class="testimonial-author"><div class="author-avatar">JK</div><div class="author-info"><h4>John Kiplagat</h4><p>Farm Owner, Kapenguria</p></div></div>
-        </div>
-        <div class="testimonial-card" data-animate>
-          <p class="testimonial-text">The hydrogeological survey was thorough and accurate. They found water exactly where predicted. The entire process was transparent and the team was very knowledgeable.</p>
-          <div class="testimonial-author"><div class="author-avatar">SM</div><div class="author-info"><h4>Sarah Mwangi</h4><p>Hotel Manager, West Pokot</p></div></div>
-        </div>
-        <div class="testimonial-card" data-animate>
-          <p class="testimonial-text">Outstanding service from start to finish. The water treatment system they installed has transformed our water quality. The team is responsive, professional, and truly cares.</p>
-          <div class="testimonial-author"><div class="author-avatar">DM</div><div class="author-info"><h4>David Mutua</h4><p>School Principal, Kitale</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="cta-content">
-      <h2>Ready to Transform Your Water Access?</h2>
-      <p>Get in touch with our expert team today for a free consultation and customized quote.</p>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-        <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Fancy Drops Water Engineering</h3>
-        <p>Your trusted partner for sustainable water solutions in Kapenguria, Kenya and beyond.</p>
-        <div class="social-links">
-          <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">WhatsApp</a>
-          <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">Email</a>
-          <a href="tel:+254713332124" class="social-link">Call</a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a><a href="about.html">About Us</a><a href="services.html">Our Services</a><a href="gallery.html">Project Gallery</a><a href="contact.html">Contact Us</a>
-      </div>
-      <div class="footer-section">
-        <h3>Our Services</h3>
-        <a href="services.html">Borehole Drilling</a><a href="services.html">Hydrogeological Survey</a><a href="services.html">Water Treatment</a><a href="services.html">Solar Water Systems</a><a href="services.html">Generator Systems</a>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p>Kapenguria, West Pokot County, Kenya</p>
-        <p><a href="tel:+254713332124">+254 713 332 124</a></p>
-        <p><a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024 Fancy Drops Water Engineering Limited. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Video switcher
-    const videos = document.querySelectorAll('.hero-video');
-    const caption = document.getElementById('videoCaption');
-    let current = 0;
-    function switchVideo() {
-      videos[current].classList.remove('active');
-      current = (current + 1) % videos.length;
-      videos[current].classList.add('active');
-      caption.textContent = videos[current].dataset.caption;
-    }
-    setInterval(switchVideo, 12000);
-
-    // Fallback
-    videos.forEach(v => v.querySelector('video').addEventListener('error', () => {
-      document.getElementById('heroFallback').style.opacity = '1';
-    }));
-
-    // Scroll effects
-    window.addEventListener('scroll', () => {
-      const p = document.getElementById('scrollProgress');
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      p.style.width = (window.scrollY / h) * 100 + '%';
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-
-    // Animations
-    const observer = new IntersectionObserver(e => {
-      e.forEach(en => {
-        if (en.isIntersecting) {
-          en.target.classList.add('visible');
-          if (en.target.classList.contains('stat-item')) {
-            const num = en.target.querySelector('.stat-number');
-            const target = +num.dataset.count;
-            let i = 0;
-            const timer = setInterval(() => {
-              i += target / 50;
-              if (i >= target) { num.textContent = target + (target === 100 ? '' : '+'); clearInterval(timer); }
-              else num.textContent = Math.floor(i) + (target === 100 ? '' : '+');
-            }, 30);
-          }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  </script>
-</body>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        /* Color Palette */
+        :root {
+            --deep-blue: #1e40af;
+            --sky-blue: #3b82f6;
+            --white: #ffffff;
+            --light-blue: #f0f9ff;
+            --accent-orange: #f97316;
+            --charcoal: #1f2937;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --success-green: #10b981;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--accent-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+            display: block;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Video Hero Section */
+        .hero {
+            position: relative;
+            height: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            margin-top: 85px;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .hero-video.active {
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.85) 0%, 
+                rgba(30, 64, 175, 0.75) 50%, 
+                rgba(59, 130, 246, 0.65) 100%);
+            z-index: 2;
+        }
+
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 3rem;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: calc(100% - 85px);
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
+        }
+
+        @keyframes fadeUpHero {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+        }
+
+        .hero-buttons .btn {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            position: relative;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .badge-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-text {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            animation: bounceIn 1s ease-out 2s both;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(100px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-ring 2s infinite;
+            position: relative;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 3px solid #25D366;
+            border-radius: 50%;
+            opacity: 0;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50%, 100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--charcoal);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 85px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 3rem;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            color: var(--deep-blue);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            color: var(--charcoal);
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            color: var(--deep-blue);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-content p {
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        .service-content .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Stats Counter Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            padding: 5rem 3rem;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 6rem 3rem;
+            background: var(--light-blue);
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .feature-card.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: var(--deep-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--charcoal);
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.95), rgba(234, 88, 12, 0.95)),
+                        url('cta-background.jpg') center/cover;
+            padding: 6rem 3rem;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-buttons-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons-group .btn {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            background: var(--white);
+            color: var(--accent-orange);
+        }
+
+        .cta-buttons-group .btn:hover {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .social-link:hover {
+            background: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 2;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                order: 4;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .logo {
+                order: 3;
+                margin-left: auto;
+            }
+
+            .cta-buttons {
+                width: 100%;
+                order: 5;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .whatsapp-sticky {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.7rem;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div><!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks"><a href="index.html" class="active">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="contact.html">Contact</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
+   </div>
+  </nav><!-- Hero Section with Video -->
+  <section class="hero">
+   <div class="hero-video-container">
+    <video class="hero-video active" autoplay muted loop playsinline><source src="images/hero-video-1.mp4" type="video/mp4">
+    </video>
+    <video class="hero-video" muted loop playsinline><source src="images/hero-video-2.mp4" type="video/mp4">
+    </video>
+    <video class="hero-video" muted loop playsinline><source src="images/hero-video-3.mp4" type="video/mp4">
+    </video>
+   </div>
+   <div class="hero-overlay"></div>
+   <div class="hero-content">
+    <h1>Kenya's Leading Water Engineering Experts</h1>
+    <p class="subtitle">Borehole Drilling | Solar Systems | Water Treatment</p>
+    <p>Transform your water challenges into sustainable solutions. Over 500 successful projects across Kenya. Licensed, certified, and trusted by communities, farms, and industries.</p>
+    <div class="hero-buttons"><a href="contact.html" class="btn btn-primary">🎯 Get Free Consultation</a> <a href="tel:+254713332124" class="btn btn-secondary">📞 Call Now</a>
+    </div>
+    <div class="trust-badges">
+     <div class="badge"><span class="badge-number" data-count="500">0</span>+ <span class="badge-text">Projects Completed</span>
+     </div>
+     <div class="badge"><span class="badge-number" data-count="10">0</span>+ <span class="badge-text">Years Experience</span>
+     </div>
+     <div class="badge"><span class="badge-number" data-count="100">0</span>% <span class="badge-text">Client Satisfaction</span>
+     </div>
+     <div class="badge"><span class="badge-number" data-count="24">0</span>hr <span class="badge-text">Response Time</span>
+     </div>
+    </div>
+   </div>
+  </section><!-- Sticky WhatsApp Button --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬 <span class="whatsapp-tooltip">Chat with us on WhatsApp!</span>
+   </div></a> <!-- Services Section -->
+  <section class="services">
+   <div class="section-header">
+    <h2>Our Expert Services</h2>
+    <p>Comprehensive water engineering solutions tailored to your needs</p>
+   </div>
+   <div class="services-grid">
+    <div class="service-card" data-animate style="transition-delay: 0.1s"><img src="images/borehole-drilling.jpg" alt="Professional Borehole Drilling Services in Kenya" class="service-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\'%3E%3Crect width=\'400\' height=\'250\' fill=\'%231e40af\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EBorehole Drilling%3C/text%3E%3C/svg%3E';">
+     <div class="service-content">
+      <h3>🚰 Borehole Drilling</h3>
+      <p>Professional drilling services up to 300 meters depth. Advanced equipment, hydrogeological surveys, and guaranteed water yield. Perfect for homes, farms, schools, and industries.</p><a href="services.html" class="btn btn-primary">Learn More →</a>
+     </div>
+    </div>
+    <div class="service-card" data-animate style="transition-delay: 0.2s"><img src="images/water-treatment.jpg" alt="Advanced Water Treatment Systems in Kenya" class="service-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\'%3E%3Crect width=\'400\' height=\'250\' fill=\'%233b82f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EWater Treatment%3C/text%3E%3C/svg%3E';">
+     <div class="service-content">
+      <h3>💧 Water Treatment Systems</h3>
+      <p>Complete purification solutions including filtration, softening, UV sterilization, and reverse osmosis. Safe, clean water for drinking and industrial use.</p><a href="services.html" class="btn btn-primary">Learn More →</a>
+     </div>
+    </div>
+    <div class="service-card" data-animate style="transition-delay: 0.3s"><img src="images/solar-systems.jpg" alt="Solar Water Pumping Systems Kenya" class="service-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\'%3E%3Crect width=\'400\' height=\'250\' fill=\'%23f97316\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3ESolar Systems%3C/text%3E%3C/svg%3E';">
+     <div class="service-content">
+      <h3>☀️ Solar Water Systems</h3>
+      <p>Eco-friendly, cost-effective solar pumping solutions. Eliminate electricity bills, reliable water supply 24/7. Expert installation and maintenance included.</p><a href="services.html" class="btn btn-primary">Learn More →</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Stats Counter -->
+  <section class="stats-section">
+   <div class="stats-grid">
+    <div class="stat-item" data-animate><span class="stat-icon">🎯</span> <span class="stat-number" data-count="500">0</span>+ <span class="stat-label">Successful Projects</span>
+    </div>
+    <div class="stat-item" data-animate style="transition-delay: 0.2s"><span class="stat-icon">⭐</span> <span class="stat-number" data-count="100">0</span>% <span class="stat-label">Client Satisfaction</span>
+    </div>
+    <div class="stat-item" data-animate style="transition-delay: 0.4s"><span class="stat-icon">🏆</span> <span class="stat-number" data-count="10">0</span>+ <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-item" data-animate style="transition-delay: 0.6s"><span class="stat-icon">👷</span> <span class="stat-number" data-count="25">0</span>+ <span class="stat-label">Expert Technicians</span>
+    </div>
+   </div>
+  </section><!-- Why Choose Us -->
+  <section class="why-choose">
+   <div class="section-header">
+    <h2>Why Choose Fancy Drops?</h2>
+    <p>Experience the difference of working with Kenya's most trusted water engineering company</p>
+   </div>
+   <div class="features-grid">
+    <div class="feature-card" data-animate style="transition-delay: 0.1s"><span class="feature-icon">🎓</span>
+     <h3>Certified Experts</h3>
+     <p>Our team holds international certifications and 10+ years of hands-on experience in water engineering.</p>
+    </div>
+    <div class="feature-card" data-animate style="transition-delay: 0.2s"><span class="feature-icon">🔧</span>
+     <h3>Advanced Equipment</h3>
+     <p>State-of-the-art drilling rigs, testing equipment, and installation tools for superior results.</p>
+    </div>
+    <div class="feature-card" data-animate style="transition-delay: 0.3s"><span class="feature-icon">✅</span>
+     <h3>Quality Guarantee</h3>
+     <p>All projects backed by comprehensive warranties. We stand behind our work 100%.</p>
+    </div>
+    <div class="feature-card" data-animate style="transition-delay: 0.4s"><span class="feature-icon">⚡</span>
+     <h3>Fast Response</h3>
+     <p>24-hour response time for inquiries. Emergency services available across West Pokot and beyond.</p>
+    </div>
+    <div class="feature-card" data-animate style="transition-delay: 0.5s"><span class="feature-icon">💰</span>
+     <h3>Fair Pricing</h3>
+     <p>Transparent quotes with no hidden charges. Best value for money in the industry.</p>
+    </div>
+    <div class="feature-card" data-animate style="transition-delay: 0.6s"><span class="feature-icon">🌍</span>
+     <h3>Eco-Friendly</h3>
+     <p>Sustainable solutions that protect the environment while meeting your water needs.</p>
+    </div>
+   </div>
+  </section><!-- CTA Section -->
+  <section class="cta-section">
+   <div class="cta-content">
+    <h2>Ready to Solve Your Water Challenges?</h2>
+    <p>Get a FREE consultation and quote today! Our experts are standing by to help you find the perfect water solution for your home, farm, or business.</p>
+    <div class="cta-buttons-group"><a href="contact.html" class="btn">📋 Get Free Quote</a> <a href="tel:+254713332124" class="btn">📞 Call +254 713 332 124</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn">💬 WhatsApp Now</a>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
+     <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
+     </div>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Info</h3>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
+     <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
+   </div>
+  </footer>
+  <script>
+        // Video Rotation
+        const videos = document.querySelectorAll('.hero-video');
+        let currentVideo = 0;
+
+        function rotateVideos() {
+            videos[currentVideo].classList.remove('active');
+            currentVideo = (currentVideo + 1) % videos.length;
+            videos[currentVideo].classList.add('active');
+            videos[currentVideo].play();
+        }
+
+        // Rotate videos every 8 seconds
+        setInterval(rotateVideos, 8000);
+
+        // Play all videos
+        videos.forEach(video => {
+            video.play();
+        });
+
+        // Animated Counters
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate counters
+                    const counters = entry.target.querySelectorAll('[data-count]');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate badge counters
+        document.querySelectorAll('.badge-number[data-count]').forEach(counter => {
+            setTimeout(() => animateCounter(counter), 1500);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Button Ripple Effect
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.pointerEvents = 'none';
+                
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.animation = 'rippleEffect 0.6s ease-out';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero-content');
+            
+            parallaxElements.forEach(el => {
+                el.style.transform = `translateY(${scrolled * 0.2}px)`;
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a28a77be7860533',t:'MTc2MzgxNjg5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
