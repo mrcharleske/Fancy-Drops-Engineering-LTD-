@@ -1,0 +1,2359 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borehole Water Treatment Guide West Pokot | Fancy Drops Engineering</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Complete guide to borehole water treatment in West Pokot. Learn about filtration, purification, and ensuring safe drinking water from your borehole.">
+  <meta name="keywords" content="borehole water treatment Kenya, water purification West Pokot, water filtration systems, safe drinking water, water quality testing Kenya">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        :root {
+            --deep-blue: #1e40af;
+            --sky-blue: #3b82f6;
+            --white: #ffffff;
+            --light-blue: #f0f9ff;
+            --accent-orange: #f97316;
+            --charcoal: #1f2937;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --ocean-blue: #0c4a6e;
+            --gold: #f59e0b;
+        }
+
+        /* Navigation - Same as previous */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--accent-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .nav-cta-call {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Article Hero */
+        .article-hero {
+            margin-top: 85px;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .article-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .article-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 3rem;
+        }
+
+        .article-intro {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f0fdf4;
+            border-radius: 15px;
+            border-left: 5px solid var(--success-green);
+        }
+
+        .article-content h2 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .article-content h3 {
+            color: var(--sky-blue);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .cost-card {
+            background: #f0fdf4;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--success-green);
+        }
+
+        .cost-card h3 {
+            color: var(--success-green);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .price-tag {
+            background: var(--success-green);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .cost-breakdown {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--deep-blue);
+        }
+
+        .highlight-box {
+            background: #f0fdf4;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--success-green);
+        }
+
+        .highlight-box h4 {
+            color: var(--success-green);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ef4444;
+        }
+
+        .warning-box h4 {
+            color: #ef4444;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--light-blue);
+        }
+
+        /* CTA Section */
+        .article-cta {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .article-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .article-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: var(--white);
+        }
+
+        .cta-buttons-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .cta-btn-primary {
+            background: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
+        }
+
+        .cta-btn-secondary {
+            background: var(--white);
+            color: var(--deep-blue);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--gray-100);
+            color: var(--deep-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-blog:hover {
+            background: var(--sky-blue);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* Share Section */
+        .share-section {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .share-section h4 {
+            color: var(--deep-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .share-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .share-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .share-email {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .share-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--light-blue);
+            border-radius: 20px;
+        }
+
+        .related-articles h3 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .related-card h4 {
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .related-card p {
+            color: var(--charcoal);
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+
+        /* Sticky WhatsApp */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ocean-blue);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                order: 4;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .article-hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .article-hero h1 {
+                font-size: 2rem;
+            }
+
+            .article-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .featured-image {
+                height: 250px;
+                font-size: 4rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.7rem 0.5rem;
+            }
+
+            .cta-buttons-group {
+                flex-direction: column;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="blog.html" class="active">Blog</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
+   </div>
+  </nav><!-- Sticky WhatsApp --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬
+   </div></a> <!-- Article Hero -->
+  <section class="article-hero">
+   <div class="article-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>→</span> <a href="blog.html">Blog</a> <span>→</span> <span>Water Treatment</span>
+    </div><span class="article-category">Water Treatment</span>
+    <h1>Complete Guide to Borehole Water Treatment in West Pokot</h1>
+    <div class="article-meta"><span class="meta-item">📅 January 6, 2024</span> <span class="meta-item">⏱️ 8 min read</span> <span class="meta-item">✍️ Fancy Drops Engineering</span>
+    </div>
+   </div>
+  </section><!-- Article Content -->
+  <div class="article-container"><a href="blog.html" class="back-to-blog">← Back to Blog</a>
+   <article class="article-content">
+    <div class="featured-image">
+     💎
+    </div>
+    <p class="article-intro"><strong>Crystal-clear water from your borehole.</strong> Having a borehole is one thing – ensuring safe, clean drinking water is another. Learn exactly what treatment your West Pokot borehole needs, why it matters, and how to keep your family healthy for years to come.</p>
+    <h2>Why Borehole Water Treatment Matters in West Pokot</h2>
+    <p>Your brand-new borehole pumps crystal-clear water to the surface. It <em>looks</em> clean, so it must be safe to drink, right? <strong>Not always.</strong> Even the clearest borehole water can contain invisible contaminants that affect health, damage appliances, and create long-term problems.</p>
+    <p><strong>The good news:</strong> Not every borehole needs extensive treatment. About 40% of West Pokot boreholes produce naturally safe water requiring only basic filtration. The key is knowing <em>exactly</em> what's in your water through professional testing.</p>
+    <h2>Step 1: Water Quality Testing (ALWAYS Do This First!)</h2>
+    <div class="highlight-box">
+     <h4>✅ Comprehensive Water Test Package: KSH 5,000 - 12,000</h4>
+     <p><strong>What's Tested:</strong></p>
+     <ul>
+      <li><strong>Physical Parameters:</strong> Color, turbidity, temperature, taste, odor</li>
+      <li><strong>Chemical Parameters:</strong> pH, hardness, iron, fluoride, nitrates, chlorides, sulfates, total dissolved solids (TDS)</li>
+      <li><strong>Bacteriological Testing:</strong> E. coli, total coliforms, fecal coliforms</li>
+      <li><strong>Heavy Metals (if needed):</strong> Lead, arsenic, mercury</li>
+     </ul>
+     <p><strong>Turnaround Time:</strong> 5-7 days for results<br><strong>Where to Test:</strong> Government Chemist, KEBS Labs, or accredited private labs</p>
+    </div>
+    <div class="warning-box">
+     <h4>⚠️ Never Assume Your Water is Safe</h4>
+     <p>Even if neighbors have good water, YOUR borehole could tap a different aquifer layer with different quality. Testing costs KSH 5,000-12,000 – a small price for your family's health. <strong>Fancy Drops includes basic testing in our installation packages.</strong></p>
+    </div>
+    <h2>Common Water Quality Issues in West Pokot Boreholes</h2>
+    <div class="cost-card">
+     <h3>🧪 Issue #1: High Mineral Content (Hard Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 60% of boreholes<br><strong>Signs You Have It:</strong> White scale buildup on taps/kettles, soap doesn't lather well, dishes have spots, skin feels dry after bathing</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Generally safe to drink</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Severe - clogs pipes, damages heaters</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Water softener system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 35,000 - 65,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Calcium and magnesium dissolve from underground rock formations. West Pokot's limestone-rich geology makes hard water common.</p>
+     <div class="highlight-box">
+      <h4>✅ Softener ROI: Saves Money Long-Term!</h4>
+      <p><strong>Softener Cost:</strong> KSH 45,000 average<br><strong>Annual Savings:</strong> KSH 15,000-20,000 (reduced soap, detergent, appliance repairs)<br><strong>Appliance Lifespan Extension:</strong> 3-5 years longer for heaters, washing machines<br><strong>Payback Period:</strong> 2-3 years</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🦠 Issue #2: Bacterial Contamination</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 25% of boreholes (especially shallow ones)<br><strong>Signs You Have It:</strong> Often NO visible signs - requires lab testing</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>HIGH RISK - causes diarrhea, typhoid, cholera</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>None</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>UV sterilization or chlorination</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 25,000 - 45,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Surface water seepage (especially in shallow boreholes &lt;40m), poor borehole sealing, contamination during drilling, nearby septic systems.</p>
+     <div class="warning-box">
+      <h4>⚠️ CRITICAL: Test Before Drinking!</h4>
+      <p>You cannot see, smell, or taste most harmful bacteria. Even brand-new boreholes can be contaminated. <strong>ALWAYS test water before consumption.</strong> Testing costs KSH 5,000-8,000 but could save your family's health.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🌫️ Issue #3: High Turbidity (Cloudy Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 30% of boreholes (especially new ones)<br><strong>Signs You Have It:</strong> Water looks milky/cloudy, sediment settles in tanks, brownish tint</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Medium risk - can harbor bacteria</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Moderate - clogs filters, damages pumps</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Sediment filter + borehole flushing</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 8,000 - 20,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Fine sand/silt particles, inadequate borehole development, poor screen selection, or aquifer disturbance.</p>
+     <p><strong>Good News:</strong> Often temporary in new boreholes! Proper borehole flushing (development) for 6-12 hours usually resolves the issue permanently.</p>
+    </div>
+    <div class="cost-card">
+     <h3>⚫ Issue #4: Iron &amp; Manganese</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 20% of boreholes<br><strong>Signs You Have It:</strong> Brown/orange stains on fixtures, metallic taste, water turns brown when exposed to air, reddish sediment</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Low - safe but unpleasant taste</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>High - stains everything, clogs pipes</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Aeration + filtration system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 45,000 - 80,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Iron-rich rock formations dissolve into groundwater. Common in areas with volcanic geology.</p>
+    </div>
+    <div class="cost-card">
+     <h3>🧂 Issue #5: High Salinity (Salty Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 10% of boreholes (mainly in specific regions)<br><strong>Signs You Have It:</strong> Water tastes salty, white crusty deposits, corrodes metal quickly</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Medium - high salt intake concerns</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Very high - corrosion, scale buildup</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Reverse osmosis system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 80,000 - 150,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Dissolved salts from rock formations or, in some cases, seawater intrusion (not common in West Pokot).</p>
+     <div class="warning-box">
+      <h4>⚠️ Most Expensive to Treat</h4>
+      <p>High salinity requires reverse osmosis (RO) - the most costly treatment. If your borehole tests high for salinity, consider drilling deeper or relocating the borehole instead of treating. Sometimes re-drilling is more cost-effective.</p>
+     </div>
+    </div>
+    <h2>Water Treatment Systems Explained</h2>
+    <div class="cost-card">
+     <h3>🔬 System #1: Sediment Filtration</h3><span class="price-tag">KSH 8,000 - 20,000</span>
+     <p><strong>What It Does:</strong> Removes physical particles like sand, silt, rust, and debris<br><strong>How It Works:</strong> Water passes through multiple filter cartridges (5-50 micron) that trap particles</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>Cloudy or turbid water</li>
+      <li>Protecting pumps and appliances from sediment damage</li>
+      <li>As a pre-treatment before other systems</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Replace filter cartridges every 3-6 months (KSH 800-2,500 each)</p>
+     <div class="highlight-box">
+      <h4>✅ Recommended for ALL Boreholes</h4>
+      <p>Even if your water looks clear, a basic sediment filter (KSH 8,000-12,000) protects expensive pumps and appliances from microscopic particles. Consider it cheap insurance!</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>💧 System #2: Water Softener</h3><span class="price-tag">KSH 35,000 - 65,000</span>
+     <p><strong>What It Does:</strong> Removes calcium and magnesium that cause hardness<br><strong>How It Works:</strong> Ion exchange process using salt to replace hard minerals with sodium</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>Reducing scale buildup in pipes and appliances</li>
+      <li>Improving soap lathering and cleaning efficiency</li>
+      <li>Protecting water heaters, washing machines, dishwashers</li>
+      <li>Softer skin and hair after bathing</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Refill salt tank monthly (KSH 400-800 per 25kg bag), periodic resin bed cleaning</p>
+     <p><strong>Capacity Options:</strong></p>
+     <ul>
+      <li><strong>Small (3-5 person household):</strong> KSH 35,000-45,000</li>
+      <li><strong>Medium (6-10 person household):</strong> KSH 45,000-55,000</li>
+      <li><strong>Large (commercial/institutional):</strong> KSH 55,000-80,000+</li>
+     </ul>
+    </div>
+    <div class="cost-card">
+     <h3>☀️ System #3: UV Sterilization</h3><span class="price-tag">KSH 25,000 - 45,000</span>
+     <p><strong>What It Does:</strong> Kills 99.99% of bacteria, viruses, and protozoa<br><strong>How It Works:</strong> Ultraviolet light damages microorganism DNA, making them unable to reproduce</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>Bacterial contamination (E. coli, coliforms)</li>
+      <li>Virus protection (hepatitis, polio, rotavirus)</li>
+      <li>Chemical-free disinfection</li>
+      <li>Households with children, elderly, or immune-compromised members</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Replace UV bulb annually (KSH 3,500-6,000), clean quartz sleeve every 6 months</p>
+     <div class="highlight-box">
+      <h4>✅ Highly Recommended for Shallow Boreholes (&lt;50m)</h4>
+      <p>Shallow boreholes are more susceptible to bacterial contamination from surface water. UV sterilization provides continuous protection without chemicals or taste changes.</p>
+     </div>
+     <div class="warning-box">
+      <h4>⚠️ UV Requires Clear Water First!</h4>
+      <p>UV light only works in clear water. If your water is cloudy/turbid, you MUST install sediment filtration BEFORE the UV system, or bacteria can "hide" behind particles.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🔄 System #4: Reverse Osmosis (RO)</h3><span class="price-tag">KSH 80,000 - 150,000</span>
+     <p><strong>What It Does:</strong> Removes dissolved salts, minerals, heavy metals, and most contaminants<br><strong>How It Works:</strong> Forces water through a semi-permeable membrane that blocks contaminants</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>High salinity (salty water)</li>
+      <li>Fluoride reduction</li>
+      <li>Heavy metal removal (lead, arsenic, mercury)</li>
+      <li>Extremely high TDS (total dissolved solids)</li>
+      <li>Producing bottled-water quality for drinking/cooking</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Replace filters every 6-12 months (KSH 5,000-8,000), membrane every 2-3 years (KSH 12,000-18,000)</p>
+     <p><strong>System Types:</strong></p>
+     <ul>
+      <li><strong>Under-sink (point-of-use):</strong> KSH 35,000-65,000 (for drinking water only)</li>
+      <li><strong>Whole-house (point-of-entry):</strong> KSH 150,000-300,000 (treats all water)</li>
+     </ul>
+     <div class="warning-box">
+      <h4>⚠️ RO Considerations</h4>
+      <p><strong>Water Wastage:</strong> RO systems waste 2-4 liters for every 1 liter produced<br><strong>Slow Flow:</strong> Typically fills 10-12 liters per hour<br><strong>Mineral Removal:</strong> Removes beneficial minerals too (can add remineralization cartridge)</p>
+      <p><strong>Our Recommendation:</strong> Only use RO if testing shows it's necessary. It's expensive, wastes water, and is overkill for most boreholes.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>💨 System #5: Aeration + Iron Removal</h3><span class="price-tag">KSH 45,000 - 80,000</span>
+     <p><strong>What It Does:</strong> Removes dissolved iron and manganese that cause staining<br><strong>How It Works:</strong> Aeration oxidizes iron/manganese, then filters remove the oxidized particles</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>Brown/orange water or staining</li>
+      <li>Metallic taste</li>
+      <li>Reddish-brown sediment</li>
+      <li>High iron content (&gt;0.3 mg/L)</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Backwash filter weekly (automatic systems available), replace media every 3-5 years</p>
+    </div>
+    <div class="cost-card">
+     <h3>🧪 System #6: Chlorination</h3><span class="price-tag">KSH 15,000 - 35,000</span>
+     <p><strong>What It Does:</strong> Kills bacteria and oxidizes iron/manganese<br><strong>How It Works:</strong> Automatic chlorine dosing system injects chlorine into water, then removes excess</p>
+     <p><strong>Best For:</strong></p>
+     <ul>
+      <li>Budget-friendly bacterial treatment</li>
+      <li>Combined bacterial + iron removal</li>
+      <li>Large-scale applications (schools, hospitals)</li>
+     </ul>
+     <p><strong>Maintenance:</strong> Refill chlorine solution monthly (KSH 500-1,500), periodic system calibration</p>
+     <div class="warning-box">
+      <h4>⚠️ Chlorine vs UV: Which is Better?</h4>
+      <p><strong>UV Advantages:</strong> No taste/odor, no chemicals, instant disinfection, no ongoing costs<br><strong>Chlorine Advantages:</strong> Lower upfront cost, provides residual protection in storage tanks, also removes iron</p>
+      <p><strong>Our Recommendation:</strong> UV is better for home use; chlorine for large institutions or if iron removal is also needed.</p>
+     </div>
+    </div>
+    <h2>Recommended Treatment Packages by Water Quality</h2>
+    <table class="comparison-table">
+     <thead>
+      <tr>
+       <th>Your Water Issue</th>
+       <th>Recommended Package</th>
+       <th>Total Cost</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td><strong>Clear, No Issues</strong><br>
+        (40% of boreholes)</td>
+       <td>Basic sediment filter only</td>
+       <td><strong>KSH 8,000 - 12,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Hard Water Only</strong><br>
+        (25% of boreholes)</td>
+       <td>Sediment filter + Water softener</td>
+       <td><strong>KSH 45,000 - 75,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Bacterial Risk</strong><br>
+        (15% of boreholes)</td>
+       <td>Sediment filter + UV sterilization</td>
+       <td><strong>KSH 35,000 - 60,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Hard Water + Bacteria</strong><br>
+        (10% of boreholes)</td>
+       <td>Sediment filter + Softener + UV</td>
+       <td><strong>KSH 65,000 - 110,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Iron/Manganese</strong><br>
+        (5% of boreholes)</td>
+       <td>Sediment filter + Aeration/iron removal</td>
+       <td><strong>KSH 55,000 - 95,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>High Salinity</strong><br>
+        (5% of boreholes)</td>
+       <td>Under-sink RO for drinking water only</td>
+       <td><strong>KSH 35,000 - 65,000</strong></td>
+      </tr>
+     </tbody>
+    </table>
+    <h2>Maintenance &amp; Ongoing Costs</h2>
+    <p>Water treatment systems require regular maintenance to function properly. Budget for these ongoing costs:</p>
+    <ul>
+     <li><strong>Sediment Filters:</strong> Replace every 3-6 months (KSH 800-2,500 per filter)</li>
+     <li><strong>Water Softener Salt:</strong> Monthly refill (KSH 400-800 per 25kg bag)</li>
+     <li><strong>UV Bulb:</strong> Annual replacement (KSH 3,500-6,000)</li>
+     <li><strong>RO Filters:</strong> Pre-filters every 6 months (KSH 2,000-3,000), membrane every 2-3 years (KSH 12,000-18,000)</li>
+     <li><strong>Professional Servicing:</strong> Annual checkup (KSH 3,000-8,000)</li>
+    </ul>
+    <p><strong>Annual Maintenance Budget:</strong> KSH 5,000-20,000 depending on systems installed</p>
+    <h2>DIY vs Professional Installation</h2>
+    <div class="warning-box">
+     <h4>⚠️ We Recommend Professional Installation</h4>
+     <p><strong>Why?</strong></p>
+     <ul>
+      <li><strong>Correct Sizing:</strong> Wrong system size = wasted money + poor performance</li>
+      <li><strong>Proper Sequencing:</strong> Treatment stages must be in correct order or they won't work</li>
+      <li><strong>Warranty Protection:</strong> DIY installation often voids manufacturer warranties</li>
+      <li><strong>Plumbing Expertise:</strong> Incorrect installation can cause leaks or contamination</li>
+      <li><strong>Testing &amp; Calibration:</strong> Systems need professional testing to ensure effectiveness</li>
+     </ul>
+     <p><strong>Fancy Drops Installation Service:</strong> KSH 5,000-15,000 (includes testing, calibration, training, 1-year warranty)</p>
+    </div>
+    <h2>When Treatment Isn't Enough: Consider Drilling Deeper</h2>
+    <p>Sometimes, the most cost-effective solution isn't treating bad water – it's drilling deeper to reach better water quality. Consider deepening or relocating your borehole if:</p>
+    <ul>
+     <li>Treatment costs exceed KSH 150,000 (might be cheaper to drill deeper)</li>
+     <li>High salinity requiring expensive RO systems</li>
+     <li>Persistent bacterial contamination despite treatment (surface water intrusion)</li>
+     <li>Very low yield (&lt;5 liters/minute) making treatment impractical</li>
+    </ul>
+    <p><strong>Consult Fancy Drops:</strong> We'll honestly assess whether treatment or re-drilling makes more economic sense for your situation.</p>
+    <div class="article-cta">
+     <h3>🧪 Get Your Water Tested &amp; Treated Today</h3>
+     <p>Fancy Drops Engineering offers comprehensive water testing and professional treatment system installation. We'll test your water, recommend the right treatment, and ensure your family has safe, clean drinking water.</p>
+     <div class="cta-buttons-group"><a href="tel:+254713332124" class="cta-btn cta-btn-primary">📞 Schedule Water Test</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary">💬 WhatsApp for Consultation</a>
+     </div>
+    </div>
+    <div class="share-section">
+     <h4>Help others ensure safe water! Share this guide 🔄</h4>
+     <div class="share-buttons"><a href="https://wa.me/?text=Complete%20guide%20to%20borehole%20water%20treatment%20in%20West%20Pokot!%20https://yourwebsite.com/blog-water-treatment.html" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp">💬 Share on WhatsApp</a> <a href="mailto:?subject=Borehole%20Water%20Treatment%20Guide&amp;body=Check%20out%20this%20comprehensive%20guide:%20https://yourwebsite.com/blog-water-treatment.html" class="share-btn share-email">✉️ Share via Email</a>
+     </div>
+    </div>
+   </article><!-- Related Articles -->
+   <div class="related-articles">
+    <h3>📚 Related Articles</h3>
+    <div class="related-grid"><a href="blog-borehole-guide.html" class="related-card"> <h4>💧 Complete Borehole Drilling Guide</h4><p>Everything you need to know about the drilling process and requirements.</p></a> <a href="blog-cost-breakdown.html" class="related-card"> <h4>💰 Borehole Cost Breakdown</h4><p>Transparent pricing for every aspect of your borehole project.</p></a> <a href="blog-wra-permits.html" class="related-card"> <h4>📋 WRA Permits Step-by-Step Guide</h4><p>Navigate Kenya's water regulations and obtain necessary permits.</p></a>
+    </div>
+   </div>
+  </div><!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
+     <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
+     </div>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="blog.html">Blog</a> <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Info</h3>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
+     <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
+   </div>
+  </footer>
+  <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borehole Water Treatment Guide West Pokot | Fancy Drops Engineering</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Complete guide to borehole water treatment in West Pokot. Learn about filtration, purification, and ensuring safe drinking water from your borehole.">
+  <meta name="keywords" content="borehole water treatment Kenya, water purification West Pokot, water filtration systems, safe drinking water, water quality testing Kenya">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        :root {
+            --deep-blue: #1e40af;
+            --sky-blue: #3b82f6;
+            --white: #ffffff;
+            --light-blue: #f0f9ff;
+            --accent-orange: #f97316;
+            --charcoal: #1f2937;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --ocean-blue: #0c4a6e;
+            --gold: #f59e0b;
+        }
+
+        /* Navigation - Same as previous */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--accent-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .nav-cta-call {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Article Hero */
+        .article-hero {
+            margin-top: 85px;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .article-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .article-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 3rem;
+        }
+
+        .article-intro {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #fffbeb;
+            border-radius: 15px;
+            border-left: 5px solid var(--gold);
+        }
+
+        .article-content h2 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .article-content h3 {
+            color: var(--sky-blue);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .cost-card {
+            background: #fffbeb;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .cost-card h3 {
+            color: var(--gold);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .price-tag {
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .cost-breakdown {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--deep-blue);
+        }
+
+        .highlight-box {
+            background: #f0fdf4;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--success-green);
+        }
+
+        .highlight-box h4 {
+            color: var(--success-green);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ef4444;
+        }
+
+        .warning-box h4 {
+            color: #ef4444;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--light-blue);
+        }
+
+        /* CTA Section */
+        .article-cta {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .article-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .article-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: var(--white);
+        }
+
+        .cta-buttons-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .cta-btn-primary {
+            background: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
+        }
+
+        .cta-btn-secondary {
+            background: var(--white);
+            color: var(--deep-blue);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--gray-100);
+            color: var(--deep-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-blog:hover {
+            background: var(--sky-blue);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* Share Section */
+        .share-section {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .share-section h4 {
+            color: var(--deep-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .share-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .share-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .share-email {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .share-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--light-blue);
+            border-radius: 20px;
+        }
+
+        .related-articles h3 {
+            color: var(--deep-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .related-card h4 {
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .related-card p {
+            color: var(--charcoal);
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+
+        /* Sticky WhatsApp */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ocean-blue);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                order: 4;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .article-hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .article-hero h1 {
+                font-size: 2rem;
+            }
+
+            .article-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .featured-image {
+                height: 250px;
+                font-size: 4rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.7rem 0.5rem;
+            }
+
+            .cta-buttons-group {
+                flex-direction: column;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style> <!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="blog.html" class="active">Blog</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
+   </div>
+  </nav><!-- Sticky WhatsApp --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬
+   </div></a> <!-- Article Hero -->
+  <section class="article-hero">
+   <div class="article-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>→</span> <a href="blog.html">Blog</a> <span>→</span> <span>Cost Breakdown</span>
+    </div><span class="article-category">Water Treatment</span>
+    <h1>Complete Guide to Borehole Water Treatment in West Pokot</h1>
+    <div class="article-meta"><span class="meta-item">📅 January 6, 2024</span> <span class="meta-item">⏱️ 8 min read</span> <span class="meta-item">✍️ Fancy Drops Engineering</span>
+    </div>
+   </div>
+  </section><!-- Article Content -->
+  <div class="article-container"><a href="blog.html" class="back-to-blog">← Back to Blog</a>
+   <article class="article-content">
+    <div class="featured-image">
+     💎
+    </div>
+    <p class="article-intro"><strong>Crystal-clear water from your borehole.</strong> Having a borehole is one thing – ensuring safe, clean drinking water is another. Learn exactly what treatment your West Pokot borehole needs, why it matters, and how to keep your family healthy for years to come.</p>
+    <h2>Why Borehole Water Treatment Matters in West Pokot</h2>
+    <p>Your brand-new borehole pumps crystal-clear water to the surface. It <em>looks</em> clean, so it must be safe to drink, right? <strong>Not always.</strong> Even the clearest borehole water can contain invisible contaminants that affect health, damage appliances, and create long-term problems.</p>
+    <p><strong>The good news:</strong> Not every borehole needs extensive treatment. About 40% of West Pokot boreholes produce naturally safe water requiring only basic filtration. The key is knowing <em>exactly</em> what's in your water through professional testing.</p>
+    <h2>Common Water Quality Issues in West Pokot Boreholes</h2>
+    <div class="cost-card">
+     <h3>🧪 Issue #1: High Mineral Content (Hard Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 60% of boreholes<br><strong>Signs You Have It:</strong> White scale buildup on taps/kettles, soap doesn't lather well, dishes have spots, skin feels dry after bathing</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Generally safe to drink</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Severe - clogs pipes, damages heaters</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Water softener system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 35,000 - 65,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Calcium and magnesium dissolve from underground rock formations. West Pokot's limestone-rich geology makes hard water common.</p>
+     <div class="highlight-box">
+      <h4>✅ Softener ROI: Saves Money Long-Term!</h4>
+      <p><strong>Softener Cost:</strong> KSH 45,000 average<br><strong>Annual Savings:</strong> KSH 15,000-20,000 (reduced soap, detergent, appliance repairs)<br><strong>Appliance Lifespan Extension:</strong> 3-5 years longer for heaters, washing machines<br><strong>Payback Period:</strong> 2-3 years</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🦠 Issue #2: Bacterial Contamination</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 25% of boreholes (especially shallow ones)<br><strong>Signs You Have It:</strong> Often NO visible signs - requires lab testing</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>HIGH RISK - causes diarrhea, typhoid, cholera</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>None</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>UV sterilization or chlorination</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 25,000 - 45,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Surface water seepage (especially in shallow boreholes &lt;40m), poor borehole sealing, contamination during drilling, nearby septic systems.</p>
+     <div class="warning-box">
+      <h4>⚠️ CRITICAL: Test Before Drinking!</h4>
+      <p>You cannot see, smell, or taste most harmful bacteria. Even brand-new boreholes can be contaminated. <strong>ALWAYS test water before consumption.</strong> Testing costs KSH 5,000-8,000 but could save your family's health.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🌫️ Issue #3: High Turbidity (Cloudy Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 30% of boreholes (especially new ones)<br><strong>Signs You Have It:</strong> Water looks milky/cloudy, sediment settles in tanks, brownish tint</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Medium risk - can harbor bacteria</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Moderate - clogs filters, damages pumps</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Sediment filter + borehole flushing</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 8,000 - 20,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Fine sand/silt particles, inadequate borehole development, poor screen selection, or aquifer disturbance.</p>
+     <p><strong>Good News:</strong> Often temporary in new boreholes! Proper borehole flushing (development) for 6-12 hours usually resolves the issue permanently.</p>
+    </div>
+    <div class="cost-card">
+     <h3>⚫ Issue #4: Iron &amp; Manganese</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 20% of boreholes<br><strong>Signs You Have It:</strong> Brown/orange stains on fixtures, metallic taste, water turns brown when exposed to air, reddish sediment</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Low - safe but unpleasant taste</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>High - stains everything, clogs pipes</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Aeration + filtration system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 45,000 - 80,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Iron-rich rock formations dissolve into groundwater. Common in areas with volcanic geology.</p>
+    </div>
+    <div class="cost-card">
+     <h3>🧂 Issue #5: High Salinity (Salty Water)</h3>
+     <p><strong>Prevalence in West Pokot:</strong> About 10% of boreholes (mainly in specific regions)<br><strong>Signs You Have It:</strong> Water tastes salty, white crusty deposits, corrodes metal quickly</p>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Health Impact:</strong></span> <span>Medium - high salt intake concerns</span>
+      </div>
+      <div class="cost-item"><span><strong>Equipment Damage:</strong></span> <span>Very high - corrosion, scale buildup</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Needed:</strong></span> <span>Reverse osmosis system</span>
+      </div>
+      <div class="cost-item"><span><strong>Treatment Cost:</strong></span> <span><strong>KSH 80,000 - 150,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Causes It:</strong> Dissolved salts from rock formations or, in some cases, seawater intrusion (not common in West Pokot).</p>
+     <div class="warning-box">
+      <h4>⚠️ Most Expensive to Treat</h4>
+      <p>High salinity requires reverse osmosis (RO) - the most costly treatment. If your borehole tests high for salinity, consider drilling deeper or relocating the borehole instead of treating. Sometimes re-drilling is more cost-effective.</p>
+     </div>
+    </div>
+    <h2>Water Treatment Systems Explained</h2>
+    <div class="cost-card">
+     <h3>🔬 System #1: Sediment Filtration</h3><span class="price-tag">KSH 8,000 - 20,000</span>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span>WRA Drilling Permit Application</span> <span><strong>KSH 3,000 - 5,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Environmental Impact Assessment (if required)</span> <span><strong>KSH 0 - 10,000</strong></span>
+      </div>
+      <div class="cost-item"><span>County Government Permits</span> <span><strong>KSH 2,000 - 3,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Document Processing &amp; Submissions</span> <span><strong>KSH 5,000 - 5,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Water Abstraction License (Annual)</span> <span><strong>KSH 2,000 - 2,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Phase 2 Subtotal:</span> <span><strong>KSH 12,000 - 25,000</strong></span>
+      </div>
+     </div>
+     <p><strong>Legal Protection:</strong> Fancy Drops Engineering handles all permit applications and ensures full WRA compliance. We navigate the bureaucracy so you don't have to.</p>
+     <div class="highlight-box">
+      <h4>✅ Included in Our Service</h4>
+      <p>When you work with Fancy Drops, we handle ALL permit applications, follow-ups, and approvals. You get legal peace of mind and avoid costly penalties (up to KSH 500,000 for non-compliance).</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🚜 Phase 3: Drilling &amp; Borehole Construction</h3><span class="price-tag">KSH 200,000 - 400,000</span>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span>Drilling Cost (per meter)</span> <span><strong>KSH 4,000 - 6,000/m</strong></span>
+      </div>
+      <div class="cost-item"><span>Average Depth: 50-70 meters</span> <span><strong>KSH 200,000 - 350,000</strong></span>
+      </div>
+      <div class="cost-item"><span>PVC Casing Installation (6-inch)</span> <span><strong>KSH 30,000 - 50,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Gravel Pack &amp; Screen</span> <span><strong>KSH 15,000 - 25,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Drilling Team &amp; Equipment Mobilization</span> <span><strong>KSH 25,000 - 35,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Borehole Development &amp; Cleaning</span> <span><strong>KSH 20,000 - 30,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Phase 3 Subtotal:</span> <span><strong>KSH 290,000 - 490,000</strong></span>
+      </div>
+     </div>
+     <p><strong>What Affects Drilling Cost:</strong></p>
+     <ul>
+      <li><strong>Rock Formation:</strong> Soft soil (KSH 4,000/m) vs. hard rock (KSH 6,000/m)</li>
+      <li><strong>Depth Required:</strong> Shallow aquifers (30-50m) cost less than deep drilling (80-120m)</li>
+      <li><strong>Site Accessibility:</strong> Easy access vs. remote locations requiring equipment transport</li>
+      <li><strong>Casing Diameter:</strong> Standard 6-inch vs. larger 8-inch casing</li>
+     </ul>
+     <div class="highlight-box">
+      <h4>✅ West Pokot Advantage</h4>
+      <p>West Pokot's geology is favorable for borehole drilling! Most successful boreholes hit water at 40-70 meters depth, keeping drilling costs reasonable. Our local expertise means we know exactly where to drill for optimal results.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>⚡ Phase 4: Pump &amp; Equipment Installation</h3><span class="price-tag">KSH 80,000 - 250,000</span>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span><strong>Option A: Electric Submersible Pump</strong></span> <span></span>
+      </div>
+      <div class="cost-item"><span>Quality Pump (1-2 HP)</span> <span><strong>KSH 45,000 - 80,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Electrical Installation &amp; Control Panel</span> <span><strong>KSH 25,000 - 40,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Delivery Pipes &amp; Fittings</span> <span><strong>KSH 15,000 - 25,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Option A Subtotal:</span> <span><strong>KSH 85,000 - 145,000</strong></span>
+      </div>
+     </div>
+     <div class="cost-breakdown" style="margin-top: 1.5rem;">
+      <div class="cost-item"><span><strong>Option B: Solar-Powered System (RECOMMENDED)</strong></span> <span></span>
+      </div>
+      <div class="cost-item"><span>Solar Pump (DC, 1-2 HP)</span> <span><strong>KSH 55,000 - 90,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Solar Panels (300-600W)</span> <span><strong>KSH 40,000 - 80,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Mounting Structure &amp; Installation</span> <span><strong>KSH 20,000 - 35,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Controller &amp; Wiring</span> <span><strong>KSH 15,000 - 25,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Delivery Pipes &amp; Fittings</span> <span><strong>KSH 15,000 - 25,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Option B Subtotal:</span> <span><strong>KSH 145,000 - 255,000</strong></span>
+      </div>
+     </div>
+     <div class="highlight-box">
+      <h4>✅ Solar ROI: Pays for Itself in 2-3 Years!</h4>
+      <p><strong>Solar Initial Cost:</strong> KSH 60,000 more than electric<br><strong>Annual Electricity Savings:</strong> KSH 24,000 - 36,000/year<br><strong>Payback Period:</strong> 2-3 years<br><strong>20-Year Savings:</strong> KSH 480,000 - 720,000</p>
+      <p>After payback, you enjoy FREE water pumping for 15-20 years! Plus, solar works during power outages and grid failures.</p>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>🏗️ Phase 5: Water Storage &amp; Distribution</h3><span class="price-tag">KSH 45,000 - 120,000</span>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span>5,000L Storage Tank (Plastic)</span> <span><strong>KSH 18,000 - 28,000</strong></span>
+      </div>
+      <div class="cost-item"><span>10,000L Storage Tank (Plastic)</span> <span><strong>KSH 30,000 - 45,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Tank Stand/Platform Construction</span> <span><strong>KSH 15,000 - 35,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Distribution Piping (50-100m)</span> <span><strong>KSH 20,000 - 40,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Valves, Taps &amp; Fittings</span> <span><strong>KSH 8,000 - 15,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Pressure Tank (Optional)</span> <span><strong>KSH 15,000 - 30,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Phase 5 Subtotal:</span> <span><strong>KSH 45,000 - 120,000</strong></span>
+      </div>
+     </div>
+    </div>
+    <div class="cost-card">
+     <h3>💎 Phase 6: Water Treatment (Optional but Recommended)</h3><span class="price-tag">KSH 25,000 - 80,000</span>
+     <div class="cost-breakdown">
+      <div class="cost-item"><span>Basic Sediment Filter</span> <span><strong>KSH 8,000 - 15,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Water Softener (For Hard Water)</span> <span><strong>KSH 35,000 - 65,000</strong></span>
+      </div>
+      <div class="cost-item"><span>UV Sterilization System</span> <span><strong>KSH 25,000 - 45,000</strong></span>
+      </div>
+      <div class="cost-item"><span>Complete Treatment Package:</span> <span><strong>KSH 60,000 - 120,000</strong></span>
+      </div>
+     </div>
+     <p><strong>Is Treatment Necessary?</strong> We perform water quality testing and recommend treatment only if needed. About 60% of West Pokot boreholes benefit from basic filtration; 30% need softening.</p>
+    </div>
+    <h2>Total Project Cost Summary</h2>
+    <table class="comparison-table">
+     <thead>
+      <tr>
+       <th>Project Package</th>
+       <th>What's Included</th>
+       <th>Total Investment</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td><strong>Basic Package</strong></td>
+       <td>Survey + Permits + 50m Drilling + Electric Pump + 5,000L Tank + Basic Piping</td>
+       <td><strong>KSH 450,000 - 550,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Standard Package</strong></td>
+       <td>Survey + Permits + 60m Drilling + Electric Pump + 10,000L Tank + Distribution + Treatment</td>
+       <td><strong>KSH 580,000 - 700,000</strong></td>
+      </tr>
+      <tr>
+       <td><strong>Premium Solar Package</strong></td>
+       <td>Survey + Permits + 70m Drilling + Solar Pump System + 10,000L Tank + Distribution + Treatment</td>
+       <td><strong>KSH 720,000 - 850,000</strong></td>
+      </tr>
+     </tbody>
+    </table>
+    <h2>Hidden Costs to Watch For (We Don't Charge These!) ⚠️</h2>
+    <p>Some companies quote low prices upfront but add hidden costs later. <strong>Fancy Drops Engineering believes in transparent, all-inclusive pricing.</strong> Here's what unethical contractors might surprise you with:</p>
+    <div class="warning-box">
+     <h4>🚫 Hidden Cost Alert!</h4>
+     <ul>
+      <li><strong>Extra Depth Charges:</strong> "KSH 3,000/meter initially, but KSH 7,000/m after 40m" (surprise!)</li>
+      <li><strong>Rock Penetration Fee:</strong> KSH 50,000-100,000 for "unexpected" hard rock</li>
+      <li><strong>Weekend/Holiday Drilling:</strong> 50-100% price increase</li>
+      <li><strong>Dry Borehole Fee:</strong> Full payment even if no water found</li>
+      <li><strong>Mobilization Charges:</strong> Hidden transport fees not mentioned upfront</li>
+      <li><strong>Permit "Facilitation":</strong> Inflated permit costs with hidden markups</li>
+     </ul>
+     <p><strong>Our Guarantee:</strong> Fixed-price contracts with no surprise charges. If we quote KSH 500,000, you pay KSH 500,000. Period.</p>
+    </div>
+    <h2>Payment Terms &amp; Financing</h2>
+    <p>We understand that borehole projects are significant investments. Fancy Drops Engineering offers flexible payment terms:</p>
+    <div class="highlight-box">
+     <h4>💳 Flexible Payment Plans</h4>
+     <ul>
+      <li><strong>Milestone-Based Payments:</strong>
+       <ul>
+        <li>30% deposit (survey &amp; mobilization)</li>
+        <li>40% upon reaching water</li>
+        <li>30% upon project completion</li>
+       </ul></li>
+      <li><strong>Partnership with Financial Institutions:</strong> We can connect you with banks offering borehole financing at competitive rates</li>
+      <li><strong>Group Projects:</strong> Reduced per-household cost for community/church/school projects (5+ connections)</li>
+     </ul>
+    </div>
+    <h2>Cost-Saving Tips (Without Compromising Quality) 💡</h2>
+    <ol>
+     <li><strong>Drill During Dry Season (Jan-March):</strong> Better access, faster drilling, potentially lower rates due to contractor availability</li>
+     <li><strong>Choose Solar from Day 1:</strong> Higher upfront but massive long-term savings (KSH 500,000+ over 20 years)</li>
+     <li><strong>Right-Size Your System:</strong> Don't over-spec. A 5,000L tank may be sufficient vs. unnecessarily expensive 10,000L</li>
+     <li><strong>Community Projects:</strong> Partnering with neighbors for shared infrastructure can reduce per-household costs by 30-40%</li>
+     <li><strong>Professional Survey is Non-Negotiable:</strong> That KSH 25,000 survey prevents a KSH 200,000 dry borehole mistake</li>
+    </ol>
+    <div class="article-cta">
+     <h3>💰 Get Your Free Detailed Quote Today</h3>
+     <p>Every project is unique. Get a customized, transparent quote based on your exact needs with no hidden charges. Free site visit and consultation for West Pokot projects!</p>
+     <div class="cta-buttons-group"><a href="tel:+254713332124" class="cta-btn cta-btn-primary">📞 Request Free Quote</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary">💬 WhatsApp for Quote</a>
+     </div>
+    </div>
+    <div class="share-section">
+     <h4>Found this pricing guide helpful? Share it! 🔄</h4>
+     <div class="share-buttons"><a href="https://wa.me/?text=Transparent%20borehole%20drilling%20costs%20for%20West%20Pokot%202024!%20https://yourwebsite.com/blog-cost-breakdown.html" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp">💬 Share on WhatsApp</a> <a href="mailto:?subject=Borehole%20Cost%20Breakdown%20West%20Pokot&amp;body=Check%20out%20this%20transparent%20pricing%20guide:%20https://yourwebsite.com/blog-cost-breakdown.html" class="share-btn share-email">✉️ Share via Email</a>
+     </div>
+    </div>
+   </article><!-- Related Articles -->
+   <div class="related-articles">
+    <h3>📚 Related Articles</h3>
+    <div class="related-grid"><a href="blog-borehole-guide.html" class="related-card"> <h4>💧 Complete Borehole Drilling Guide</h4><p>Everything you need to know about the drilling process and requirements.</p></a> <a href="blog-solar-benefits.html" class="related-card"> <h4>☀️ 5 Benefits of Solar Water Pumps</h4><p>Why solar is the smartest long-term investment for water pumping.</p></a> <a href="blog-wra-permits.html" class="related-card"> <h4>📋 WRA Permits Step-by-Step Guide</h4><p>Navigate Kenya's water regulations and obtain necessary permits.</p></a>
+    </div>
+   </div>
+  </div><!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
+     <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
+     </div>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="blog.html">Blog</a> <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Info</h3>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
+     <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
+     <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
+   </div>
+  </footer>
+  <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a2bcdeb94538a65',t:'MTc2Mzg0OTkyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
