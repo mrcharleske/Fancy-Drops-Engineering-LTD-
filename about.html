@@ -3,9 +3,10 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Fancy Drops Water Engineering Limited</title>
-  <link rel="icon" type="image/png" href="faviconlogo.png">
-  <meta name="description" content="Learn about Fancy Drops Water Engineering Limited - Kenya's leading water solutions provider with over 10 years of experience in borehole drilling and water systems.">
+  <title>About Us - Fancy Drops Engineering Limited | Expert Water Engineering Team</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Meet the expert team behind Fancy Drops Engineering Limited. 12+ years of water engineering excellence in Kenya. Licensed, certified, and trusted.">
+  <meta name="keywords" content="water engineering team Kenya, borehole drilling experts, Cornelius Kitayi, water solutions West Pokot">
   <style>
         * {
             margin: 0;
@@ -18,6 +19,7 @@
             line-height: 1.6;
             color: #1f2937;
             overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         html {
@@ -35,11 +37,13 @@
             --charcoal: #1f2937;
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --ocean-blue: #0c4a6e;
         }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
             position: fixed;
@@ -50,8 +54,8 @@
         }
 
         nav.scrolled {
-            box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 1);
         }
 
         .nav-container {
@@ -60,42 +64,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 3rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--deep-blue);
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
+            padding: 1rem 3rem;
+            gap: 2rem;
         }
 
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
-            flex-wrap: wrap;
+            flex: 1;
+            justify-content: center;
         }
 
         .nav-links a {
@@ -129,110 +107,169 @@
             color: var(--sky-blue);
         }
 
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+            display: block;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
-        .btn {
-            padding: 0.85rem 1.8rem;
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             border: none;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn:active {
-            transform: scale(0.95);
+            white-space: nowrap;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-        }
-
-        .btn-secondary {
+        .nav-cta-call {
             background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
             color: var(--white);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
         }
 
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 64, 175, 0.85) 50%, rgba(59, 130, 246, 0.8) 100%),
-                        url('about-hero.jpg') center/cover;
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: var(--white);
-            padding: 10rem 3rem 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px;
-            min-height: 50%;
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
         }
 
-        .page-hero::before {
-            content: '';
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile CTA Bar */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            z-index: 999;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60%;
+            min-height: 500px;
+            overflow: hidden;
+            margin-top: 85px;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 100%);
+        }
+
+        .hero-image {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.85) 0%, 
+                rgba(30, 64, 175, 0.75) 50%, 
+                rgba(59, 130, 246, 0.65) 100%);
+            z-index: 2;
         }
 
-        .page-hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
             opacity: 0;
-            animation: fadeUpHero 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
         }
 
         @keyframes fadeUpHero {
@@ -246,243 +283,87 @@
             }
         }
 
-        .page-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        /* Story Section */
-        .story-section {
-            padding: 7rem 3rem;
+        /* Our Story Section */
+        .our-story {
+            padding: 6rem 3rem;
             background: var(--white);
         }
 
-        .container {
+        .story-container {
             max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .story-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 4rem;
             align-items: center;
-            margin-bottom: 5rem;
-        }
-
-        .story-content {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .story-content.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: var(--accent-orange);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
         }
 
         .story-content h2 {
-            font-size: 2.8rem;
             color: var(--deep-blue);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .story-content p {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .story-visual {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .story-visual.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .story-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            height: 500px;
-            position: relative;
-        }
-
-        .story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .story-image:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Values Section */
-        .values-section {
-            padding: 7rem 3rem;
-            background: var(--light-blue);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .values-section::before {
-            content: '💧';
-            position: absolute;
-            font-size: 30rem;
-            opacity: 0.03;
-            top: 50%;
-            right: -5rem;
-            transform: translateY(-50%);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .section-header.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-header h2 {
             font-size: 3rem;
-            color: var(--deep-blue);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
         }
 
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--charcoal);
-            opacity: 0.8;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .value-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            text-align: center;
-            opacity: 0;
-            transform: scale(0.9);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid var(--gray-200);
-            position: relative;
-        }
-
-        .value-card.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .value-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.2);
-            border-color: var(--sky-blue);
-        }
-
-        .value-card::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            border-radius: 20px;
-            background: linear-gradient(45deg, var(--accent-orange), var(--sky-blue), var(--accent-orange));
-            background-size: 300% 300%;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: -1;
-            animation: gradientShift 3s ease infinite;
-        }
-
-        .value-card:hover::before {
-            opacity: 0.3;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .value-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            transition: transform 0.5s ease;
-        }
-
-        .value-card:hover .value-icon {
-            transform: rotateY(360deg);
-        }
-
-        .value-card h3 {
-            color: var(--deep-blue);
+        .story-content h3 {
+            color: var(--accent-orange);
             font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        .value-card p {
+        .story-content p {
             color: var(--charcoal);
-            line-height: 1.7;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
             opacity: 0.85;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .story-image:hover {
+            transform: scale(1.05);
         }
 
         /* Team Section */
         .team-section {
-            padding: 7rem 3rem;
-            background: var(--white);
+            padding: 6rem 3rem;
+            background: var(--light-blue);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            color: var(--deep-blue);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            color: var(--charcoal);
+            font-size: 1.2rem;
+            opacity: 0.8;
         }
 
         .team-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
-            margin-top: 4rem;
         }
 
         .team-card {
@@ -493,8 +374,6 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             transform: translateY(30px);
-            border: 1px solid var(--gray-200);
-            cursor: pointer;
         }
 
         .team-card.visible {
@@ -507,36 +386,19 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
 
-        .team-image {
-            height: 350px;
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .team-photo {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .team-card:hover .team-image::before {
-            left: 100%;
+        .team-card:hover .team-photo {
+            transform: scale(1.1);
         }
 
         .team-info {
             padding: 2rem;
-            text-align: center;
         }
 
         .team-info h3 {
@@ -546,177 +408,370 @@
             font-weight: 700;
         }
 
-        .team-role {
+        .team-info .position {
             color: var(--accent-orange);
-            font-weight: 600;
             font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 1rem;
+            display: block;
         }
 
         .team-info p {
             color: var(--charcoal);
-            line-height: 1.7;
-            opacity: 0.85;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
+            opacity: 0.85;
         }
 
-        /* Modal Styles */
+        .learn-more-btn {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .learn-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
-            top: 0;
+            z-index: 10000;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.8);
-            z-index: 10000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
             backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .modal.active {
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 1;
         }
 
         .modal-content {
             background: var(--white);
+            padding: 3rem;
             border-radius: 20px;
-            max-width: 800px;
+            max-width: 700px;
             width: 90%;
-            max-height: 90%;
+            max-height: 80%;
             overflow-y: auto;
             position: relative;
-            transform: scale(0.8);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
         }
 
-        .modal.active .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            color: var(--white);
-            padding: 3rem;
-            text-align: center;
-            position: relative;
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .modal-close {
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: var(--white);
             font-size: 2rem;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
+            background: none;
+            border: none;
             cursor: pointer;
+            color: var(--charcoal);
             transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .modal-close:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: var(--gray-100);
             transform: rotate(90deg);
         }
 
-        .modal-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .modal-header h2 {
-            font-size: 2.2rem;
+        .modal-content h3 {
+            color: var(--deep-blue);
+            font-size: 2rem;
             margin-bottom: 0.5rem;
             font-weight: 800;
         }
 
-        .modal-header p {
+        .modal-content .position {
+            color: var(--accent-orange);
             font-size: 1.2rem;
-            opacity: 0.95;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: block;
         }
 
-        .modal-body {
-            padding: 3rem;
-        }
-
-        .modal-body h3 {
-            color: var(--deep-blue);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .modal-body p {
+        .modal-content p {
             color: var(--charcoal);
             line-height: 1.9;
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .strengths-list {
-            background: var(--light-blue);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-        }
-
-        .strengths-list h4 {
-            color: var(--deep-blue);
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .strengths-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .strengths-list li {
-            color: var(--charcoal);
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
             font-size: 1.05rem;
         }
 
-        .strengths-list li::before {
+        .modal-content h4 {
+            color: var(--deep-blue);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-content ul li {
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .modal-content ul li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--accent-orange);
-            font-weight: 800;
+            color: var(--success-green);
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            padding: 6rem 3rem;
+            background: var(--white);
+        }
+
+        .cert-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .cert-card {
+            background: var(--light-blue);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .cert-card.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--sky-blue);
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+        }
+
+        .cert-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .cert-card h3 {
+            color: var(--deep-blue);
             font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .cert-card p {
+            color: var(--charcoal);
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 6rem 3rem;
+            background: var(--light-blue);
+        }
+
+        .values-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .value-card.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+        }
+
+        .value-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .value-card h3 {
+            color: var(--deep-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: var(--charcoal);
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        /* Milestones Section */
+        .milestones {
+            padding: 6rem 3rem;
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: var(--white);
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-50%);
+        }
+
+        .milestone {
+            position: relative;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .milestone.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .milestone:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: translateX(50px);
+        }
+
+        .milestone:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .milestone-content {
+            flex: 1;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .milestone-content:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        .milestone-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 2rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        }
+
+        .milestone-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .milestone-content p {
+            opacity: 0.9;
+            line-height: 1.7;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 7rem 3rem;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 64, 175, 0.9) 50%, rgba(59, 130, 246, 0.85) 100%),
-                        url('cta-bg.jpg') center/cover;
-            color: var(--white);
+            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-blue) 100%);
+            padding: 6rem 3rem;
             text-align: center;
+            color: var(--white);
             position: relative;
-            overflow: hidden;
         }
 
         .cta-section::before {
@@ -726,27 +781,23 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                radial-gradient(circle at 30% 50%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
         }
 
         .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
-        .cta-section h2 {
+        .cta-content h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
         }
 
-        .cta-section p {
+        .cta-content p {
             font-size: 1.3rem;
             margin-bottom: 2.5rem;
             opacity: 0.95;
@@ -755,26 +806,37 @@
 
         .cta-buttons-group {
             display: flex;
-            gap: 1.2rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-outline:hover {
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
             background: var(--white);
             color: var(--deep-blue);
+        }
+
+        .btn:hover {
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            background: var(--accent-orange);
+            color: var(--white);
         }
 
         /* Footer */
         footer {
-            background: var(--charcoal);
+            background: var(--ocean-blue);
             color: var(--white);
             padding: 4rem 3rem 2rem;
         }
@@ -826,6 +888,8 @@
             justify-content: center;
             font-size: 1.3rem;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
         }
 
         .social-link:hover {
@@ -840,6 +904,101 @@
             color: rgba(255,255,255,0.6);
         }
 
+        /* Sticky WhatsApp Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            animation: bounceIn 1s ease-out 2s both;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(100px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-ring 2s infinite;
+            position: relative;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 3px solid #25D366;
+            border-radius: 50%;
+            opacity: 0;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50%, 100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--charcoal);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 85px;
+        }
+
         /* Scroll Progress Bar */
         .scroll-progress {
             position: fixed;
@@ -851,47 +1010,60 @@
             transition: width 0.1s ease;
         }
 
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--deep-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-toggle:hover {
-            transform: scale(1.1);
-        }
-
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .story-grid {
+            .story-container {
                 grid-template-columns: 1fr;
-                gap: 3rem;
             }
 
-            .page-hero h1 {
-                font-size: 2.8rem;
+            .timeline::before {
+                left: 40px;
+            }
+
+            .milestone,
+            .milestone:nth-child(even) {
+                flex-direction: row;
+                transform: translateX(0);
+            }
+
+            .milestone-icon {
+                margin: 0 1rem 0 0;
             }
         }
 
         @media (max-width: 768px) {
             .nav-container {
                 padding: 1rem 1.5rem;
+                flex-wrap: wrap;
             }
 
             .menu-toggle {
                 display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
             }
 
             .nav-links {
                 display: none;
                 width: 100%;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0;
+                order: 4;
                 padding: 1rem 0;
             }
 
@@ -899,41 +1071,55 @@
                 display: flex;
             }
 
-            .cta-buttons {
+            .nav-links a {
+                padding: 1rem;
                 width: 100%;
-                justify-content: center;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
             }
 
-            .page-hero {
-                padding: 6rem 1.5rem 4rem;
+            .mobile-cta-bar {
+                display: none;
             }
 
-            .page-hero h1 {
-                font-size: 2.2rem;
+            .hero {
+                margin-top: 150px;
+                min-height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
 
             .section-header h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .story-content h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
             }
 
             .team-grid {
                 grid-template-columns: 1fr;
             }
 
-            .cta-section h2 {
-                font-size: 2rem;
+            .whatsapp-sticky {
+                bottom: 20px;
+                right: 20px;
             }
 
-            .modal-content {
-                width: 95%;
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.7rem;
             }
 
-            .modal-body {
-                padding: 2rem;
+            .whatsapp-tooltip {
+                display: none;
             }
         }
     </style>
@@ -945,153 +1131,243 @@
  <body><!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div><!-- Navigation -->
   <nav id="navbar">
-   <div class="nav-container"><a href="index.html" class="logo"> <img src="logo.png" alt="Fancy Drops Logo" class="logo-icon" onerror="this.style.display='none';"> <span>Fancy Drops</span> </a> <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html" class="active">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="contact.html">Contact</a>
     </div>
-    <div class="cta-buttons"><a href="tel:+254713332124" class="btn btn-secondary">📞 Call</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-primary">💬 WhatsApp</a>
-    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
    </div>
-  </nav><!-- Page Hero -->
-  <section class="page-hero">
-   <div class="page-hero-content">
-    <h1>About Fancy Drops</h1>
-    <p>Pioneering sustainable water solutions across Kenya with innovation, expertise, and unwavering commitment to excellence.</p>
+  </nav><!-- Mobile CTA Bar -->
+  <div class="mobile-cta-bar"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+  </div><!-- Hero Section -->
+  <section class="hero"><img src="images/about-hero.jpg" alt="Fancy Drops Engineering Team in Action" class="hero-image" onerror="this.style.display='none';">
+   <div class="hero-overlay"></div>
+   <div class="hero-content">
+    <h1>Building Trust Through Excellence</h1>
+    <p>Meet the expert team transforming Kenya's water landscape with sustainable solutions, innovative technology, and unwavering commitment to quality.</p>
    </div>
-  </section><!-- Story Section -->
-  <section class="story-section">
-   <div class="container">
-    <div class="story-grid">
-     <div class="story-content" data-animate><span class="section-badge">Our Story</span>
-      <h2>Building a Legacy of Water Excellence</h2>
-      <p>Founded with a vision to transform water access across Kenya, Fancy Drops Water Engineering Limited has grown into a trusted leader in comprehensive water solutions. Our journey began with a simple yet powerful mission: to deliver reliable, sustainable, and affordable water systems to communities, farms, and businesses.</p>
-      <p>Over the years, we've drilled hundreds of boreholes, installed cutting-edge water treatment systems, and pioneered solar-powered water solutions that reduce costs while protecting the environment. Every project we undertake is guided by our commitment to quality, innovation, and customer satisfaction.</p>
-      <p>Today, we stand proud as one of Kenya's most respected water engineering firms, serving clients across Kapenguria, West Pokot, and beyond with unmatched expertise and dedication.</p>
-     </div>
-     <div class="story-visual" data-animate>
-      <div class="story-image"><img src="story-image.jpg" alt="Fancy Drops team at work" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
-      </div>
-     </div>
+  </section><!-- Sticky WhatsApp Button --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬 <span class="whatsapp-tooltip">Chat with us on WhatsApp!</span>
+   </div></a> <!-- Our Story Section -->
+  <section class="our-story">
+   <div class="story-container">
+    <div class="story-content">
+     <h2>Our Story</h2>
+     <h3>🌊 Transforming Lives Through Water</h3>
+     <p>Fancy Drops Engineering Limited was founded with a singular mission: to provide reliable, sustainable, and affordable water solutions to communities, farms, and industries across Kenya.</p>
+     <p>What started as a vision to solve water scarcity challenges has grown into a trusted partnership with hundreds of clients. We've drilled boreholes in remote villages, installed solar water systems for schools, and designed treatment plants for industries.</p>
+     <h3>💧 Our Mission</h3>
+     <p>To deliver innovative water engineering solutions that empower communities, enhance agricultural productivity, and support industrial growth while protecting our environment for future generations.</p>
+     <h3>🎯 Our Vision</h3>
+     <p>To be Kenya's leading water engineering company, recognized for technical excellence, customer satisfaction, and sustainable impact across East Africa.</p>
     </div>
-   </div>
-  </section><!-- Values Section -->
-  <section class="values-section">
-   <div class="container">
-    <div class="section-header" data-animate><span class="section-badge">Our Values</span>
-     <h2>What Drives Us Forward</h2>
-     <p>The principles that guide every decision we make and every project we deliver</p>
-    </div>
-    <div class="values-grid">
-     <div class="value-card" data-animate style="transition-delay: 0.1s">
-      <div class="value-icon">
-       🎯
-      </div>
-      <h3>Excellence</h3>
-      <p>We pursue the highest standards in every aspect of our work, from initial surveys to final installations, ensuring superior quality and lasting results.</p>
-     </div>
-     <div class="value-card" data-animate style="transition-delay: 0.2s">
-      <div class="value-icon">
-       🌱
-      </div>
-      <h3>Sustainability</h3>
-      <p>Environmental responsibility is at our core. We champion eco-friendly solutions like solar water systems that benefit both our clients and the planet.</p>
-     </div>
-     <div class="value-card" data-animate style="transition-delay: 0.3s">
-      <div class="value-icon">
-       🤝
-      </div>
-      <h3>Integrity</h3>
-      <p>Honesty and transparency define our relationships. We build trust through clear communication, fair pricing, and delivering on our promises.</p>
-     </div>
-     <div class="value-card" data-animate style="transition-delay: 0.4s">
-      <div class="value-icon">
-       💡
-      </div>
-      <h3>Innovation</h3>
-      <p>We embrace cutting-edge technology and modern techniques to provide efficient, cost-effective solutions that meet evolving water challenges.</p>
-     </div>
+    <div><img src="images/our-story.jpg" alt="Fancy Drops Engineering Team and Facilities" class="story-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'500\'%3E%3Crect width=\'600\' height=\'500\' fill=\'%231e40af\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'30\' fill=\'white\'%3EOur Story%3C/text%3E%3C/svg%3E';">
     </div>
    </div>
   </section><!-- Team Section -->
   <section class="team-section">
-   <div class="container">
-    <div class="section-header" data-animate><span class="section-badge">Our Team</span>
-     <h2>Meet the Experts Behind Our Success</h2>
-     <p>Experienced professionals dedicated to delivering exceptional water solutions</p>
-    </div>
-    <div class="team-grid">
-     <div class="team-card" data-animate style="transition-delay: 0.1s">
-      <div class="team-image">
-       👨‍💼
-      </div>
-      <div class="team-info">
-       <h3>Cornelius Kitayi</h3>
-       <p class="team-role">Founder &amp; Managing Director</p>
-       <p>Over 10 years of experience in borehole drilling and project management.</p><button class="btn btn-primary" onclick="openModal()">Learn More</button>
-      </div>
+   <div class="section-header">
+    <h2>Meet Our Expert Team</h2>
+    <p>The skilled professionals behind every successful project</p>
+   </div>
+   <div class="team-grid"><!-- Cornelius Kitayi -->
+    <div class="team-card" data-animate style="transition-delay: 0.1s"><img src="images/cornelius-kitayi.jpg" alt="Cornelius Kitayi - Technical Project Manager" class="team-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect width=\'400\' height=\'400\' fill=\'%231e40af\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3ECornelius Kitayi%3C/text%3E%3C/svg%3E';">
+     <div class="team-info">
+      <h3>Cornelius Kitayi</h3><span class="position">Technical Project Manager</span>
+      <p>12+ years leading water projects across Kenya. Expert in solar water systems, borehole drilling, and sustainable infrastructure development.</p><button class="learn-more-btn" onclick="openModal('cornelius')">Learn More →</button>
      </div>
-     <div class="team-card" data-animate style="transition-delay: 0.2s">
-      <div class="team-image">
-       👨‍🔧
-      </div>
-      <div class="team-info">
-       <h3>Alfred Ndiema</h3>
-       <p class="team-role">Water Engineer</p>
-       <p>Expert in water system design, installation, and maintenance with a passion for sustainable solutions.</p>
-      </div>
+    </div><!-- Alfred Ndiema -->
+    <div class="team-card" data-animate style="transition-delay: 0.2s"><img src="images/alfred-ndiema.jpg" alt="Alfred Ndiema - Water Engineer" class="team-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect width=\'400\' height=\'400\' fill=\'%233b82f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EAlfred Ndiema%3C/text%3E%3C/svg%3E';">
+     <div class="team-info">
+      <h3>Alfred Ndiema</h3><span class="position">Water Engineer</span>
+      <p>Specialized in water system design, hydrogeological surveys, and advanced treatment solutions. Passionate about delivering clean water to communities.</p><button class="learn-more-btn" onclick="openModal('alfred')">Learn More →</button>
      </div>
-     <div class="team-card" data-animate style="transition-delay: 0.3s">
-      <div class="team-image">
-       👩‍🔧
-      </div>
-      <div class="team-info">
-       <h3>Chepoghon Jael Rengetiang</h3>
-       <p class="team-role">Electrical Engineer</p>
-       <p>Specialized in electrical systems, solar installations, and generator setups for reliable water infrastructure.</p>
-      </div>
+    </div><!-- Chepoghon Jael -->
+    <div class="team-card" data-animate style="transition-delay: 0.3s"><img src="images/chepoghon-jael.jpg" alt="Chepoghon Jael Rengetiang - Electrical Engineer" class="team-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect width=\'400\' height=\'400\' fill=\'%23f97316\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EChepoghon Jael%3C/text%3E%3C/svg%3E';">
+     <div class="team-info">
+      <h3>Chepoghon Jael Rengetiang</h3><span class="position">Electrical Engineer</span>
+      <p>Expert in solar integration and electrical systems for water projects. Ensures reliable, efficient power solutions for sustainable water supply.</p><button class="learn-more-btn" onclick="openModal('jael')">Learn More →</button>
      </div>
     </div>
    </div>
-  </section><!-- Modal for Managing Director -->
-  <div class="modal" id="directorModal" onclick="closeModalOnBackdrop(event)">
-   <div class="modal-content">
-    <div class="modal-header"><button class="modal-close" onclick="closeModal()" aria-label="Close modal">×</button>
-     <div class="modal-avatar">
-      👨‍💼
-     </div>
-     <h2>Cornelius Kitayi</h2>
-     <p>Founder &amp; Managing Director</p>
+  </section><!-- Modals -->
+  <div id="corneliusModal" class="modal">
+   <div class="modal-content"><button class="modal-close" onclick="closeModal('cornelius')">×</button>
+    <h3>Cornelius Kitayi</h3><span class="position">Technical Project Manager</span>
+    <p>Cornelius Kitayi is a dedicated WASH (Water, Sanitation, and Hygiene) professional with over 12 years of progressive experience in water engineering, project management, and sustainable infrastructure development.</p>
+    <p>He holds a Bachelor's degree in Project Planning and Management from the University of Nairobi and a Diploma in Water Engineering from the Kenya Water Institute.</p>
+    <p>Cornelius has led numerous successful water projects across Kenya and the region, ranging from solar-powered water supply systems and borehole drilling to treatment plant installations and community water solutions.</p>
+    <p>As Managing Director, he oversees company operations, project execution, and stakeholder engagement, ensuring that every project meets the highest standards of quality and sustainability. His leadership is guided by a deep passion for innovation and a commitment to expanding access to clean water.</p>
+    <h4>Core Strengths:</h4>
+    <ul>
+     <li>Water system design and implementation</li>
+     <li>Solar water pumping and treatment technologies</li>
+     <li>Project planning and execution</li>
+     <li>Stakeholder coordination and capacity building</li>
+     <li>Sustainable and community-centered water solutions</li>
+    </ul>
+   </div>
+  </div>
+  <div id="alfredModal" class="modal">
+   <div class="modal-content"><button class="modal-close" onclick="closeModal('alfred')">×</button>
+    <h3>Alfred Ndiema</h3><span class="position">Water Engineer</span>
+    <p>Alfred Ndiema is a highly skilled Water Engineer with extensive expertise in designing and implementing comprehensive water solutions across diverse environments.</p>
+    <p>With a strong background in hydrogeological surveys, borehole design, and water treatment systems, Alfred ensures every project is built on solid technical foundations and delivers sustainable results.</p>
+    <p>His meticulous approach to water quality testing and treatment plant design has made him an invaluable asset to communities and industries seeking reliable water access.</p>
+    <p>Alfred is passionate about leveraging technology and innovation to overcome water scarcity challenges, and he works closely with clients to develop customized solutions that meet their specific needs.</p>
+    <h4>Core Strengths:</h4>
+    <ul>
+     <li>Hydrogeological surveys and site assessments</li>
+     <li>Borehole design and drilling supervision</li>
+     <li>Water treatment plant design and installation</li>
+     <li>Water quality testing and analysis</li>
+     <li>Sustainable water resource management</li>
+    </ul>
+   </div>
+  </div>
+  <div id="jaelModal" class="modal">
+   <div class="modal-content"><button class="modal-close" onclick="closeModal('jael')">×</button>
+    <h3>Chepoghon Jael Rengetiang</h3><span class="position">Electrical Engineer</span>
+    <p>Chepoghon Jael Rengetiang is an expert Electrical Engineer specializing in solar power integration for water pumping systems and sustainable energy solutions.</p>
+    <p>With deep knowledge of photovoltaic systems, electrical installations, and power management, Jael ensures that every water project operates with maximum efficiency and reliability.</p>
+    <p>Her innovative approach to solar-powered water systems has helped countless communities and farms eliminate electricity costs while maintaining consistent water supply.</p>
+    <p>Jael's commitment to renewable energy and environmental sustainability makes her a driving force behind Fancy Drops' eco-friendly water solutions.</p>
+    <h4>Core Strengths:</h4>
+    <ul>
+     <li>Solar power system design and installation</li>
+     <li>Electrical system integration for water projects</li>
+     <li>Power management and optimization</li>
+     <li>Renewable energy solutions</li>
+     <li>System maintenance and troubleshooting</li>
+    </ul>
+   </div>
+  </div><!-- Certifications Section -->
+  <section class="certifications">
+   <div class="section-header">
+    <h2>Certifications &amp; Compliance</h2>
+    <p>Licensed, certified, and committed to industry best practices</p>
+   </div>
+   <div class="cert-grid">
+    <div class="cert-card" data-animate style="transition-delay: 0.1s"><span class="cert-icon">🏛️</span>
+     <h3>Government Licensed</h3>
+     <p>Fully licensed by Kenyan authorities to operate water engineering services nationwide</p>
     </div>
-    <div class="modal-body">
-     <h3>About Cornelius</h3>
-     <p>Cornelius Kitayi is a dedicated WASH (Water, Sanitation, and Hygiene) professional with more than 12 years of progressive experience in water engineering, project management, and sustainable infrastructure development. He holds a Bachelor's degree in Project Planning and Management from the University of Nairobi and a Diploma in Water Engineering from the Kenya Water Institute.</p>
-     <p>Cornelius has led numerous successful water projects across Kenya and the region, ranging from solar-powered water supply systems and borehole drilling to treatment plant installations and community water solutions. His technical expertise, strategic planning skills, and hands-on leadership have positioned Fancy Drops Water Engineering Ltd as a trusted partner in delivering reliable, safe, and affordable water solutions.</p>
-     <p>As Managing Director, Cornelius oversees company operations, project execution, and stakeholder engagement, ensuring that every project meets the highest standards of quality and sustainability. His leadership is guided by a deep passion for innovation and a commitment to expanding access to clean water for communities, institutions, and industries.</p>
-     <div class="strengths-list">
-      <h4>Core Strengths:</h4>
-      <ul>
-       <li>Water system design and implementation</li>
-       <li>Solar water pumping and treatment technologies</li>
-       <li>Project planning and execution</li>
-       <li>Stakeholder coordination and capacity building</li>
-       <li>Sustainable and community-centered water solutions</li>
-      </ul>
+    <div class="cert-card" data-animate style="transition-delay: 0.2s"><span class="cert-icon">🎓</span>
+     <h3>Kenya Water Institute Certified</h3>
+     <p>Team trained and certified by leading water engineering institutions</p>
+    </div>
+    <div class="cert-card" data-animate style="transition-delay: 0.3s"><span class="cert-icon">⭐</span>
+     <h3>ISO Quality Standards</h3>
+     <p>Committed to international quality management and service excellence</p>
+    </div>
+    <div class="cert-card" data-animate style="transition-delay: 0.4s"><span class="cert-icon">🛡️</span>
+     <h3>Fully Insured</h3>
+     <p>Comprehensive insurance coverage for all projects and operations</p>
+    </div>
+    <div class="cert-card" data-animate style="transition-delay: 0.5s"><span class="cert-icon">👷</span>
+     <h3>Safety Compliance</h3>
+     <p>Adherence to all occupational health and safety regulations</p>
+    </div>
+    <div class="cert-card" data-animate style="transition-delay: 0.6s"><span class="cert-icon">🏆</span>
+     <h3>Professional Memberships</h3>
+     <p>Active members of water engineering professional bodies</p>
+    </div>
+   </div>
+  </section><!-- Values Section -->
+  <section class="values-section">
+   <div class="section-header">
+    <h2>Our Core Values</h2>
+    <p>The principles that guide everything we do</p>
+   </div>
+   <div class="values-grid">
+    <div class="value-card" data-animate style="transition-delay: 0.1s"><span class="value-icon">💎</span>
+     <h3>Quality Excellence</h3>
+     <p>We never compromise on quality. Every project is executed to the highest standards using premium materials and proven techniques.</p>
+    </div>
+    <div class="value-card" data-animate style="transition-delay: 0.2s"><span class="value-icon">🤝</span>
+     <h3>Customer First</h3>
+     <p>Your satisfaction is our priority. We listen, understand your needs, and deliver solutions that exceed expectations.</p>
+    </div>
+    <div class="value-card" data-animate style="transition-delay: 0.3s"><span class="value-icon">💡</span>
+     <h3>Innovation</h3>
+     <p>We embrace cutting-edge technology and innovative approaches to solve complex water challenges efficiently.</p>
+    </div>
+    <div class="value-card" data-animate style="transition-delay: 0.4s"><span class="value-icon">🌱</span>
+     <h3>Sustainability</h3>
+     <p>Environmental protection is core to our work. We design solutions that are eco-friendly and sustainable for future generations.</p>
+    </div>
+    <div class="value-card" data-animate style="transition-delay: 0.5s"><span class="value-icon">✨</span>
+     <h3>Integrity</h3>
+     <p>Transparency, honesty, and ethical practices define our business relationships and project execution.</p>
+    </div>
+    <div class="value-card" data-animate style="transition-delay: 0.6s"><span class="value-icon">❤️</span>
+     <h3>Community Impact</h3>
+     <p>We're committed to transforming lives by providing access to clean, reliable water for all communities.</p>
+    </div>
+   </div>
+  </section><!-- Milestones Section -->
+  <section class="milestones">
+   <div class="section-header">
+    <h2>Our Journey of Excellence</h2>
+    <p>Key milestones that shaped our success</p>
+   </div>
+   <div class="timeline">
+    <div class="milestone" data-animate>
+     <div class="milestone-content">
+      <h3>🚀 Company Founded</h3>
+      <p>Fancy Drops Engineering Limited was established with a vision to solve Kenya's water challenges through innovative engineering solutions.</p>
+     </div>
+     <div class="milestone-icon">
+      🎯
+     </div>
+     <div style="flex: 1;"></div>
+    </div>
+    <div class="milestone" data-animate style="transition-delay: 0.2s">
+     <div style="flex: 1;"></div>
+     <div class="milestone-icon">
+      💧
+     </div>
+     <div class="milestone-content">
+      <h3>💯 First 100 Boreholes</h3>
+      <p>Successfully completed 100 borehole projects, earning trust from communities and establishing our reputation for excellence.</p>
+     </div>
+    </div>
+    <div class="milestone" data-animate style="transition-delay: 0.4s">
+     <div class="milestone-content">
+      <h3>🌍 Multi-County Expansion</h3>
+      <p>Expanded operations across Kenya, serving West Pokot, Trans Nzoia, Turkana, and neighboring counties with comprehensive water solutions.</p>
+     </div>
+     <div class="milestone-icon">
+      📈
+     </div>
+     <div style="flex: 1;"></div>
+    </div>
+    <div class="milestone" data-animate style="transition-delay: 0.6s">
+     <div style="flex: 1;"></div>
+     <div class="milestone-icon">
+      🏆
+     </div>
+     <div class="milestone-content">
+      <h3>⭐ 500+ Projects Milestone</h3>
+      <p>Celebrated the completion of over 500 successful water projects, becoming one of Kenya's leading water engineering firms.</p>
      </div>
     </div>
    </div>
-  </div><!-- CTA Section -->
+  </section><!-- CTA Section -->
   <section class="cta-section">
    <div class="cta-content">
-    <h2>Ready to Work With the Best?</h2>
-    <p>Partner with our experienced team to bring your water project to life. Let's create sustainable solutions together.</p>
-    <div class="cta-buttons-group"><a href="contact.html" class="btn btn-primary">Get in Touch</a> <a href="https://wa.me/254713332124?text=Hi%20Fancy%20Drops!%20I'd%20like%20to%20discuss%20a%20water%20project." target="_blank" rel="noopener noreferrer" class="btn btn-outline">💬 Chat on WhatsApp</a>
+    <h2>Ready to Work With The Best?</h2>
+    <p>Join 500+ satisfied clients who trust Fancy Drops Engineering Limited for their water solutions. Let our expert team transform your water challenges into sustainable success.</p>
+    <div class="cta-buttons-group"><a href="contact.html" class="btn">📋 Get Free Consultation</a> <a href="tel:+254713332124" class="btn">📞 Call +254 713 332 124</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn">💬 WhatsApp Now</a>
     </div>
    </div>
   </section><!-- Footer -->
   <footer>
    <div class="footer-content">
     <div class="footer-section">
-     <h3>Fancy Drops Water Engineering</h3>
-     <p>Your trusted partner for sustainable water solutions in Kapenguria, Kenya and beyond.</p>
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
      <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
      </div>
     </div>
@@ -1099,32 +1375,51 @@
      <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="contact.html">Contact Us</a>
     </div>
     <div class="footer-section">
-     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Generator Systems</a>
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
     </div>
     <div class="footer-section">
      <h3>Contact Info</h3>
-     <p>📍 Kapenguria, West Pokot County, Kenya</p>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
      <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
      <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
-     <p>💬 <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
     </div>
    </div>
    <div class="footer-bottom">
-    <p>© 2024 Fancy Drops Water Engineering Limited. All rights reserved. | Designed with 💧 for excellence</p>
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
    </div>
   </footer>
   <script>
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollHeight) * 100;
-            scrollProgress.style.width = scrolled + '%';
-        });
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Modal Functions
+        function openModal(person) {
+            const modal = document.getElementById(person + 'Modal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(person) {
+            const modal = document.getElementById(person + 'Modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
 
         // Scroll Animations
         const observerOptions = {
-            threshold: 0.15,
+            threshold: 0.2,
             rootMargin: '0px 0px -80px 0px'
         };
 
@@ -1136,8 +1431,17 @@
             });
         }, observerOptions);
 
+        // Observe all animated elements
         document.querySelectorAll('[data-animate]').forEach(el => {
             observer.observe(el);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
         });
 
         // Navbar Scroll Effect
@@ -1150,93 +1454,19 @@
             }
         });
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Modal Functions
-        function openModal() {
-            const modal = document.getElementById('directorModal');
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('directorModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        function closeModalOnBackdrop(event) {
-            if (event.target.id === 'directorModal') {
-                closeModal();
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Ripple Effect on Buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-                ripple.style.pointerEvents = 'none';
-                
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.style.animation = 'rippleEffect 0.6s ease-out';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
-
-        // Parallax Effect on Scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.page-hero-content');
-            
-            parallaxElements.forEach(el => {
-                el.style.transform = `translateY(${scrolled * 0.3}px)`;
-            });
-        });
-
-        // Tilt Effect on Team Cards
-        document.querySelectorAll('.team-card').forEach(card => {
-            card.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-                
-                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99c6a706f0828a6b',t:'MTc2Mjc4OTI3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a28fc8aa5318a65',t:'MTc2MzgyMDM3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
