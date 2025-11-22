@@ -3,9 +3,10 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Projects - Fancy Drops Water Engineering Limited</title>
-  <link rel="icon" type="image/png" href="faviconlogo.png">
-  <meta name="description" content="Explore our portfolio of successful water engineering projects including borehole drilling, solar water systems, and water treatment installations across Kenya.">
+  <title>Project Gallery - Fancy Drops Engineering Limited | Completed Water Projects Kenya</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Explore our portfolio of completed water engineering projects across Kenya: borehole drilling, solar systems, water treatment, and generator installations. See our quality work firsthand.">
+  <meta name="keywords" content="water projects Kenya, borehole drilling gallery, solar water systems portfolio, West Pokot water projects, completed water installations">
   <style>
         * {
             margin: 0;
@@ -18,6 +19,7 @@
             line-height: 1.6;
             color: #1f2937;
             overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         html {
@@ -35,11 +37,13 @@
             --charcoal: #1f2937;
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
+            --success-green: #10b981;
+            --ocean-blue: #0c4a6e;
         }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
             position: fixed;
@@ -50,8 +54,8 @@
         }
 
         nav.scrolled {
-            box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 1);
         }
 
         .nav-container {
@@ -60,42 +64,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 3rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--deep-blue);
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
+            padding: 1rem 3rem;
+            gap: 2rem;
         }
 
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
-            flex-wrap: wrap;
+            flex: 1;
+            justify-content: center;
         }
 
         .nav-links a {
@@ -129,110 +107,153 @@
             color: var(--sky-blue);
         }
 
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+            display: block;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
-        .btn {
-            padding: 0.85rem 1.8rem;
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             border: none;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn:active {
-            transform: scale(0.95);
+            white-space: nowrap;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-        }
-
-        .btn-secondary {
+        .nav-cta-call {
             background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
             color: var(--white);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
         }
 
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 64, 175, 0.85) 50%, rgba(59, 130, 246, 0.8) 100%),
-                        url('projects-hero.jpg') center/cover;
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: var(--white);
-            padding: 10rem 3rem 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px;
-            min-height: 50%;
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
         }
 
-        .page-hero::before {
-            content: '';
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60%;
+            min-height: 500px;
+            overflow: hidden;
+            margin-top: 85px;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 100%);
+        }
+
+        .hero-image {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.85) 0%, 
+                rgba(30, 64, 175, 0.75) 50%, 
+                rgba(59, 130, 246, 0.65) 100%);
+            z-index: 2;
         }
 
-        .page-hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
             opacity: 0;
-            animation: fadeUpHero 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
         }
 
         @keyframes fadeUpHero {
@@ -246,123 +267,64 @@
             }
         }
 
-        .page-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            background: var(--white);
-            padding: 4rem 3rem;
-            margin-top: -3rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            color: var(--white);
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .stat-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.3);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
         /* Filter Section */
         .filter-section {
-            padding: 4rem 3rem 2rem;
-            background: var(--light-blue);
+            background: var(--white);
+            padding: 3rem 3rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
 
-        .container {
+        .filter-container {
             max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .filter-buttons {
             display: flex;
-            gap: 1rem;
             justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 3rem;
         }
 
         .filter-btn {
-            padding: 0.8rem 2rem;
+            padding: 0.9rem 2rem;
             border-radius: 50px;
+            border: 2px solid var(--gray-200);
             background: var(--white);
             color: var(--charcoal);
-            border: 2px solid var(--gray-200);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            font-weight: 700;
             font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
         .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             border-color: var(--sky-blue);
-            color: var(--sky-blue);
-            transform: translateY(-2px);
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
             color: var(--white);
-            border-color: var(--accent-orange);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            border-color: var(--deep-blue);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
         }
 
-        /* Projects Grid */
-        .projects-section {
-            padding: 3rem 3rem 7rem;
+        /* Gallery Grid Section */
+        .gallery-section {
+            padding: 4rem 3rem;
             background: var(--light-blue);
         }
 
         .projects-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2.5rem;
         }
 
@@ -372,10 +334,9 @@
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
             opacity: 0;
             transform: scale(0.9);
-            cursor: pointer;
-            border: 1px solid var(--gray-200);
         }
 
         .project-card.visible {
@@ -383,103 +344,124 @@
             transform: scale(1);
         }
 
-        .project-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(59, 130, 246, 0.2);
-            border-color: var(--sky-blue);
+        .project-card.hidden {
+            display: none;
         }
 
-        .project-image {
-            height: 280px;
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: var(--white);
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .project-image-container {
             position: relative;
+            height: 280px;
             overflow: hidden;
         }
 
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .project-image {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .project-card:hover .project-image::before {
-            left: 100%;
+        .project-card:hover .project-image {
+            transform: scale(1.15);
         }
 
-        .project-badge {
+        .project-category-badge {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent-orange);
+            top: 20px;
+            right: 20px;
+            background: rgba(249, 115, 22, 0.95);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 50px;
-            font-size: 0.8rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .project-content {
             padding: 2rem;
         }
 
-        .project-content h3 {
+        .project-title {
             color: var(--deep-blue);
             font-size: 1.6rem;
             margin-bottom: 0.8rem;
             font-weight: 700;
         }
 
-        .project-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+        .project-location {
             color: var(--charcoal);
-            opacity: 0.7;
-        }
-
-        .project-meta span {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.5rem;
+            opacity: 0.8;
         }
 
-        .project-content p {
+        .project-description {
             color: var(--charcoal);
-            line-height: 1.8;
+            line-height: 1.7;
             margin-bottom: 1.5rem;
             opacity: 0.85;
         }
 
-        .project-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
             margin-bottom: 1.5rem;
         }
 
-        .tag {
+        .stat-item {
             background: var(--light-blue);
-            color: var(--deep-blue);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 0.8rem;
+            border-radius: 12px;
+            text-align: center;
         }
 
-        /* Modal */
+        .stat-value {
+            color: var(--deep-blue);
+            font-weight: 900;
+            font-size: 1.3rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--charcoal);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .view-details-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .view-details-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -487,31 +469,32 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.85);
             z-index: 10000;
+            align-items: center;
+            justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
-            backdrop-filter: blur(5px);
+            padding: 2rem;
+            overflow-y: auto;
         }
 
         .modal.active {
             display: flex;
-            align-items: center;
-            justify-content: center;
             opacity: 1;
         }
 
         .modal-content {
             background: var(--white);
-            border-radius: 20px;
+            border-radius: 25px;
             max-width: 900px;
-            width: 90%;
+            width: 100%;
             max-height: 90%;
             overflow-y: auto;
             position: relative;
-            transform: scale(0.8);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
         }
 
         .modal.active .modal-content {
@@ -520,20 +503,20 @@
 
         .modal-close {
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: var(--white);
-            font-size: 2rem;
+            top: 20px;
+            right: 20px;
             width: 45px;
             height: 45px;
+            background: rgba(0,0,0,0.6);
+            color: var(--white);
+            border: none;
             border-radius: 50%;
+            font-size: 1.8rem;
             cursor: pointer;
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s ease;
             z-index: 10;
         }
 
@@ -543,140 +526,280 @@
         }
 
         .modal-image {
+            width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10rem;
-            color: var(--white);
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
         }
 
         .modal-body {
             padding: 3rem;
         }
 
-        .modal-body h2 {
+        .modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .modal-title {
             color: var(--deep-blue);
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
 
-        .modal-body .project-meta {
-            margin-bottom: 2rem;
-        }
-
-        .modal-body p {
+        .modal-location {
             color: var(--charcoal);
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
         }
 
-        .project-details {
-            background: var(--light-blue);
-            padding: 2rem;
-            border-radius: 15px;
+        .modal-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .modal-description {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            line-height: 1.8;
             margin: 2rem 0;
         }
 
-        .project-details h3 {
+        .modal-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .modal-stat {
+            background: var(--light-blue);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .modal-stat-value {
             color: var(--deep-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-stat-label {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .modal-features {
+            margin: 2rem 0;
+        }
+
+        .modal-features h3 {
+            color: var(--deep-blue);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        .details-list {
+        .features-list {
             list-style: none;
-            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
         }
 
-        .details-list li {
+        .features-list li {
             color: var(--charcoal);
-            padding: 0.8rem 0;
-            padding-left: 2rem;
+            padding: 0.8rem;
+            padding-left: 2.5rem;
             position: relative;
-            font-size: 1.05rem;
+            background: var(--gray-100);
+            border-radius: 12px;
+            line-height: 1.6;
         }
 
-        .details-list li::before {
+        .features-list li::before {
             content: '✓';
             position: absolute;
-            left: 0;
-            color: var(--accent-orange);
-            font-weight: 800;
+            left: 0.8rem;
+            color: var(--success-green);
+            font-weight: 900;
             font-size: 1.3rem;
         }
 
-        /* CTA Section */
-        .cta-section {
-            padding: 7rem 3rem;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 64, 175, 0.9) 50%, rgba(59, 130, 246, 0.85) 100%),
-                        url('cta-bg.jpg') center/cover;
+        .start-project-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: var(--white);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 1.3rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 2rem;
+            text-decoration: none;
         }
 
-        .cta-section::before {
+        .start-project-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            animation: bounceIn 1s ease-out 2s both;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(100px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .whatsapp-btn::before {
             content: '';
             position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 3px solid #25D366;
+            border-radius: 50%;
+            opacity: 0;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50%, 100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--charcoal);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 85px;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 30% 50%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
+            z-index: 9999;
+            transition: width 0.1s ease;
         }
 
-        .cta-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 6rem 2rem;
+            display: none;
         }
 
-        .cta-section h2 {
-            font-size: 3rem;
+        .empty-state.visible {
+            display: block;
+        }
+
+        .empty-state-icon {
+            font-size: 5rem;
             margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
+            opacity: 0.3;
         }
 
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .cta-buttons-group {
-            display: flex;
-            gap: 1.2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
+        .empty-state h3 {
             color: var(--deep-blue);
-            transform: translateY(-3px);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state p {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            opacity: 0.7;
         }
 
         /* Footer */
         footer {
-            background: var(--charcoal);
+            background: var(--ocean-blue);
             color: var(--white);
             padding: 4rem 3rem 2rem;
         }
@@ -728,6 +851,8 @@
             justify-content: center;
             font-size: 1.3rem;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
         }
 
         .social-link:hover {
@@ -742,57 +867,40 @@
             color: rgba(255,255,255,0.6);
         }
 
-        /* Scroll Progress Bar */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
-            z-index: 9999;
-            transition: width 0.1s ease;
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--deep-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-toggle:hover {
-            transform: scale(1.1);
-        }
-
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .projects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-
-            .page-hero h1 {
-                font-size: 2.8rem;
-            }
-        }
-
         @media (max-width: 768px) {
             .nav-container {
                 padding: 1rem 1.5rem;
+                flex-wrap: wrap;
             }
 
             .menu-toggle {
                 display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
             }
 
             .nav-links {
                 display: none;
                 width: 100%;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0;
+                order: 4;
                 padding: 1rem 0;
             }
 
@@ -800,34 +908,55 @@
                 display: flex;
             }
 
-            .cta-buttons {
+            .nav-links a {
+                padding: 1rem;
                 width: 100%;
-                justify-content: center;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
             }
 
-            .page-hero {
-                padding: 6rem 1.5rem 4rem;
+            .hero {
+                margin-top: 150px;
+                min-height: 400px;
             }
 
-            .page-hero h1 {
-                font-size: 2.2rem;
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .filter-section {
+                top: 150px;
+                padding: 2rem 1.5rem 1.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.7rem 1.3rem;
+                font-size: 0.85rem;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
+                padding: 0 1rem;
             }
 
-            .cta-section h2 {
-                font-size: 2rem;
+            .modal {
+                padding: 1rem;
             }
 
             .modal-body {
-                padding: 2rem;
+                padding: 2rem 1.5rem;
             }
 
-            .modal-image {
-                height: 250px;
-                font-size: 6rem;
+            .modal-title {
+                font-size: 1.8rem;
+            }
+
+            .modal-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -839,182 +968,239 @@
  <body><!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div><!-- Navigation -->
   <nav id="navbar">
-   <div class="nav-container"><a href="index.html" class="logo"> <img src="logo.png" alt="Fancy Drops Logo" class="logo-icon" onerror="this.style.display='none';"> <span>Fancy Drops</span> </a> <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html" class="active">Gallery</a> <a href="contact.html">Contact</a>
     </div>
-    <div class="cta-buttons"><a href="tel:+254713332124" class="btn btn-secondary">📞 Call</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-primary">💬 WhatsApp</a>
-    </div>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
    </div>
-  </nav><!-- Page Hero -->
-  <section class="page-hero">
-   <div class="page-hero-content">
-    <h1>Our Projects</h1>
-    <p>Explore our portfolio of successful water engineering projects delivered across Kenya with excellence and precision.</p>
+  </nav><!-- Hero Section -->
+  <section class="hero"><img src="images/gallery-hero.jpg" alt="Fancy Drops Water Projects Gallery" class="hero-image" onerror="this.style.display='none';">
+   <div class="hero-overlay"></div>
+   <div class="hero-content">
+    <h1>Our Project Gallery</h1>
+    <p>Explore our portfolio of successful water engineering projects across Kenya. Quality work that speaks for itself.</p>
    </div>
-  </section><!-- Stats Section -->
-  <section class="stats-section">
-   <div class="stats-container">
-    <div class="stat-card" data-animate style="transition-delay: 0.1s"><span class="stat-number">500+</span> <span class="stat-label">Projects Completed</span>
-    </div>
-    <div class="stat-card" data-animate style="transition-delay: 0.2s"><span class="stat-number">300+</span> <span class="stat-label">Boreholes Drilled</span>
-    </div>
-    <div class="stat-card" data-animate style="transition-delay: 0.3s"><span class="stat-number">150+</span> <span class="stat-label">Solar Systems</span>
-    </div>
-    <div class="stat-card" data-animate style="transition-delay: 0.4s"><span class="stat-number">98%</span> <span class="stat-label">Client Satisfaction</span>
-    </div>
-   </div>
-  </section><!-- Filter Section -->
+  </section><!-- Sticky WhatsApp Button --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬 <span class="whatsapp-tooltip">Start Your Project!</span>
+   </div></a> <!-- Filter Section -->
   <section class="filter-section">
-   <div class="container">
-    <div class="filter-buttons"><button class="filter-btn active" data-filter="all">All Projects</button> <button class="filter-btn" data-filter="borehole">Borehole Drilling</button> <button class="filter-btn" data-filter="solar">Solar Systems</button> <button class="filter-btn" data-filter="treatment">Water Treatment</button> <button class="filter-btn" data-filter="generator">Generator Systems</button>
-    </div>
+   <div class="filter-container"><button class="filter-btn active" data-filter="all" onclick="filterProjects('all')"> 🌊 All Projects </button> <button class="filter-btn" data-filter="borehole" onclick="filterProjects('borehole')"> ⛏️ Borehole Drilling </button> <button class="filter-btn" data-filter="solar" onclick="filterProjects('solar')"> ☀️ Solar Systems </button> <button class="filter-btn" data-filter="treatment" onclick="filterProjects('treatment')"> 💧 Water Treatment </button> <button class="filter-btn" data-filter="generator" onclick="filterProjects('generator')"> ⚡ Generator Systems </button>
    </div>
-  </section><!-- Projects Grid -->
-  <section class="projects-section">
-   <div class="container">
-    <div class="projects-grid" id="projectsGrid"><!-- Project 1 -->
-     <div class="project-card" data-category="borehole" data-animate style="transition-delay: 0.1s">
-      <div class="project-image">
-       💧 <span class="project-badge">Borehole</span>
-      </div>
-      <div class="project-content">
-       <h3>Kapenguria Secondary School</h3>
-       <div class="project-meta"><span>📍 Kapenguria</span> <span>📅 2024</span>
-       </div>
-       <p>Complete borehole drilling and water distribution system serving 800+ students with reliable clean water supply.</p>
-       <div class="project-tags"><span class="tag">150m Deep</span> <span class="tag">5000L/hr</span> <span class="tag">Education</span>
-       </div><button class="btn btn-primary" onclick="openModal('project1')">View Details</button>
-      </div>
-     </div><!-- Project 2 -->
-     <div class="project-card" data-category="solar" data-animate style="transition-delay: 0.2s">
-      <div class="project-image">
-       ☀️ <span class="project-badge">Solar</span>
-      </div>
-      <div class="project-content">
-       <h3>Makutano Farm Solar System</h3>
-       <div class="project-meta"><span>📍 Makutano</span> <span>📅 2024</span>
-       </div>
-       <p>Solar-powered water pumping system for 50-acre commercial farm, reducing operational costs by 80%.</p>
-       <div class="project-tags"><span class="tag">10kW Solar</span> <span class="tag">Irrigation</span> <span class="tag">Agriculture</span>
-       </div><button class="btn btn-primary" onclick="openModal('project2')">View Details</button>
-      </div>
-     </div><!-- Project 3 -->
-     <div class="project-card" data-category="treatment" data-animate style="transition-delay: 0.3s">
-      <div class="project-image">
-       🔬 <span class="project-badge">Treatment</span>
-      </div>
-      <div class="project-content">
-       <h3>West Pokot County Hospital</h3>
-       <div class="project-meta"><span>📍 Kapenguria</span> <span>📅 2023</span>
-       </div>
-       <p>Advanced water treatment plant installation ensuring medical-grade water quality for critical healthcare operations.</p>
-       <div class="project-tags"><span class="tag">RO System</span> <span class="tag">Healthcare</span> <span class="tag">10,000L/day</span>
-       </div><button class="btn btn-primary" onclick="openModal('project3')">View Details</button>
-      </div>
-     </div><!-- Project 4 -->
-     <div class="project-card" data-category="borehole" data-animate style="transition-delay: 0.4s">
-      <div class="project-image">
-       🏘️ <span class="project-badge">Borehole</span>
-      </div>
-      <div class="project-content">
-       <h3>Chepareria Community Project</h3>
-       <div class="project-meta"><span>📍 Chepareria</span> <span>📅 2023</span>
-       </div>
-       <p>Community borehole project providing clean water access to 500+ households in rural West Pokot.</p>
-       <div class="project-tags"><span class="tag">200m Deep</span> <span class="tag">Community</span> <span class="tag">8000L/hr</span>
-       </div><button class="btn btn-primary" onclick="openModal('project4')">View Details</button>
-      </div>
-     </div><!-- Project 5 -->
-     <div class="project-card" data-category="generator" data-animate style="transition-delay: 0.5s">
-      <div class="project-image">
-       ⚡ <span class="project-badge">Generator</span>
-      </div>
-      <div class="project-content">
-       <h3>Sigor Trading Center Backup</h3>
-       <div class="project-meta"><span>📍 Sigor</span> <span>📅 2024</span>
-       </div>
-       <p>Automatic generator backup system ensuring uninterrupted water supply for busy commercial center.</p>
-       <div class="project-tags"><span class="tag">25kVA</span> <span class="tag">Auto-Start</span> <span class="tag">Commercial</span>
-       </div><button class="btn btn-primary" onclick="openModal('project5')">View Details</button>
-      </div>
-     </div><!-- Project 6 -->
-     <div class="project-card" data-category="solar" data-animate style="transition-delay: 0.6s">
-      <div class="project-image">
-       🏡 <span class="project-badge">Solar</span>
-      </div>
-      <div class="project-content">
-       <h3>Residential Solar Water System</h3>
-       <div class="project-meta"><span>📍 Kitale</span> <span>📅 2024</span>
-       </div>
-       <p>Eco-friendly solar water pumping and heating system for modern residential estate with 20 units.</p>
-       <div class="project-tags"><span class="tag">5kW Solar</span> <span class="tag">Residential</span> <span class="tag">Eco-Friendly</span>
-       </div><button class="btn btn-primary" onclick="openModal('project6')">View Details</button>
-      </div>
-     </div><!-- Project 7 -->
-     <div class="project-card" data-category="borehole" data-animate style="transition-delay: 0.7s">
-      <div class="project-image">
-       🏭 <span class="project-badge">Borehole</span>
-      </div>
-      <div class="project-content">
-       <h3>Industrial Water Supply - Eldoret</h3>
-       <div class="project-meta"><span>📍 Eldoret</span> <span>📅 2023</span>
-       </div>
-       <p>High-capacity borehole system for manufacturing facility requiring consistent water supply for operations.</p>
-       <div class="project-tags"><span class="tag">250m Deep</span> <span class="tag">Industrial</span> <span class="tag">15,000L/hr</span>
-       </div><button class="btn btn-primary" onclick="openModal('project7')">View Details</button>
-      </div>
-     </div><!-- Project 8 -->
-     <div class="project-card" data-category="treatment" data-animate style="transition-delay: 0.8s">
-      <div class="project-image">
-       🏫 <span class="project-badge">Treatment</span>
-      </div>
-      <div class="project-content">
-       <h3>St. Mary's Girls School Treatment</h3>
-       <div class="project-meta"><span>📍 Lodwar</span> <span>📅 2023</span>
-       </div>
-       <p>Water softening and filtration system installation improving water quality for 600+ boarding students.</p>
-       <div class="project-tags"><span class="tag">Filtration</span> <span class="tag">Softening</span> <span class="tag">Education</span>
-       </div><button class="btn btn-primary" onclick="openModal('project8')">View Details</button>
-      </div>
-     </div><!-- Project 9 -->
-     <div class="project-card" data-category="solar" data-animate style="transition-delay: 0.9s">
-      <div class="project-image">
-       🌾 <span class="project-badge">Solar</span>
-      </div>
-      <div class="project-content">
-       <h3>Turkana Irrigation Project</h3>
-       <div class="project-meta"><span>📍 Turkana</span> <span>📅 2024</span>
-       </div>
-       <p>Large-scale solar irrigation system transforming arid land into productive agricultural zone.</p>
-       <div class="project-tags"><span class="tag">20kW Solar</span> <span class="tag">100 Acres</span> <span class="tag">Agriculture</span>
-       </div><button class="btn btn-primary" onclick="openModal('project9')">View Details</button>
+  </section><!-- Gallery Section -->
+  <section class="gallery-section">
+   <div class="projects-grid" id="projectsGrid"><!-- Borehole Projects -->
+    <div class="project-card visible" data-category="borehole" data-project="borehole-1">
+     <div class="project-image-container"><img src="images/borehole-project-1.jpg" alt="Commercial Borehole Drilling Project" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%231e40af\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EBorehole Project%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Borehole Drilling
       </div>
      </div>
+     <div class="project-content">
+      <h3 class="project-title">Commercial Borehole Installation</h3>
+      <div class="project-location">
+       📍 Kapenguria, West Pokot
+      </div>
+      <p class="project-description">Complete 350m borehole with submersible pump installation for a commercial property.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">350m</span> <span class="stat-label">Depth</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">15,000L</span> <span class="stat-label">Daily Yield</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('borehole-1')"> View Details → </button>
+     </div>
+    </div>
+    <div class="project-card visible" data-category="borehole" data-project="borehole-2">
+     <div class="project-image-container"><img src="images/borehole-project-2.jpg" alt="Residential Borehole Project" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%233b82f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EResidential Borehole%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Borehole Drilling
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Residential Water Supply System</h3>
+      <div class="project-location">
+       📍 Kitale, Trans-Nzoia
+      </div>
+      <p class="project-description">200m residential borehole with automated pressure system and water storage.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">200m</span> <span class="stat-label">Depth</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">8,000L</span> <span class="stat-label">Daily Yield</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('borehole-2')"> View Details → </button>
+     </div>
+    </div>
+    <div class="project-card visible" data-category="borehole" data-project="borehole-3">
+     <div class="project-image-container"><img src="images/borehole-project-3.jpg" alt="Agricultural Borehole Project" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%230c4a6e\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EAgricultural Borehole%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Borehole Drilling
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Large-Scale Agricultural Irrigation</h3>
+      <div class="project-location">
+       📍 Eldoret, Uasin Gishu
+      </div>
+      <p class="project-description">450m deep borehole serving 50-acre farm with drip irrigation system.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">450m</span> <span class="stat-label">Depth</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">25,000L</span> <span class="stat-label">Daily Yield</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('borehole-3')"> View Details → </button>
+     </div>
+    </div><!-- Solar System Projects -->
+    <div class="project-card visible" data-category="solar" data-project="solar-1">
+     <div class="project-image-container"><img src="images/solar-project-1.jpg" alt="Solar Water Pumping System" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%23f97316\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3ESolar System%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Solar Systems
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Off-Grid Solar Pumping System</h3>
+      <div class="project-location">
+       📍 Lodwar, Turkana
+      </div>
+      <p class="project-description">Complete solar-powered water pumping for remote community water project.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">5kW</span> <span class="stat-label">Solar Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">12,000L</span> <span class="stat-label">Daily Output</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('solar-1')"> View Details → </button>
+     </div>
+    </div>
+    <div class="project-card visible" data-category="solar" data-project="solar-2">
+     <div class="project-image-container"><img src="images/solar-project-2.jpg" alt="Hybrid Solar Water System" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%2310b981\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EHybrid Solar System%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Solar Systems
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Hybrid Solar-Electric System</h3>
+      <div class="project-location">
+       📍 Kapenguria, West Pokot
+      </div>
+      <p class="project-description">Smart hybrid system with solar panels and grid backup for hotel complex.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">8kW</span> <span class="stat-label">Solar Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">20,000L</span> <span class="stat-label">Daily Output</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('solar-2')"> View Details → </button>
+     </div>
+    </div><!-- Water Treatment Projects -->
+    <div class="project-card visible" data-category="treatment" data-project="treatment-1">
+     <div class="project-image-container"><img src="images/treatment-project-1.jpg" alt="Water Treatment Plant" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%231e40af\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EWater Treatment%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Water Treatment
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Commercial Water Treatment Plant</h3>
+      <div class="project-location">
+       📍 Eldoret, Uasin Gishu
+      </div>
+      <p class="project-description">Complete filtration and purification system for bottled water production.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">5,000L</span> <span class="stat-label">Hourly Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">99.9%</span> <span class="stat-label">Purity Level</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('treatment-1')"> View Details → </button>
+     </div>
+    </div>
+    <div class="project-card visible" data-category="treatment" data-project="treatment-2">
+     <div class="project-image-container"><img src="images/treatment-project-2.jpg" alt="Residential Water Purification" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%233b82f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EResidential Treatment%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Water Treatment
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Home Water Purification System</h3>
+      <div class="project-location">
+       📍 Kitale, Trans-Nzoia
+      </div>
+      <p class="project-description">Multi-stage filtration for safe drinking water in residential compound.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">500L</span> <span class="stat-label">Hourly Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">5-Stage</span> <span class="stat-label">Filtration</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('treatment-2')"> View Details → </button>
+     </div>
+    </div><!-- Generator System Projects -->
+    <div class="project-card visible" data-category="generator" data-project="generator-1">
+     <div class="project-image-container"><img src="images/generator-project-1.jpg" alt="Backup Generator System" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%23f97316\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EGenerator System%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Generator Systems
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Automatic Backup Generator</h3>
+      <div class="project-location">
+       📍 Kapenguria, West Pokot
+      </div>
+      <p class="project-description">25kVA generator with auto-start for uninterrupted water pumping.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">25kVA</span> <span class="stat-label">Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">Auto</span> <span class="stat-label">Start System</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('generator-1')"> View Details → </button>
+     </div>
+    </div>
+    <div class="project-card visible" data-category="generator" data-project="generator-2">
+     <div class="project-image-container"><img src="images/generator-project-2.jpg" alt="Industrial Generator Installation" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'280\'%3E%3Crect width=\'600\' height=\'280\' fill=\'%230c4a6e\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'white\'%3EIndustrial Generator%3C/text%3E%3C/svg%3E';">
+      <div class="project-category-badge">
+       Generator Systems
+      </div>
+     </div>
+     <div class="project-content">
+      <h3 class="project-title">Industrial Power Backup System</h3>
+      <div class="project-location">
+       📍 Eldoret, Uasin Gishu
+      </div>
+      <p class="project-description">50kVA diesel generator for commercial water treatment facility.</p>
+      <div class="project-stats">
+       <div class="stat-item"><span class="stat-value">50kVA</span> <span class="stat-label">Capacity</span>
+       </div>
+       <div class="stat-item"><span class="stat-value">24/7</span> <span class="stat-label">Monitoring</span>
+       </div>
+      </div><button class="view-details-btn" onclick="openModal('generator-2')"> View Details → </button>
+     </div>
+    </div>
+   </div><!-- Empty State -->
+   <div class="empty-state" id="emptyState">
+    <div class="empty-state-icon">
+     🔍
+    </div>
+    <h3>No Projects Found</h3>
+    <p>Try selecting a different category to view more projects.</p>
+   </div>
+  </section><!-- Modal -->
+  <div class="modal" id="projectModal">
+   <div class="modal-content"><button class="modal-close" onclick="closeModal()">×</button> <img id="modalImage" src="" alt="Project Image" class="modal-image">
+    <div class="modal-body">
+     <div class="modal-header">
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-location" id="modalLocation"></div><span class="modal-category" id="modalCategory"></span>
+     </div>
+     <p class="modal-description" id="modalDescription"></p>
+     <div class="modal-stats" id="modalStats"></div>
+     <div class="modal-features">
+      <h3>Project Highlights</h3>
+      <ul class="features-list" id="modalFeatures"></ul>
+     </div><a href="#" target="_blank" rel="noopener noreferrer" class="start-project-btn" id="modalWhatsappBtn"> 💬 Start a Similar Project </a>
     </div>
    </div>
-  </section><!-- Project Modal -->
-  <div class="modal" id="projectModal" onclick="closeModalOnBackdrop(event)">
-   <div class="modal-content"><button class="modal-close" onclick="closeModal()" aria-label="Close modal">×</button>
-    <div class="modal-image" id="modalImage">
-     💧
-    </div>
-    <div class="modal-body" id="modalBody"><!-- Content will be dynamically inserted -->
-    </div>
-   </div>
-  </div><!-- CTA Section -->
-  <section class="cta-section">
-   <div class="cta-content">
-    <h2>Ready to Start Your Project?</h2>
-    <p>Join hundreds of satisfied clients who trust Fancy Drops for their water engineering needs. Let's bring your vision to life!</p>
-    <div class="cta-buttons-group"><a href="contact.html" class="btn btn-primary">Get Free Quote</a> <a href="https://wa.me/254713332124?text=Hi%20Fancy%20Drops!%20I'd%20like%20to%20discuss%20a%20water%20project." target="_blank" rel="noopener noreferrer" class="btn btn-outline">💬 Chat on WhatsApp</a>
-    </div>
-   </div>
-  </section><!-- Footer -->
+  </div><!-- Footer -->
   <footer>
    <div class="footer-content">
     <div class="footer-section">
-     <h3>Fancy Drops Water Engineering</h3>
-     <p>Your trusted partner for sustainable water solutions in Kapenguria, Kenya and beyond.</p>
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
      <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
      </div>
     </div>
@@ -1022,270 +1208,347 @@
      <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="contact.html">Contact Us</a>
     </div>
     <div class="footer-section">
-     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Generator Systems</a>
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
     </div>
     <div class="footer-section">
      <h3>Contact Info</h3>
-     <p>📍 Kapenguria, West Pokot County, Kenya</p>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
      <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
      <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
-     <p>💬 <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
     </div>
    </div>
    <div class="footer-bottom">
-    <p>© 2024 Fancy Drops Water Engineering Limited. All rights reserved. | Designed with 💧 for excellence</p>
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
    </div>
   </footer>
   <script>
         // Project Data
-        const projectData = {
-            project1: {
-                icon: '💧',
-                title: 'Kapenguria Secondary School',
-                location: 'Kapenguria',
-                year: '2024',
-                description: 'A comprehensive water solution project for Kapenguria Secondary School, providing reliable clean water access to over 800 students and staff members. The project included borehole drilling, pump installation, and a complete water distribution network across the school compound.',
-                details: [
-                    'Borehole depth: 150 meters',
-                    'Water yield: 5,000 liters per hour',
-                    'Submersible pump: 7.5HP',
-                    'Storage capacity: 20,000 liters',
-                    'Distribution network: 500 meters',
-                    'Beneficiaries: 800+ students and staff',
-                    'Project duration: 3 weeks',
-                    'Water quality testing completed'
-                ]
+        const projectsData = {
+            'borehole-1': {
+                title: 'Commercial Borehole Installation',
+                location: '📍 Kapenguria, West Pokot',
+                category: 'Borehole Drilling',
+                description: 'Successfully completed a 350-meter deep borehole installation for a commercial property in Kapenguria. The project included comprehensive hydrogeological surveys, drilling operations, submersible pump installation, and complete water distribution system setup. This system now provides reliable water supply for the entire commercial complex with a daily yield of 15,000 liters.',
+                image: 'images/borehole-project-1.jpg',
+                stats: [
+                    { label: 'Depth', value: '350m' },
+                    { label: 'Daily Yield', value: '15,000L' },
+                    { label: 'Completion', value: '45 Days' },
+                    { label: 'Warranty', value: '2 Years' }
+                ],
+                features: [
+                    'Pre-drilling hydrogeological survey',
+                    '350m deep borehole with casing',
+                    'High-efficiency submersible pump (2HP)',
+                    '10,000L elevated water storage tank',
+                    'Complete distribution pipeline network',
+                    'Automated pressure control system',
+                    'Water quality testing & certification',
+                    '2-year comprehensive warranty'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I saw your Commercial Borehole Installation project in Kapenguria and I\'m interested in starting a similar project. Can you provide a detailed quote and timeline?'
             },
-            project2: {
-                icon: '☀️',
-                title: 'Makutano Farm Solar System',
-                location: 'Makutano',
-                year: '2024',
-                description: 'An innovative solar-powered water pumping system installed for a 50-acre commercial farm. This eco-friendly solution reduced the farm\'s operational costs by 80% while providing reliable irrigation water throughout the year.',
-                details: [
-                    'Solar panel capacity: 10kW',
-                    'Solar pump: 5HP submersible',
-                    'Daily water output: 80,000 liters',
-                    'Irrigation coverage: 50 acres',
-                    'Cost savings: 80% reduction',
-                    'Battery backup: 48V system',
-                    'ROI period: 2.5 years',
-                    'Zero carbon emissions'
-                ]
+            'borehole-2': {
+                title: 'Residential Water Supply System',
+                location: '📍 Kitale, Trans-Nzoia',
+                category: 'Borehole Drilling',
+                description: 'Delivered a complete residential water solution featuring a 200-meter borehole with state-of-the-art automation. This project transformed water access for a family home, providing consistent pressure and supply throughout the property. The system includes smart controls and energy-efficient components for optimal performance.',
+                image: 'images/borehole-project-2.jpg',
+                stats: [
+                    { label: 'Depth', value: '200m' },
+                    { label: 'Daily Yield', value: '8,000L' },
+                    { label: 'Completion', value: '30 Days' },
+                    { label: 'Warranty', value: '2 Years' }
+                ],
+                features: [
+                    'Site assessment & water detection',
+                    '200m borehole with PVC casing',
+                    'Efficient 1.5HP submersible pump',
+                    '5,000L underground water tank',
+                    'Automatic pressure boosting system',
+                    'Complete indoor plumbing integration',
+                    'Water filtration at point of use',
+                    'Energy-efficient operation'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I\'m interested in your Residential Water Supply System similar to the Kitale project. Please send me a quote for my home.'
             },
-            project3: {
-                icon: '🔬',
-                title: 'West Pokot County Hospital',
-                location: 'Kapenguria',
-                year: '2023',
-                description: 'Installation of an advanced water treatment plant at West Pokot County Hospital, ensuring medical-grade water quality for critical healthcare operations including surgery, dialysis, and laboratory services.',
-                details: [
-                    'Reverse osmosis system',
-                    'Treatment capacity: 10,000 liters/day',
-                    'Multi-stage filtration',
-                    'UV sterilization',
-                    'Medical-grade water quality',
-                    'Automated monitoring system',
-                    'Backup power supply',
-                    'Regular maintenance program'
-                ]
+            'borehole-3': {
+                title: 'Large-Scale Agricultural Irrigation',
+                location: '📍 Eldoret, Uasin Gishu',
+                category: 'Borehole Drilling',
+                description: 'Executed a major agricultural water project featuring a 450-meter deep borehole serving a 50-acre commercial farm. This comprehensive solution includes advanced irrigation systems, large storage capacity, and reliable pumping infrastructure designed for high-volume agricultural use. The system supports year-round farming operations with exceptional reliability.',
+                image: 'images/borehole-project-3.jpg',
+                stats: [
+                    { label: 'Depth', value: '450m' },
+                    { label: 'Daily Yield', value: '25,000L' },
+                    { label: 'Completion', value: '60 Days' },
+                    { label: 'Farm Size', value: '50 Acres' }
+                ],
+                features: [
+                    'Extensive geological survey & mapping',
+                    '450m deep borehole with steel casing',
+                    'High-capacity 5HP submersible pump',
+                    '50,000L water storage reservoir',
+                    'Drip irrigation system installation',
+                    'Automated irrigation scheduling',
+                    'Fertilizer injection system',
+                    'Remote monitoring & control'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I need a large-scale agricultural irrigation system like your Eldoret project. Please provide a detailed proposal for my farm.'
             },
-            project4: {
-                icon: '🏘️',
-                title: 'Chepareria Community Project',
-                location: 'Chepareria',
-                year: '2023',
-                description: 'A transformative community water project bringing clean water access to over 500 households in rural Chepareria. This project has significantly improved health outcomes and reduced water collection time for community members.',
-                details: [
-                    'Borehole depth: 200 meters',
-                    'Water yield: 8,000 liters per hour',
-                    'Beneficiary households: 500+',
-                    'Distribution points: 5 locations',
-                    'Storage tanks: 50,000 liters total',
-                    'Community management training',
-                    'Sustainable water pricing model',
-                    'Health impact assessment completed'
-                ]
+            'solar-1': {
+                title: 'Off-Grid Solar Pumping System',
+                location: '📍 Lodwar, Turkana',
+                category: 'Solar Systems',
+                description: 'Implemented a groundbreaking off-grid solar water pumping solution in Lodwar, providing sustainable water access to a remote community. This 5kW solar system operates completely independently, eliminating electricity costs and providing reliable water supply in an area with limited grid access. The project demonstrates our expertise in renewable energy water solutions.',
+                image: 'images/solar-project-1.jpg',
+                stats: [
+                    { label: 'Solar Capacity', value: '5kW' },
+                    { label: 'Daily Output', value: '12,000L' },
+                    { label: 'Completion', value: '21 Days' },
+                    { label: 'ROI Period', value: '3 Years' }
+                ],
+                features: [
+                    '5kW solar panel array (16 panels)',
+                    'High-efficiency solar charge controller',
+                    '3HP solar-compatible submersible pump',
+                    'Battery backup system (optional)',
+                    '15,000L elevated storage tank',
+                    'Community distribution network',
+                    'Zero electricity costs',
+                    '25-year panel warranty'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I\'m interested in an off-grid solar water pumping system like your Lodwar project. Please provide pricing and technical details.'
             },
-            project5: {
-                icon: '⚡',
-                title: 'Sigor Trading Center Backup',
-                location: 'Sigor',
-                year: '2024',
-                description: 'Installation of an automatic generator backup system for Sigor Trading Center, ensuring uninterrupted water supply for the busy commercial hub serving thousands of traders and customers daily.',
-                details: [
-                    'Generator capacity: 25kVA',
-                    'Automatic transfer switch',
-                    'Fuel tank: 500 liters',
-                    'Runtime: 48 hours continuous',
-                    'Noise reduction enclosure',
+            'solar-2': {
+                title: 'Hybrid Solar-Electric System',
+                location: '📍 Kapenguria, West Pokot',
+                category: 'Solar Systems',
+                description: 'Designed and installed an intelligent hybrid water pumping system combining solar power with grid electricity backup. This 8kW system serves a busy hotel complex, prioritizing solar energy while seamlessly switching to grid power when needed. The smart control system maximizes solar usage and minimizes operational costs.',
+                image: 'images/solar-project-2.jpg',
+                stats: [
+                    { label: 'Solar Capacity', value: '8kW' },
+                    { label: 'Daily Output', value: '20,000L' },
+                    { label: 'Completion', value: '35 Days' },
+                    { label: 'Cost Savings', value: '70%' }
+                ],
+                features: [
+                    '8kW solar panel installation (24 panels)',
+                    'Hybrid solar-grid inverter system',
+                    'Automatic switching controller',
+                    '5HP dual-power submersible pump',
+                    '30,000L underground tank',
+                    'Smart energy management system',
+                    'Real-time monitoring dashboard',
+                    'Backup grid power integration'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I\'m interested in a hybrid solar-electric water system similar to the Kapenguria hotel project. Please send a detailed quote.'
+            },
+            'treatment-1': {
+                title: 'Commercial Water Treatment Plant',
+                location: '📍 Eldoret, Uasin Gishu',
+                category: 'Water Treatment',
+                description: 'Established a state-of-the-art water treatment facility for a bottled water production company. This comprehensive system processes 5,000 liters per hour through multiple purification stages, delivering 99.9% pure water suitable for bottling. The facility meets all KEBS standards and includes automated quality monitoring.',
+                image: 'images/treatment-project-1.jpg',
+                stats: [
+                    { label: 'Hourly Capacity', value: '5,000L' },
+                    { label: 'Purity Level', value: '99.9%' },
+                    { label: 'Completion', value: '45 Days' },
+                    { label: 'Daily Output', value: '80,000L' }
+                ],
+                features: [
+                    'Multi-stage filtration system',
+                    'Reverse osmosis purification',
+                    'UV sterilization chamber',
+                    'Ozonation treatment',
+                    'Automated quality monitoring',
+                    'KEBS standard compliance',
+                    'Stainless steel construction',
+                    'Remote system diagnostics'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I need a commercial water treatment plant like your Eldoret facility. Please provide a complete proposal and pricing.'
+            },
+            'treatment-2': {
+                title: 'Home Water Purification System',
+                location: '📍 Kitale, Trans-Nzoia',
+                category: 'Water Treatment',
+                description: 'Installed a comprehensive residential water purification system providing safe, clean drinking water for an entire household. The 5-stage filtration process removes contaminants, improves taste, and ensures water safety. This compact system integrates seamlessly with existing plumbing while delivering 500 liters per hour of purified water.',
+                image: 'images/treatment-project-2.jpg',
+                stats: [
+                    { label: 'Hourly Capacity', value: '500L' },
+                    { label: 'Filtration Stages', value: '5-Stage' },
+                    { label: 'Completion', value: '5 Days' },
+                    { label: 'Warranty', value: '3 Years' }
+                ],
+                features: [
+                    'Sediment pre-filtration',
+                    'Activated carbon filtration',
+                    'Reverse osmosis membrane',
+                    'UV disinfection',
+                    'Mineral enhancement stage',
+                    'Compact under-sink design',
+                    'Easy filter replacement',
+                    'Water quality indicator'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I want a home water purification system like the one installed in Kitale. Please provide pricing and installation details.'
+            },
+            'generator-1': {
+                title: 'Automatic Backup Generator',
+                location: '📍 Kapenguria, West Pokot',
+                category: 'Generator Systems',
+                description: 'Commissioned a fully automatic 25kVA backup generator system ensuring uninterrupted water supply during power outages. The system features intelligent auto-start technology, seamless power transfer, and comprehensive protection systems. This solution guarantees 24/7 water availability for a critical facility.',
+                image: 'images/generator-project-1.jpg',
+                stats: [
+                    { label: 'Capacity', value: '25kVA' },
+                    { label: 'Start System', value: 'Automatic' },
+                    { label: 'Completion', value: '14 Days' },
+                    { label: 'Runtime', value: '10+ Hours' }
+                ],
+                features: [
+                    '25kVA diesel generator',
+                    'Automatic transfer switch (ATS)',
+                    'Self-start control panel',
+                    'Weatherproof housing',
                     'Remote monitoring system',
-                    'Weekly maintenance schedule',
-                    'Emergency response protocol'
-                ]
+                    'Fuel level sensor & alarm',
+                    'Regular maintenance plan',
+                    'Extended runtime capacity'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I need an automatic backup generator system like your Kapenguria installation. Please send a quote and specifications.'
             },
-            project6: {
-                icon: '🏡',
-                title: 'Residential Solar Water System',
-                location: 'Kitale',
-                year: '2024',
-                description: 'A modern eco-friendly solar water pumping and heating system for a residential estate with 20 units. This sustainable solution provides hot water and reliable water pressure while minimizing environmental impact.',
-                details: [
-                    'Solar capacity: 5kW',
-                    'Residential units: 20',
-                    'Solar water heaters: 20 units',
-                    'Pressure pumps: Variable speed',
-                    'Storage per unit: 1,000 liters',
-                    'Energy savings: 75%',
-                    'Smart monitoring app',
-                    '10-year warranty'
-                ]
-            },
-            project7: {
-                icon: '🏭',
-                title: 'Industrial Water Supply - Eldoret',
-                location: 'Eldoret',
-                year: '2023',
-                description: 'High-capacity borehole system designed for a manufacturing facility in Eldoret requiring consistent water supply for production processes. The system ensures uninterrupted operations with redundant backup systems.',
-                details: [
-                    'Borehole depth: 250 meters',
-                    'Water yield: 15,000 liters per hour',
-                    'Industrial-grade pumps: 15HP',
-                    'Storage capacity: 100,000 liters',
-                    'Redundant pump system',
-                    'Water quality monitoring',
-                    'Automated control system',
-                    '24/7 technical support'
-                ]
-            },
-            project8: {
-                icon: '🏫',
-                title: 'St. Mary\'s Girls School Treatment',
-                location: 'Lodwar',
-                year: '2023',
-                description: 'Comprehensive water softening and filtration system installation at St. Mary\'s Girls School, dramatically improving water quality for over 600 boarding students and protecting plumbing infrastructure.',
-                details: [
-                    'Water softening system',
-                    'Multi-media filtration',
-                    'Treatment capacity: 8,000 L/hr',
-                    'Beneficiaries: 600+ students',
-                    'Reduced hardness: 90%',
-                    'Automated regeneration',
-                    'Monthly water testing',
-                    'Staff training completed'
-                ]
-            },
-            project9: {
-                icon: '🌾',
-                title: 'Turkana Irrigation Project',
-                location: 'Turkana',
-                year: '2024',
-                description: 'Large-scale solar irrigation system transforming 100 acres of arid land into productive agricultural zone. This project demonstrates the power of sustainable technology in food security and economic development.',
-                details: [
-                    'Solar capacity: 20kW',
-                    'Irrigation coverage: 100 acres',
-                    'Drip irrigation system',
-                    'Water efficiency: 95%',
-                    'Crop yield increase: 300%',
-                    'Jobs created: 50+',
-                    'Community training program',
-                    'Sustainable farming practices'
-                ]
+            'generator-2': {
+                title: 'Industrial Power Backup System',
+                location: '📍 Eldoret, Uasin Gishu',
+                category: 'Generator Systems',
+                description: 'Deployed a robust 50kVA industrial generator system for a commercial water treatment facility requiring continuous operation. This heavy-duty system includes 24/7 monitoring, automatic controls, and extended fuel capacity. The installation ensures the treatment plant operates without interruption, maintaining production schedules and water quality standards.',
+                image: 'images/generator-project-2.jpg',
+                stats: [
+                    { label: 'Capacity', value: '50kVA' },
+                    { label: 'Monitoring', value: '24/7' },
+                    { label: 'Completion', value: '21 Days' },
+                    { label: 'Fuel Tank', value: '500L' }
+                ],
+                features: [
+                    '50kVA industrial diesel generator',
+                    'Soundproof container housing',
+                    'Automatic synchronization panel',
+                    '500L bulk fuel storage tank',
+                    '24/7 remote monitoring & alerts',
+                    'Load management system',
+                    'Scheduled maintenance program',
+                    'Emergency support hotline'
+                ],
+                whatsappMessage: 'Hello Fancy Drops! I require an industrial backup generator system similar to your Eldoret installation. Please provide a comprehensive proposal.'
             }
         };
 
-        // Filter Functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
-                
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // Filter projects
-                projectCards.forEach(card => {
-                    const category = card.getAttribute('data-category');
-                    
-                    if (filter === 'all' || category === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.classList.add('visible');
-                        }, 10);
-                    } else {
-                        card.classList.remove('visible');
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
+        // Filter Projects
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const emptyState = document.getElementById('emptyState');
+            let visibleCount = 0;
+
+            // Update active filter button
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('active');
+                }
             });
-        });
 
-        // Modal Functions
-        function openModal(projectId) {
-            const modal = document.getElementById('projectModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalBody = document.getElementById('modalBody');
-            const project = projectData[projectId];
-            
-            if (project) {
-                modalImage.textContent = project.icon;
+            // Filter cards
+            cards.forEach((card, index) => {
+                const cardCategory = card.dataset.category;
                 
-                modalBody.innerHTML = `
-                    <h2>${project.title}</h2>
-                    <div class="project-meta">
-                        <span>📍 ${project.location}</span>
-                        <span>📅 ${project.year}</span>
-                    </div>
-                    <p>${project.description}</p>
-                    <div class="project-details">
-                        <h3>Project Details</h3>
-                        <ul class="details-list">
-                            ${project.details.map(detail => `<li>${detail}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <a href="contact.html" class="btn btn-primary">Start Similar Project</a>
-                `;
-                
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                if (category === 'all' || cardCategory === category) {
+                    card.classList.remove('hidden');
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                    setTimeout(() => card.classList.add('visible'), 50);
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('visible');
+                }
+            });
+
+            // Show/hide empty state
+            if (visibleCount === 0) {
+                emptyState.classList.add('visible');
+            } else {
+                emptyState.classList.remove('visible');
             }
         }
 
+        // Open Modal
+        function openModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const project = projectsData[projectId];
+
+            if (!project) return;
+
+            // Populate modal content
+            document.getElementById('modalImage').src = project.image;
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalLocation').textContent = project.location;
+            document.getElementById('modalCategory').textContent = project.category;
+            document.getElementById('modalDescription').textContent = project.description;
+
+            // Populate stats
+            const statsHTML = project.stats.map(stat => `
+                <div class="modal-stat">
+                    <span class="modal-stat-value">${stat.value}</span>
+                    <span class="modal-stat-label">${stat.label}</span>
+                </div>
+            `).join('');
+            document.getElementById('modalStats').innerHTML = statsHTML;
+
+            // Populate features
+            const featuresHTML = project.features.map(feature => 
+                `<li>${feature}</li>`
+            ).join('');
+            document.getElementById('modalFeatures').innerHTML = featuresHTML;
+
+            // Set WhatsApp link
+            const whatsappUrl = `https://wa.me/254713332124?text=${encodeURIComponent(project.whatsappMessage)}`;
+            document.getElementById('modalWhatsappBtn').href = whatsappUrl;
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close Modal
         function closeModal() {
             const modal = document.getElementById('projectModal');
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
-        function closeModalOnBackdrop(event) {
-            if (event.target.id === 'projectModal') {
+        // Close modal on outside click
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
                 closeModal();
             }
-        }
+        });
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', (e) => {
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
             }
         });
 
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollHeight) * 100;
-            scrollProgress.style.width = scrolled + '%';
-        });
-
         // Scroll Animations
         const observerOptions = {
-            threshold: 0.15,
+            threshold: 0.2,
             rootMargin: '0px 0px -80px 0px'
         };
 
@@ -1297,8 +1560,17 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('[data-animate]').forEach(el => {
+        // Observe project cards
+        document.querySelectorAll('.project-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
         });
 
         // Navbar Scroll Effect
@@ -1311,67 +1583,12 @@
             }
         });
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Ripple Effect on Buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-                ripple.style.pointerEvents = 'none';
-                
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.style.animation = 'rippleEffect 0.6s ease-out';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
-
-        // Parallax Effect
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.page-hero-content');
-            
-            parallaxElements.forEach(el => {
-                el.style.transform = `translateY(${scrolled * 0.3}px)`;
-            });
-        });
-
-        // Card Tilt Effect
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 30;
-                const rotateY = (centerX - x) / 30;
-                
-                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+        // Initialize - show all projects on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.project-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99c6d673a7c76247',t:'MTc2Mjc5MTIxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a2a3d9472980533',t:'MTc2MzgzMzUyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
