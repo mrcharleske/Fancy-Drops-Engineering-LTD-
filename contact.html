@@ -3,9 +3,11 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Fancy Drops Water Engineering Limited</title>
-  <link rel="icon" type="image/png" href="faviconlogo.png">
-  <meta name="description" content="Get in touch with Fancy Drops Water Engineering Limited. Contact us for water engineering solutions, borehole drilling, solar systems, and water treatment services in Kenya.">
+  <title>Contact Us - Fancy Drops Engineering Limited | Get Free Water System Quote</title>
+  <link rel="icon" type="image/png" href="images/faviconlogo.png">
+  <meta name="description" content="Contact Fancy Drops Engineering for free water system consultation. Borehole drilling, solar systems, and water treatment in West Pokot. Call +254 713 332 124 or WhatsApp us today!">
+  <meta name="keywords" content="contact water engineer Kenya, borehole drilling quote, Kapenguria water services, West Pokot water company contact, free water consultation">
+  <script src="/_sdk/element_sdk.js"></script>
   <style>
         * {
             margin: 0;
@@ -18,6 +20,7 @@
             line-height: 1.6;
             color: #1f2937;
             overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         html {
@@ -36,12 +39,12 @@
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
             --success-green: #10b981;
-            --error-red: #ef4444;
+            --ocean-blue: #0c4a6e;
         }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
             position: fixed;
@@ -52,8 +55,8 @@
         }
 
         nav.scrolled {
-            box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 1);
         }
 
         .nav-container {
@@ -62,42 +65,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 3rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--deep-blue);
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
+            padding: 1rem 3rem;
+            gap: 2rem;
         }
 
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
-            flex-wrap: wrap;
+            flex: 1;
+            justify-content: center;
         }
 
         .nav-links a {
@@ -131,110 +108,175 @@
             color: var(--sky-blue);
         }
 
+        .logo {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+            display: block;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
-        .btn {
-            padding: 0.85rem 1.8rem;
+        .nav-cta-btn {
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             border: none;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn:active {
-            transform: scale(0.95);
+            white-space: nowrap;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-        }
-
-        .btn-secondary {
+        .nav-cta-call {
             background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
             color: var(--white);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
         }
 
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        .nav-cta-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 64, 175, 0.85) 50%, rgba(59, 130, 246, 0.8) 100%),
-                        url('contact-hero.jpg') center/cover;
+        .nav-cta-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: var(--white);
-            padding: 10rem 3rem 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px;
-            min-height: 50%;
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
         }
 
-        .page-hero::before {
-            content: '';
+        .nav-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60%;
+            min-height: 500px;
+            overflow: hidden;
+            margin-top: 85px;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 100%);
+        }
+
+        .hero-image {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.85) 0%, 
+                rgba(30, 64, 175, 0.75) 50%, 
+                rgba(59, 130, 246, 0.65) 100%);
+            z-index: 2;
         }
 
-        .page-hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
             opacity: 0;
-            animation: fadeUpHero 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeUpHero 1s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         @keyframes fadeUpHero {
@@ -248,101 +290,15 @@
             }
         }
 
-        .page-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        /* Contact Info Cards */
-        .contact-info-section {
-            background: var(--white);
-            padding: 4rem 3rem;
-            margin-top: -3rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .contact-info-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            color: var(--white);
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .info-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .info-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.3);
-        }
-
-        .info-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .info-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .info-card p {
-            font-size: 1.05rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .info-card a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .info-card a:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-        }
-
-        /* Main Contact Section */
-        .main-contact-section {
-            padding: 6rem 3rem;
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 3rem;
             background: var(--light-blue);
         }
 
-        .container {
+        .contact-container {
             max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
@@ -353,49 +309,44 @@
         .contact-form-container {
             background: var(--white);
             padding: 3rem;
-            border-radius: 20px;
+            border-radius: 25px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .contact-form-container.visible {
-            opacity: 1;
-            transform: translateX(0);
+        .form-header {
+            margin-bottom: 2rem;
         }
 
-        .contact-form-container h2 {
+        .form-header h2 {
             color: var(--deep-blue);
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
 
-        .contact-form-container p {
+        .form-header p {
             color: var(--charcoal);
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
             opacity: 0.8;
-            font-size: 1.05rem;
         }
 
         .form-group {
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
             display: block;
             color: var(--charcoal);
-            font-weight: 600;
-            margin-bottom: 0.6rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 1rem 1.2rem;
+            padding: 1rem;
             border: 2px solid var(--gray-200);
             border-radius: 12px;
             font-size: 1rem;
@@ -405,16 +356,16 @@
         }
 
         .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--sky-blue);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 120px;
         }
 
         .form-row {
@@ -425,25 +376,25 @@
 
         .submit-btn {
             width: 100%;
-            padding: 1.2rem;
-            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: var(--white);
-            border: none;
+            padding: 1.3rem;
             border-radius: 50px;
-            font-size: 1.1rem;
+            border: none;
             font-weight: 700;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
         }
 
         .submit-btn:disabled {
@@ -452,101 +403,21 @@
             transform: none;
         }
 
-        /* Success/Error Messages */
-        .message {
-            padding: 1.2rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            display: none;
-            animation: slideDown 0.4s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .message.success {
-            background: #d1fae5;
-            color: #065f46;
-            border: 2px solid var(--success-green);
-        }
-
-        .message.error {
-            background: #fee2e2;
-            color: #991b1b;
-            border: 2px solid var(--error-red);
-        }
-
-        .message.show {
-            display: block;
-        }
-
-        /* Map & Info Container */
-        .map-info-container {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .map-info-container.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .map-container {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-            height: 400px;
-            position: relative;
-        }
-
-        .map-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+        /* Contact Info */
+        .contact-info-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 2rem;
+            gap: 2rem;
         }
 
-        .map-placeholder-icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-        }
-
-        .map-placeholder a {
-            color: var(--white);
-            text-decoration: underline;
-            font-weight: 700;
-            margin-top: 1rem;
-            display: inline-block;
-        }
-
-        /* Additional Info Cards */
-        .additional-info {
+        .contact-info-card {
             background: var(--white);
             padding: 2.5rem;
-            border-radius: 20px;
+            border-radius: 25px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
 
-        .additional-info h3 {
+        .contact-info-card h3 {
             color: var(--deep-blue);
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
@@ -554,31 +425,185 @@
         }
 
         .info-item {
-            padding: 1.2rem 0;
-            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-blue);
+            border-radius: 15px;
+            transition: all 0.3s ease;
         }
 
-        .info-item:last-child {
-            border-bottom: none;
+        .info-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .info-item h4 {
-            color: var(--charcoal);
+        .info-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .info-content h4 {
+            color: var(--deep-blue);
             font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .info-content p {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .info-content a {
+            color: var(--sky-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .info-content a:hover {
+            color: var(--accent-orange);
+        }
+
+        .quick-contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .quick-contact-btn {
+            padding: 1rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quick-contact-call {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+        }
+
+        .quick-contact-call:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .quick-contact-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+        }
+
+        .quick-contact-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Map Section */
+        .map-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .map-card h3 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--gray-200);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Service Areas */
+        .service-areas {
+            padding: 4rem 3rem;
+            background: var(--white);
+        }
+
+        .service-areas-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .service-areas h2 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .service-areas p {
+            color: var(--charcoal);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .area-card {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .area-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sky-blue);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+        }
+
+        .area-card h3 {
+            color: var(--deep-blue);
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
-        .info-item p {
+        .area-card p {
             color: var(--charcoal);
-            opacity: 0.8;
-            line-height: 1.7;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin: 0;
         }
 
         /* FAQ Section */
         .faq-section {
-            padding: 6rem 3rem;
-            background: var(--white);
+            padding: 5rem 3rem;
+            background: var(--light-blue);
         }
 
         .faq-container {
@@ -588,12 +613,12 @@
 
         .faq-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .faq-header h2 {
             color: var(--deep-blue);
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
@@ -605,16 +630,11 @@
         }
 
         .faq-item {
-            background: var(--light-blue);
+            background: var(--white);
             border-radius: 15px;
             margin-bottom: 1.5rem;
             overflow: hidden;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .faq-item:hover {
-            border-color: var(--sky-blue);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .faq-question {
@@ -623,18 +643,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 700;
-            color: var(--deep-blue);
-            font-size: 1.1rem;
+            gap: 1rem;
             transition: all 0.3s ease;
+            background: var(--white);
         }
 
         .faq-question:hover {
-            background: rgba(59, 130, 246, 0.05);
+            background: var(--light-blue);
+        }
+
+        .faq-question h3 {
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
         }
 
         .faq-icon {
             font-size: 1.5rem;
+            color: var(--sky-blue);
             transition: transform 0.3s ease;
         }
 
@@ -646,23 +673,127 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 2rem;
         }
 
         .faq-item.active .faq-answer {
             max-height: 500px;
-            padding: 0 2rem 1.8rem;
+            padding: 0 2rem 2rem 2rem;
         }
 
         .faq-answer p {
             color: var(--charcoal);
             line-height: 1.8;
-            opacity: 0.85;
+            font-size: 1rem;
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            animation: bounceIn 1s ease-out 2s both;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(100px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 3px solid #25D366;
+            border-radius: 50%;
+            opacity: 0;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50%, 100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--charcoal);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 85px;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
+            z-index: 9999;
+            transition: width 0.1s ease;
         }
 
         /* Footer */
         footer {
-            background: var(--charcoal);
+            background: var(--ocean-blue);
             color: var(--white);
             padding: 4rem 3rem 2rem;
         }
@@ -714,6 +845,8 @@
             justify-content: center;
             font-size: 1.3rem;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
         }
 
         .social-link:hover {
@@ -728,58 +861,40 @@
             color: rgba(255,255,255,0.6);
         }
 
-        /* Scroll Progress Bar */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-orange), var(--sky-blue));
-            z-index: 9999;
-            transition: width 0.1s ease;
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--deep-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-toggle:hover {
-            transform: scale(1.1);
-        }
-
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .page-hero h1 {
-                font-size: 2.8rem;
-            }
-        }
-
         @media (max-width: 768px) {
             .nav-container {
                 padding: 1rem 1.5rem;
+                flex-wrap: wrap;
             }
 
             .menu-toggle {
                 display: block;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                order: 3;
+                gap: 0.5rem;
+            }
+
+            .nav-cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
             }
 
             .nav-links {
                 display: none;
                 width: 100%;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0;
+                order: 4;
                 padding: 1rem 0;
             }
 
@@ -787,137 +902,176 @@
                 display: flex;
             }
 
-            .cta-buttons {
+            .nav-links a {
+                padding: 1rem;
                 width: 100%;
-                justify-content: center;
+                text-align: center;
+                border-bottom: 1px solid var(--gray-200);
             }
 
-            .page-hero {
-                padding: 6rem 1.5rem 4rem;
+            .hero {
+                margin-top: 150px;
+                min-height: 400px;
             }
 
-            .page-hero h1 {
-                font-size: 2.2rem;
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
+            }
+
+            .form-header h2 {
+                font-size: 2rem;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
             }
 
-            .contact-form-container,
-            .map-info-container {
-                transform: none;
+            .quick-contact-buttons {
+                grid-template-columns: 1fr;
             }
 
-            .faq-header h2 {
-                font-size: 2rem;
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-question {
+                padding: 1.5rem;
+            }
+
+            .faq-question h3 {
+                font-size: 1rem;
             }
         }
     </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
  <body><!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div><!-- Navigation -->
   <nav id="navbar">
-   <div class="nav-container"><a href="index.html" class="logo"> <img src="logo.png" alt="Fancy Drops Logo" class="logo-icon" onerror="this.style.display='none';"> <span>Fancy Drops</span> </a> <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+   <div class="nav-container"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks"><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="contact.html" class="active">Contact</a>
     </div>
-    <div class="cta-buttons"><a href="tel:+254713332124" class="btn btn-secondary">📞 Call</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="btn btn-primary">💬 WhatsApp</a>
+    <div class="cta-buttons"><a href="tel:+254713332124" class="nav-cta-btn nav-cta-call">📞 Call Now</a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="nav-cta-btn nav-cta-whatsapp">💬 WhatsApp</a>
+    </div><a href="index.html" class="logo"> <img src="images/logo.png" alt="Fancy Drops Engineering Limited Logo" class="logo-icon" onerror="this.style.display='none';"> </a>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="hero"><img src="images/contact-hero.jpg" alt="Contact Fancy Drops Engineering" class="hero-image" onerror="this.style.display='none';">
+   <div class="hero-overlay"></div>
+   <div class="hero-content">
+    <h1>Let's Start Your Water Project</h1>
+    <p>Get a free consultation and detailed quote for your borehole, solar system, or water treatment needs. We respond within 2 hours!</p>
+    <div class="hero-badges">
+     <div class="hero-badge">
+      ⚡ 2-Hour Response Time
+     </div>
+     <div class="hero-badge">
+      ✓ Licensed &amp; Certified
+     </div>
+     <div class="hero-badge">
+      💯 Free Consultation
+     </div>
     </div>
    </div>
-  </nav><!-- Page Hero -->
-  <section class="page-hero">
-   <div class="page-hero-content">
-    <h1>Get In Touch</h1>
-    <p>Ready to start your water engineering project? We're here to help! Contact us today for a free consultation and quote.</p>
-   </div>
-  </section><!-- Contact Info Cards -->
-  <section class="contact-info-section">
-   <div class="contact-info-container">
-    <div class="info-card" data-animate style="transition-delay: 0.1s"><span class="info-icon">📞</span>
-     <h3>Call Us</h3>
-     <p><a href="tel:+254713332124">+254 713 332 124</a></p>
-     <p>Mon - Sat: 8:00 AM - 6:00 PM<br>
-      Sunday: Emergency Only</p>
-    </div>
-    <div class="info-card" data-animate style="transition-delay: 0.2s"><span class="info-icon">✉️</span>
-     <h3>Email Us</h3>
-     <p><a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
-     <p>We respond within 24 hours</p>
-    </div>
-    <div class="info-card" data-animate style="transition-delay: 0.3s"><span class="info-icon">📍</span>
-     <h3>Visit Us</h3>
-     <p>Kapenguria Town<br>
-      West Pokot County<br>
-      Kenya</p>
-    </div>
-    <div class="info-card" data-animate style="transition-delay: 0.4s"><span class="info-icon">💬</span>
-     <h3>WhatsApp</h3>
-     <p><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">Chat with us instantly</a></p>
-     <p>Fast response guaranteed</p>
-    </div>
-   </div>
-  </section><!-- Main Contact Section -->
-  <section class="main-contact-section">
-   <div class="container">
-    <div class="contact-grid"><!-- Contact Form -->
-     <div class="contact-form-container" data-animate>
-      <h2>Send Us a Message</h2>
-      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
-      <div id="formMessage" class="message"></div>
-      <form id="contactForm">
-       <div class="form-row">
-        <div class="form-group"><label for="firstName">First Name *</label> <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group"><label for="lastName">Last Name *</label> <input type="text" id="lastName" name="lastName" required>
-        </div>
+  </section><!-- Sticky WhatsApp Button --> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="whatsapp-sticky">
+   <div class="whatsapp-btn">
+    💬 <span class="whatsapp-tooltip">Chat with us now!</span>
+   </div></a> <!-- Contact Section -->
+  <section class="contact-section">
+   <div class="contact-container"><!-- Contact Form -->
+    <div class="contact-form-container">
+     <div class="form-header">
+      <h2>Get Your Free Quote</h2>
+      <p>Fill out the form below and we'll get back to you with a detailed proposal.</p>
+     </div>
+     <form id="contactForm">
+      <div class="form-row">
+       <div class="form-group"><label for="name">Full Name *</label> <input type="text" id="name" name="name" required placeholder="Enter your full name">
        </div>
-       <div class="form-row">
-        <div class="form-group"><label for="email">Email Address *</label> <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group"><label for="phone">Phone Number *</label> <input type="tel" id="phone" name="phone" required>
-        </div>
-       </div>
-       <div class="form-group"><label for="service">Service Interested In *</label> <select id="service" name="service" required> <option value="">Select a service...</option> <option value="borehole">Borehole Drilling</option> <option value="survey">Hydrogeological Survey</option> <option value="treatment">Water Treatment</option> <option value="solar">Solar Water Systems</option> <option value="generator">Generator Systems</option> <option value="maintenance">Maintenance &amp; Repair</option> <option value="consultation">Free Consultation</option> <option value="other">Other</option> </select>
-       </div>
-       <div class="form-group"><label for="location">Project Location</label> <input type="text" id="location" name="location" placeholder="e.g., Kapenguria, West Pokot">
-       </div>
-       <div class="form-group"><label for="message">Your Message *</label> <textarea id="message" name="message" required placeholder="Tell us about your project requirements..."></textarea>
-       </div><button type="submit" class="submit-btn" id="submitBtn"> Send Message </button>
-      </form>
-     </div><!-- Map & Additional Info -->
-     <div class="map-info-container" data-animate>
-      <div class="map-container">
-       <div class="map-placeholder"><span class="map-placeholder-icon">📍</span>
-        <p><strong>Fancy Drops Water Engineering Limited</strong><br>
-          Kapenguria Town, West Pokot County, Kenya</p><a href="https://maps.google.com/?q=Kapenguria,West+Pokot,Kenya" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+       <div class="form-group"><label for="phone">Phone Number *</label> <input type="tel" id="phone" name="phone" required placeholder="+254 712 345 678">
        </div>
       </div>
-      <div class="additional-info">
-       <h3>Why Choose Us?</h3>
-       <div class="info-item">
-        <h4>🎯 Free Consultation</h4>
-        <p>Get expert advice and project assessment at no cost</p>
+      <div class="form-group"><label for="email">Email Address</label> <input type="email" id="email" name="email" placeholder="your.email@example.com">
+      </div>
+      <div class="form-row">
+       <div class="form-group"><label for="service">Service Interested In *</label> <select id="service" name="service" required> <option value="">Select a service</option> <option value="Borehole Drilling">Borehole Drilling</option> <option value="Solar Water Systems">Solar Water Systems</option> <option value="Water Treatment">Water Treatment</option> <option value="Generator Installation">Generator Installation</option> <option value="Borehole Rehabilitation">Borehole Rehabilitation</option> <option value="Hydrogeological Survey">Hydrogeological Survey</option> <option value="Maintenance &amp; Repair">Maintenance &amp; Repair</option> <option value="Other">Other</option> </select>
        </div>
-       <div class="info-item">
-        <h4>⚡ Fast Response</h4>
-        <p>We respond to all inquiries within 24 hours</p>
+       <div class="form-group"><label for="location">Project Location *</label> <input type="text" id="location" name="location" required placeholder="e.g., Kapenguria, West Pokot">
        </div>
-       <div class="info-item">
-        <h4>💰 Transparent Pricing</h4>
-        <p>Clear, detailed quotes with no hidden charges</p>
+      </div>
+      <div class="form-group"><label for="budget">Budget Range (Optional)</label> <select id="budget" name="budget"> <option value="">Select budget range</option> <option value="Under KES 200,000">Under KES 200,000</option> <option value="KES 200,000 - 500,000">KES 200,000 - 500,000</option> <option value="KES 500,000 - 1,000,000">KES 500,000 - 1,000,000</option> <option value="Over KES 1,000,000">Over KES 1,000,000</option> <option value="Not sure yet">Not sure yet</option> </select>
+      </div>
+      <div class="form-group"><label for="message">Project Details *</label> <textarea id="message" name="message" required placeholder="Tell us more about your project requirements..."></textarea>
+      </div><button type="submit" class="submit-btn" id="submitBtn"> 💬 Send via WhatsApp </button>
+     </form>
+    </div><!-- Contact Info -->
+    <div class="contact-info-container">
+     <div class="contact-info-card">
+      <h3>Contact Information</h3>
+      <div class="info-item">
+       <div class="info-icon">
+        📞
        </div>
-       <div class="info-item">
-        <h4>🛠️ Expert Team</h4>
-        <p>Certified professionals with 10+ years experience</p>
+       <div class="info-content">
+        <h4>Call Us</h4>
+        <p><a href="tel:+254713332124">+254 713 332 124</a></p>
+        <p style="font-size: 0.85rem; margin-top: 0.3rem;">Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
        </div>
-       <div class="info-item">
-        <h4>✅ Quality Guarantee</h4>
-        <p>All work backed by comprehensive warranties</p>
+      </div>
+      <div class="info-item">
+       <div class="info-icon">
+        💬
        </div>
+       <div class="info-content">
+        <h4>WhatsApp</h4>
+        <p><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">+254 713 332 124</a></p>
+        <p style="font-size: 0.85rem; margin-top: 0.3rem;">Fast response guaranteed!</p>
+       </div>
+      </div>
+      <div class="info-item">
+       <div class="info-icon">
+        ✉️
+       </div>
+       <div class="info-content">
+        <h4>Email</h4>
+        <p><a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
+       </div>
+      </div>
+      <div class="info-item">
+       <div class="info-icon">
+        📍
+       </div>
+       <div class="info-content">
+        <h4>Office Location</h4>
+        <p>Kapenguria Town<br>
+         West Pokot County, Kenya</p>
+       </div>
+      </div>
+      <div class="quick-contact-buttons"><a href="tel:+254713332124" class="quick-contact-btn quick-contact-call"> 📞 Call Now </a> <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="quick-contact-btn quick-contact-whatsapp"> 💬 WhatsApp </a>
+      </div>
+     </div><!-- Map -->
+     <div class="map-card">
+      <h3>Find Us in Kapenguria</h3>
+      <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.234567890123!2d35.1089!3d1.2384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d8f6c8d8d8d8d%3A0x1234567890abcdef!2sKapenguria%2C%20Kenya!5e0!3m2!1sen!2ske!4v1234567890123!5m2!1sen!2ske" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
      </div>
     </div>
@@ -930,45 +1084,51 @@
      <p>Quick answers to common questions about our services</p>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>How long does borehole drilling take?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>How long does borehole drilling take?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>Typical borehole drilling projects take 2-4 weeks from start to finish, including survey, drilling, testing, and installation. The exact timeline depends on depth, ground conditions, and system complexity.</p>
+      <p>Most borehole drilling projects take 2-4 weeks from start to finish, including hydrogeological surveys, drilling, pump installation, and testing. The exact timeline depends on the depth required and site conditions.</p>
      </div>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>Do you offer free site assessments?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>Do you offer warranties on your work?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>Yes! We provide free initial consultations and site assessments within West Pokot County and surrounding areas. This includes preliminary evaluation and project recommendations.</p>
+      <p>Yes! We provide a comprehensive 2-year warranty on all borehole drilling and installation work. Solar systems come with up to 25 years on panels and 2 years on installation. We also offer maintenance contracts for long-term peace of mind.</p>
      </div>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>What areas do you serve?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>How much does a borehole cost?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>We primarily serve West Pokot County and surrounding regions including Turkana, Trans-Nzoia, Elgeyo-Marakwet, and Baringo counties. We also undertake projects in other parts of Kenya upon request.</p>
+      <p>Borehole costs vary based on depth, location, and equipment needed. Residential boreholes typically range from KES 200,000 to KES 500,000, while commercial projects can go higher. Contact us for a detailed, personalized quote based on your specific needs.</p>
      </div>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>What payment methods do you accept?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>Are you licensed and certified?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>We accept bank transfers, M-Pesa, cash payments, and checks. Projects are typically structured with a deposit, progress payments, and final payment upon completion.</p>
+      <p>Absolutely! Fancy Drops Engineering Limited is fully licensed by the Water Resources Authority (WRA) and certified to operate in Kenya. Our team includes qualified engineers and technicians with years of experience in water systems.</p>
      </div>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>Do you provide maintenance services?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>Do you provide maintenance services?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>Absolutely! We offer comprehensive maintenance packages for all water systems including regular inspections, repairs, and emergency services. Maintenance contracts ensure optimal system performance.</p>
+      <p>Yes! We offer comprehensive maintenance and repair services for all water systems, including boreholes, pumps, solar systems, and water treatment plants. We can service systems we installed as well as those installed by others.</p>
      </div>
     </div>
     <div class="faq-item">
-     <div class="faq-question" onclick="toggleFAQ(this)"><span>Are your services guaranteed?</span> <span class="faq-icon">▼</span>
+     <div class="faq-question" onclick="toggleFAQ(this)">
+      <h3>How quickly can you respond to emergencies?</h3><span class="faq-icon">▼</span>
      </div>
      <div class="faq-answer">
-      <p>Yes! All our installations come with comprehensive warranties. Boreholes include drilling guarantees, equipment carries manufacturer warranties, and our workmanship is guaranteed for 12 months.</p>
+      <p>We offer emergency support with response times within 24 hours for urgent situations. For routine inquiries, we typically respond within 2 hours during business hours. Emergency contact available 24/7 for existing clients.</p>
      </div>
     </div>
    </div>
@@ -976,8 +1136,8 @@
   <footer>
    <div class="footer-content">
     <div class="footer-section">
-     <h3>Fancy Drops Water Engineering</h3>
-     <p>Your trusted partner for sustainable water solutions in Kapenguria, Kenya and beyond.</p>
+     <h3>Fancy Drops Engineering Limited</h3>
+     <p>Your trusted partner for sustainable water solutions in Kenya. Licensed, certified, and committed to excellence.</p>
      <div class="social-links"><a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer" class="social-link">💬</a> <a href="mailto:fancydropswatersystemsltd@gmail.com" class="social-link">✉️</a> <a href="tel:+254713332124" class="social-link">📞</a>
      </div>
     </div>
@@ -985,64 +1145,65 @@
      <h3>Quick Links</h3><a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="services.html">Our Services</a> <a href="gallery.html">Project Gallery</a> <a href="contact.html">Contact Us</a>
     </div>
     <div class="footer-section">
-     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Generator Systems</a>
+     <h3>Our Services</h3><a href="services.html">Borehole Drilling</a> <a href="services.html">Hydrogeological Survey</a> <a href="services.html">Water Treatment</a> <a href="services.html">Solar Water Systems</a> <a href="services.html">Maintenance &amp; Repair</a>
     </div>
     <div class="footer-section">
      <h3>Contact Info</h3>
-     <p>📍 Kapenguria, West Pokot County, Kenya</p>
+     <p>📍 Kapenguria Town, West Pokot County, Kenya</p>
      <p>📞 <a href="tel:+254713332124">+254 713 332 124</a></p>
      <p>✉️ <a href="mailto:fancydropswatersystemsltd@gmail.com">fancydropswatersystemsltd@gmail.com</a></p>
-     <p>💬 <a href="https://wa.me/254713332124" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></p>
+     <p>⏰ Mon-Sat: 8AM-6PM | Sun: Emergency Only</p>
     </div>
    </div>
    <div class="footer-bottom">
-    <p>© 2024 Fancy Drops Water Engineering Limited. All rights reserved. | Designed with 💧 for excellence</p>
+    <p>© 2024 Fancy Drops Engineering Limited. All rights reserved. | Transforming Kenya's water landscape, one project at a time 💧</p>
    </div>
   </footer>
   <script>
-        // Form Submission Handler
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Contact Form Handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const location = document.getElementById('location').value;
+            const budget = document.getElementById('budget').value;
+            const message = document.getElementById('message').value;
+
+            // Construct WhatsApp message
+            let whatsappMessage = `*NEW PROJECT INQUIRY*\n\n`;
+            whatsappMessage += `*Name:* ${name}\n`;
+            whatsappMessage += `*Phone:* ${phone}\n`;
+            if (email) whatsappMessage += `*Email:* ${email}\n`;
+            whatsappMessage += `*Service:* ${service}\n`;
+            whatsappMessage += `*Location:* ${location}\n`;
+            if (budget) whatsappMessage += `*Budget:* ${budget}\n`;
+            whatsappMessage += `\n*Project Details:*\n${message}`;
+
+            // Encode and open WhatsApp
+            const whatsappUrl = `https://wa.me/254713332124?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+            // Show success feedback
             const submitBtn = document.getElementById('submitBtn');
-            const formMessage = document.getElementById('formMessage');
-            
-            // Disable button and show loading state
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '✓ Opening WhatsApp...';
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Get form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                location: document.getElementById('location').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Simulate form submission (replace with actual API call)
+
             setTimeout(() => {
-                // Show success message
-                formMessage.textContent = '✅ Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
-                formMessage.className = 'message success show';
-                
-                // Reset form
-                document.getElementById('contactForm').reset();
-                
-                // Re-enable button
+                submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.classList.remove('show');
-                }, 5000);
-                
-                // Log form data (in production, send to server)
-                console.log('Form submitted:', formData);
-            }, 1500);
+                // Optionally reset form
+                // document.getElementById('contactForm').reset();
+            }, 3000);
         });
 
         // FAQ Toggle
@@ -1054,7 +1215,7 @@
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Open clicked item if it wasn't active
             if (!isActive) {
                 faqItem.classList.add('active');
@@ -1069,24 +1230,6 @@
             scrollProgress.style.width = scrolled + '%';
         });
 
-        // Scroll Animations
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -80px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('[data-animate]').forEach(el => {
-            observer.observe(el);
-        });
-
         // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -1097,67 +1240,37 @@
             }
         });
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Ripple Effect on Buttons
-        document.querySelectorAll('.btn, .submit-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-                ripple.style.pointerEvents = 'none';
-                
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.style.animation = 'rippleEffect 0.6s ease-out';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
-
-        // Form Input Animation
-        document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'translateY(-2px)';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Info Card Click to Action
-        document.querySelectorAll('.info-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const link = this.querySelector('a');
-                if (link) {
-                    link.click();
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
 
-        // Parallax Effect
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.page-hero-content');
-            
-            parallaxElements.forEach(el => {
-                el.style.transform = `translateY(${scrolled * 0.3}px)`;
+        // Form validation feedback
+        const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value) {
+                    this.style.borderColor = '#ef4444';
+                } else {
+                    this.style.borderColor = '#e5e7eb';
+                }
+            });
+
+            input.addEventListener('input', function() {
+                if (this.value) {
+                    this.style.borderColor = '#10b981';
+                }
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99c6e2aa91046247',t:'MTc2Mjc5MTcxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a2a702a91a50533',t:'MTc2MzgzNTU5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
